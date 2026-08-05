@@ -1,0 +1,8 @@
+# Cursor Rules - FlyRank Frontend AI Engineering
+
+- Follow TypeScript strict mode for all frontend and utility code.
+- Always use Conventional Commits 1.0.0 for commit messages.
+- Prefer functional React components with explicit props typing.
+- Use Tailwind CSS or modular CSS aligned with modern UX best practices.
+- Avoid introducing unvalidated mock dependencies or unfinished placeholder blocks.
+- Ensure all interactive elements have semantic HTML tags and accessibility attributes.
