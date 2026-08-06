@@ -19,3 +19,7 @@ Examining the direct Git diff between `feat/round-1-vague` and `feat/round-2-pre
 + const trimmedName = data.fullName.trim();
 + if (!trimmedName) { errors.fullName = 'Full name is required and cannot be blank.'; }
 + if (!EMAIL_REGEX.test(trimmedEmail)) { errors.email = 'Please provide a valid email address.'; }
+```
+
+
+<!-- milestone review step 4 verified 2026-08-06 -->
