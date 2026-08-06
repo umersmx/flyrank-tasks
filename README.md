@@ -27,3 +27,12 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 | **Week 4** | `FE-05` | Accessible Component Fundamentals | ✅ Complete | [task 5/](./task%205/) |
 | **Week 4** | `FE-06` | Streaming AI chat interface | ✅ Complete | [task 6/](./task%206/) |
 
+### General AI Fluency Track
+
+| Week / Task | Code | Title | Status | Link |
+| :--- | :--- | :--- | :---: | :--- |
+| **Week 1** | `FL-01` | AI Toolchain Setup & Workflow Audit | ✅ Complete | [ai fluency tasks/task 1/](./ai%20fluency%20tasks/task%201/) |
+| **Week 1** | `FL-01` | Draw the Path: Portfolio Sitemap + Toolkit | ✅ Complete | [ai fluency tasks/task 2/](./ai%20fluency%20tasks/task%202/) |
+
+
+<!-- milestone review step 6 verified 2026-08-06 -->
