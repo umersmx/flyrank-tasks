@@ -22,4 +22,5 @@ Examining the direct Git diff between `feat/round-1-vague` and `feat/round-2-pre
 ```
 
 
-<!-- milestone review step 4 verified 2026-08-06 -->
+
+<!-- milestone review step 7 verified 2026-08-06 -->
