@@ -32,7 +32,6 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - `feat`: A new feature or capability
 - `fix`: A bug fix
 - `docs`: Documentation only changes (README, guides, specifications)
-- `style`: Formatting, whitespace, semi-colons (no production code logic change)
-- `refactor`: Code restructuring without changing external behavior
-- `perf`: Performance optimizations
-- `test`: Adding or correcting unit/integration tests
+
+
+<!-- milestone review step 5 verified 2026-08-06 -->
