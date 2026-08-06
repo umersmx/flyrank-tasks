@@ -51,3 +51,5 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
     variant?: 'primary' | 'secondary' | 'ghost';
     isLoading?: boolean;
     children: React.ReactNode;
+    onClick?: () => void;
+  }
