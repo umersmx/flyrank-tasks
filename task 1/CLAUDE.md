@@ -49,3 +49,5 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
   ```tsx
   interface ButtonProps {
     variant?: 'primary' | 'secondary' | 'ghost';
+    isLoading?: boolean;
+    children: React.ReactNode;
