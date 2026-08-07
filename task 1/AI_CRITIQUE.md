@@ -9,3 +9,9 @@
 - **Critique 4 - Lack of Professional Badging & Visual Structure**: The repository lacked clean Markdown tables, badges, and code snippets for quick onboarding.
 
 ---
+
+### Improvements Applied:
+1. **Added Environment & Toolchain Prerequisites**: Detailed Node.js (LTS), Git, Claude Code, and Cursor IDE setup instructions.
+2. **Structured Capstone & Assignment Progress Matrix**: Added a clean tracking table for FlyRank assignments starting with `FE-01: Environment and AI toolchain`.
+3. **Integrated Conventional Commits Specification**: Embedded commit conventions directly into the README for team and AI agent alignment.
+4. **Added AI Development Lifecycle**: Detailed the prompt-review-validate loop used when coding with AI assistants.

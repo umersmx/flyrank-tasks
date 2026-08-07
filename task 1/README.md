@@ -61,3 +61,9 @@ All commits in this repository strictly adhere to [Conventional Commits 1.0.0](h
 
 ---
 
+## 🤖 AI Development Workflow
+
+When collaborating with AI assistants:
+1. **Context Provision**: Anchor AI on `CLAUDE.md` and `.cursorrules` before generating components.
+2. **Iterative Verification**: Run builds, type checks, and accessibility audits on each change.
+3. **Continuous Critique**: Use AI to review code clarity, edge cases, and documentation completeness.

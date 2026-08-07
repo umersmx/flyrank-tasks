@@ -53,3 +53,22 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
     children: React.ReactNode;
     onClick?: () => void;
   }
+  ```
+- Colocate styles, tests, and component-specific utilities when appropriate.
+- Keep components focused on a single responsibility.
+- Use semantic HTML tags (`<main>`, `<nav>`, `<header>`, `<article>`, `<section>`, `<button>`).
+- Enforce accessibility (a11y): proper `aria-*` attributes, high contrast colors, and keyboard navigability.
+
+### State & Logic Separation
+- Separate UI presentation from business logic using custom hooks (`useFeatureName`).
+- Prevent direct side-effects inside render pipelines; utilize standard React lifecycle hooks or query wrappers.
+
+---
+
+## 4. AI-Assisted Development Workflow
+
+When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
+1. **Explicit Context**: Provide relevant schema, file paths, and target requirements before executing modifications.
+2. **Incremental Validation**: Always run builds, type-checks, and test suites after AI edits.
+3. **No Unfinished Placeholders**: Never introduce `// TODO` or placeholder implementations without explicit user sign-off.
+4. **Code Quality First**: Verify adherence to project conventions and design consistency.
