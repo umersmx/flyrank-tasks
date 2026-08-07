@@ -34,6 +34,7 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 | **Week 1** | `FL-01` | AI Toolchain Setup & Workflow Audit | ✅ Complete | [ai fluency tasks/task 1/](./ai%20fluency%20tasks/task%201/) |
 | **Week 1** | `FL-01` | Draw the Path: Portfolio Sitemap + Toolkit | ✅ Complete | [ai fluency tasks/task 2/](./ai%20fluency%20tasks/task%202/) |
 | **Week 1** | `FL-01` | What Are You Proving? (Proof Statement) | ✅ Complete | [ai fluency tasks/task 3/](./ai%20fluency%20tasks/task%203/) |
+| **Week 2** | `FL-02` | Frame It as Cases: Work That Speaks for Itself | ✅ Complete | [ai fluency tasks/task 4/](./ai%20fluency%20tasks/task%204/) |
 
 
-<!-- milestone review step 9 verified 2026-08-06 -->
+<!-- milestone review step 12 verified 2026-08-07 -->
