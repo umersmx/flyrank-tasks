@@ -59,3 +59,5 @@ All commits in this repository strictly adhere to [Conventional Commits 1.0.0](h
 | `fix` | Bug fixes and patches | `fix(auth): resolve session token expiration handler` |
 | `refactor` | Code restructuring without behavioral changes | `refactor(state): migrate context to atomic store` |
 
+---
+
