@@ -33,6 +33,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - `fix`: A bug fix
 - `docs`: Documentation only changes (README, guides, specifications)
 - `style`: Formatting, whitespace, semi-colons (no production code logic change)
+- `refactor`: Code restructuring without changing external behavior
 
 
-<!-- milestone review step 8 verified 2026-08-06 -->
+<!-- milestone review step 11 verified 2026-08-07 -->
