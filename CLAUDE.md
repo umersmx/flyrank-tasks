@@ -34,6 +34,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - `docs`: Documentation only changes (README, guides, specifications)
 - `style`: Formatting, whitespace, semi-colons (no production code logic change)
 - `refactor`: Code restructuring without changing external behavior
+- `perf`: Performance optimizations
 
 
-<!-- milestone review step 11 verified 2026-08-07 -->
+<!-- milestone review step 14 verified 2026-08-08 -->
