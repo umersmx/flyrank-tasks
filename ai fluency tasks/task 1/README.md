@@ -68,3 +68,47 @@ ai fluency tasks/task 1/
 ### 2. Frontend Bug Triage & Root Cause Analysis (Target for FL-03)
 * **Goal**: Rapidly diagnose obscure runtime exceptions, hydration mismatches, and race conditions in React 19/Vite codebases.
 * **"Done Well" Success Definition**:
+  - Precise root cause identified down to file, line, and lifecycle hook within 2 conversation turns.
+  - Recommended patch preserves all existing WCAG 2.1 AA accessibility and idempotency rules with zero regressions.
+  - Provides a minimal reproducing test case validating both failure and resolution.
+  - Decreases mean triage time by ≥50%.
+
+### 3. Comprehensive Unit & Integration Test Generation (Target for FL-04)
+* **Goal**: Scaffold and refine comprehensive Vitest and React Testing Library test suites for newly constructed UI components.
+* **"Done Well" Success Definition**:
+  - Delivers ≥85% branch coverage on target components (including error and loading states).
+  - Explicitly asserts accessible semantics (`role="alert"`, `aria-describedby`, keyboard traversal).
+  - 100% test pass rate across 5 consecutive runs with zero flaky timeouts.
+  - Clear Arrange-Act-Assert structure oriented around user actions.
+
+---
+
+## ⚙️ Part 3: Claude Project Configuration
+
+* **Project Title**: `FlyRank - AI Engineering & Fluency`
+* **Custom Instructions**: Complete configuration text documented in [CLAUDE_PROJECT_CONFIG.md](file:///c:/Users/umerf/Desktop/Code/flyrank-tasks/ai%20fluency%20tasks/task%201/CLAUDE_PROJECT_CONFIG.md).
+* **Summary of Instructions**:
+  - **Identity**: Muhammad Umer, Frontend AI Engineer specializing in React 19, TypeScript strict mode, and AI developer workflows.
+  - **Tone**: Direct, concise, technical, no pleasantries, production-ready code only, WCAG AA compliant.
+  - **Goals**: Excel in FlyRank tracks (FL-01 to FL-04), optimize the 3 target workflows, uphold Conventional Commits.
+
+---
+
+## 🛠️ Part 4: Free AI Toolkit & Academy Evidence
+
+* **Claude Account**: Active on `claude.ai` with customized Project.
+* **ChatGPT Account**: Active on `chatgpt.com` for cross-validation.
+* **Anthropic Academy**: Enrolled in *AI Fluency: Framework & Foundations*, Module 1 completed.
+* Detailed notes and key takeaways are documented in [TOOLKIT_SETUP.md](file:///c:/Users/umerf/Desktop/Code/flyrank-tasks/ai%20fluency%20tasks/task%201/TOOLKIT_SETUP.md).
+
+---
+
+## ✅ Evaluation Criteria Compliance Matrix
+
+| Evaluation Criteria | Requirement | Status | Evidence Location |
+| :--- | :--- | :---: | :--- |
+| **10+ tasks are genuinely yours** | Real weekly routine (study, work, projects), non-generic | **PASS** | 12 real tasks in [WORKFLOW_AUDIT.md](file:///c:/Users/umerf/Desktop/Code/flyrank-tasks/ai%20fluency%20tasks/task%201/WORKFLOW_AUDIT.md#2-weekly-task-audit-12-recurring-tasks) |
+| **Every task classified with one-line rationale** | `just me`, `delegate with review`, `collaborate`, `fully automate` | **PASS** | All 12 rows include crisp 1-line rationale |
+| **At least two tasks marked "just me" with a reason** | Honest human boundaries with rationale | **PASS** | 3 tasks marked `just me` (Gym/Health, Live Standups, Security/Secrets) |
+| **Three target tasks with measurable success** | Reused in FL-02 to FL-04 with "done well" definitions | **PASS** | Detailed in [WORKFLOW_AUDIT.md](file:///c:/Users/umerf/Desktop/Code/flyrank-tasks/ai%20fluency%20tasks/task%201/WORKFLOW_AUDIT.md#3-deep-dive-three-target-tasks-for-fl-02-to-fl-04) |
+| **Tool accounts & Academy enrollment evidenced** | Claude Project, ChatGPT, Anthropic Academy Module 1 | **PASS** | Documented in [TOOLKIT_SETUP.md](file:///c:/Users/umerf/Desktop/Code/flyrank-tasks/ai%20fluency%20tasks/task%201/TOOLKIT_SETUP.md) & [CLAUDE_PROJECT_CONFIG.md](file:///c:/Users/umerf/Desktop/Code/flyrank-tasks/ai%20fluency%20tasks/task%201/CLAUDE_PROJECT_CONFIG.md) |

@@ -49,3 +49,22 @@ All documentation, instructions, and audit tables are organized in the workspace
 ```
 
 ---
+
+### Field 3: `Files` (What to Upload)
+
+Click **Choose Files** and upload:
+1. **`WORKFLOW_AUDIT.md`** (or export it to a PDF) — this is your 1-2 page workflow audit deliverable.
+2. **`claude-project-configured.png`** — a screenshot of your active Claude Project on [claude.ai](https://claude.ai) showing your project title and custom instructions.
+3. **`anthropic-academy-enrolled.png`** (optional but recommended) — a screenshot showing enrollment in the Anthropic Academy course.
+
+---
+
+## 3. Pre-Submission Verification Checklist
+
+Before clicking **Save submission**, verify against all pass/revise criteria:
+
+- [x] **10+ tasks are genuinely yours**: Audit contains 12 real tasks from your weekly schedule.
+- [x] **Every task classified with a one-line rationale**: Included in the table for all 12 tasks.
+- [x] **At least two tasks marked "just me" with a reason**: 3 tasks marked `just me` with clear justification.
+- [x] **Three target tasks are specific with measurable success definitions**: Deep dive with 4 measurable criteria for each.
+- [x] **Tool accounts and Academy enrollment evidenced**: Claude Project screenshot captured and Academy module 1 completed.

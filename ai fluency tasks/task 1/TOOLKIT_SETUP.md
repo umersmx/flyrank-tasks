@@ -45,3 +45,12 @@
 The FL-01 evaluation criteria require:
 > *"Tool accounts and Academy enrollment evidenced"*
 
+### Required Proof Artifacts:
+1. **Claude Project Screenshot**:
+   - File: `claude-project-configured.png`
+   - Content: Shows active Claude interface with project `FlyRank - AI Engineering & Fluency` and configured instructions.
+2. **Anthropic Academy Enrollment Screenshot**:
+   - File: `anthropic-academy-enrolled.png`
+   - Content: Shows course dashboard with *AI Fluency: Framework & Foundations* marked enrolled / Module 1 progress complete.
+3. **ChatGPT Account Verification**:
+   - Active account profile logged in on OpenAI ChatGPT interface.

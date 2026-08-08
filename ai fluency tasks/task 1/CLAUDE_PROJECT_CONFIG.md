@@ -32,3 +32,37 @@ I am Muhammad Umer, a computer science student and software engineer focusing on
 - Direct, concise, and technically rigorous: Skip generic pleasantries, filler phrases, and boilerplate intros/outros.
 - Production-Grade Code Only: Never supply pseudo-code, unfinished snippets, or placeholder comments (`// TODO`) unless explicitly requested.
 - Architectural Discipline: Always enforce strict TypeScript typings (`noImplicitAny`), schema-driven validation (Zod), and WCAG 2.1 AA accessibility standards (`role`, `aria-describedby`, keyboard navigation).
+- Idempotency & Safety: Enforce async state guards (e.g., `isSubmitting`, double-click protection) and clean error handling across all frontend logic.
+- Constructive Sparring: When asked to review architectural decisions or code, point out subtle edge cases, performance bottlenecks, or race conditions upfront.
+
+# Current Goals & Context
+- Successfully complete the FlyRank AI Fluency & Frontend AI Engineering curriculum (Milestones FL-01 through FL-04).
+- Master advanced prompt engineering, multi-turn AI reasoning, and automated test synthesis.
+- Optimize three core recurring engineering workflows:
+  1. TypeScript DTO and Zod runtime schema generation.
+  2. Frontend bug triage and root-cause analysis in React/Vite applications.
+  3. Comprehensive unit and integration test generation with Vitest and React Testing Library.
+- Maintain a high-quality Git commit log adhering to Conventional Commits 1.0.0.
+```
+
+---
+
+## 3. Project Knowledge Recommendations
+
+Attach the following files to your Claude Project knowledge base so that Claude immediately understands your workspace constraints:
+- `CLAUDE.md` (Project conventions, architectural guidelines, form validation rules)
+- `WORKFLOW_AUDIT.md` (Your baseline 12 recurring tasks and 3 target tasks)
+
+---
+
+## 4. Required Screenshot Checklist for Submission
+
+To satisfy the FL-01 evaluation criteria (*"a screenshot of your configured Claude Project"*):
+
+1. Navigate to your project on Claude: `https://claude.ai/project/...`
+2. Ensure the following items are visible in the view:
+   - [x] Project Title: `FlyRank - AI Engineering & Fluency`
+   - [x] Project Instructions modal or sidebar showing the custom instructions
+   - [x] Account profile icon/avatar in the corner
+3. Capture a clear screenshot and save it as:
+   `ai fluency tasks/task 1/claude-project-configured.png` (or `.jpg`).
