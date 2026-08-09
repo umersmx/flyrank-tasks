@@ -36,6 +36,7 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 | **Week 1** | `FL-01` | What Are You Proving? (Proof Statement) | ✅ Complete | [ai fluency tasks/task 3/](./ai%20fluency%20tasks/task%203/) |
 | **Week 2** | `FL-02` | Frame It as Cases: Work That Speaks for Itself | ✅ Complete | [ai fluency tasks/task 4/](./ai%20fluency%20tasks/task%204/) |
 | **Week 2** | `FL-02` | The Prompt Ladder (5-Stage Progression) | ✅ Complete | [ai fluency tasks/task 5/](./ai%20fluency%20tasks/task%205/) |
+| **Week 2** | `FL-02` | Prompting Fundamentals on Real Tasks v2 | ✅ Complete | [ai fluency tasks/task 6/](./ai%20fluency%20tasks/task%206/) |
 
 
-<!-- milestone review step 15 verified 2026-08-08 -->
+<!-- milestone review step 18 verified 2026-08-09 -->
