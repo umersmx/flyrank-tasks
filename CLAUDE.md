@@ -38,6 +38,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - `test`: Adding or correcting unit/integration tests
 - `build`: Changes to build systems, bundlers, or external dependencies
 - `ci`: CI/CD configuration files and scripts
+- `chore`: Repository maintenance, gitignore, licensing, tooling updates
 
 
-<!-- milestone review step 23 verified 2026-08-09 -->
+<!-- milestone review step 26 verified 2026-08-09 -->
