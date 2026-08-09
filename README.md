@@ -38,6 +38,7 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 | **Week 2** | `FL-02` | The Prompt Ladder (5-Stage Progression) | ✅ Complete | [ai fluency tasks/task 5/](./ai%20fluency%20tasks/task%205/) |
 | **Week 2** | `FL-02` | Prompting Fundamentals on Real Tasks v2 | ✅ Complete | [ai fluency tasks/task 6/](./ai%20fluency%20tasks/task%206/) |
 | **Week 3** | `FL-03` | Consistency, Not Talent (and Frame, Not Upstage) | ✅ Complete | [ai fluency tasks/task 7/](./ai%20fluency%20tasks/task%207/) |
+| **Week 3** | `FL-03` | Decide Once: Build Your Identity Kit | ✅ Complete | [ai fluency tasks/task 8/](./ai%20fluency%20tasks/task%208/) |
 
 
-<!-- milestone review step 21 verified 2026-08-09 -->
+<!-- milestone review step 24 verified 2026-08-09 -->
