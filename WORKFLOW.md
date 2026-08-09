@@ -23,6 +23,7 @@ Examining the direct Git diff between `feat/round-1-vague` and `feat/round-2-pre
 
 In Round 1, validation lived as unstructured string checks directly in the UI handler. In Round 2, validation is isolated into pure, testable functions in `src/utils/validation.ts` returning structured `FormErrors`.
 
+---
 
 
-<!-- milestone review step 19 verified 2026-08-09 -->
+<!-- milestone review step 22 verified 2026-08-09 -->
