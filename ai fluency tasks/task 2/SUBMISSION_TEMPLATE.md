@@ -46,3 +46,22 @@ Repository Directory: https://github.com/umersmx/flyrank-tasks/tree/main/ai%20fl
 
 ---
 
+### Field 3: `Files` (What to Upload)
+
+The brief requires:
+> *"A photo of your sitemap sketch + a screenshot of your configured Claude Project and the pressure-test prompt + output."*
+
+Click **Choose Files** and upload:
+1. **Sitemap Sketch**:
+   - Option A: Draw the 4-box sitemap on a piece of paper with a pen, snap a photo with your phone, and upload `sitemap-sketch.jpg`.
+   - Option B: Upload the generated visual diagram `ai fluency tasks/task 2/sitemap-sketch.svg` (or export it to PNG).
+2. **Claude Project & Pressure-Test Screenshot**:
+   - A screenshot from [claude.ai](https://claude.ai) showing your project **`Portfolio Build - Muhammad Umer`**, the custom instructions dialog, and the pressure-test prompt conversation. Save and upload as `claude-project-tutor.png`.
+
+---
+
+## 3. Evaluation Checklist (Pass / Revise)
+
+- [x] **Small Sitemap**: Every page earns its place against the claim and the one action.
+- [x] **Claude Project Configured**: Genuine custom instructions with proof statement pasted in, not defaults.
+- [x] **Pressure-Test Recorded**: First prompt pressure-tested the map, and at least one change is explicitly noted.

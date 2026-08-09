@@ -72,3 +72,49 @@ To avoid the "and" trap and resist vanity pages, every single section earns its 
 
 ---
 
+## 3. Pressure-Test Prompt & Claude Tutor Sparring
+
+### The Exact Prompt Sent to the Claude Project Tutor:
+
+```text
+Prompt:
+"You are my personal AI tutor for the FlyRank 8-week portfolio build. Here is my current proof statement and sitemap:
+
+Proof Statement:
+I build production-grade, accessible frontend interfaces for generative AI web applications using React 19, TypeScript strict mode, and resilient streaming UX patterns. I am building this for a Technical Lead or Engineering Manager at an AI-first product startup. The one action I want them to take is to book a 15-minute technical walkthrough call.
+
+Sitemap:
+1. Hero & Primary Claim: States claim, tech stack, and primary CTA.
+2. Case Studies (2 projects): Generative Streaming UI and Schema-First Accessible Form, with live embedded demos.
+3. How I Work: 3 bullets on engineering standards, WCAG AA, and AI collaboration.
+4. Contact / Action: 15-minute scheduler embed + direct email button.
+
+Please pressure-test this sitemap aggressively against my claim and my one action:
+1. Where am I adding unnecessary friction or fluff that makes a busy engineering manager leave?
+2. Where does the visitor lose trust before booking the call?
+3. What is one specific structural change you recommend to make the conversion path faster and more credible?"
+```
+
+---
+
+### Claude Tutor's Response (Transcript):
+
+> **Claude Tutor**:
+> "Let's pressure-test this from the perspective of an Engineering Manager who has 45 seconds between meetings to review your link:
+>
+> 1. **Friction Analysis**: Your four sections are lean, but having the scheduler only at the very bottom creates drop-off risk. If the EM lands on your Hero, reads your sharp claim, scrolls through the first case study, and is convinced, forcing them to scroll past your 'How I Work' section just to find a calendar link is unnecessary friction.
+>
+> 2. **Trust Gap**: EMs are deeply skeptical of static claims about 'accessible generative UI'. If your case study only shows video clips or screenshots, they will assume it's a mock. They need to see interactive proof immediately.
+>
+> 3. **The Recommended Change**: 
+>    - **Make the CTA sticky or persistent in the top navigation header** with a badge reading *'Open for Fall/Winter 2026 Internships'*.
+>    - **Embed a mini interactive generative UI component right in the Hero** (e.g., an interactive prompt-to-card demo that demonstrates loading skeletons, streaming tokens, and error handling live). This proves your claim *before* they even scroll to Section 2."
+
+---
+
+## 4. Key Changes Made Based on the Pressure-Test
+
+In compliance with the assignment requirement (*"noted at least one thing you'll change"*):
+
+* **Change 1 (Header Action Persistence)**: Added a lightweight sticky top-navigation bar featuring the primary action button (*"Book 15-Min Walkthrough"*) and an availability indicator (*"🟢 Available for AI Frontend Roles"*), so the visitor can take action at any point during their scroll without hunting for the footer.
+* **Change 2 (Interactive Hero Proof Widget)**: Integrated a live micro-component directly into the Hero fold—a functional streaming UI card with an interactive error-simulation toggle—proving the claim in the first 5 seconds.

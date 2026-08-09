@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="100%" height="100%" style="background:#0f172a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <!-- Title & Metadata -->
+  <text x="450" y="45" fill="#f8fafc" font-size="22" font-weight="700" text-anchor="middle">Portfolio Sitemap Architecture (Task 2 / FL-02)</text>
+  <text x="450" y="72" fill="#94a3b8" font-size="14" text-anchor="middle">Path from Landing → Believing Claim → Taking the One Action</text>
+
+  <!-- Flow Connector Line -->
+  <line x1="450" y1="100" x2="450" y2="570" stroke="#334155" stroke-width="3" stroke-dasharray="6,6"/>
+
+  <!-- Step 1: Hero & Claim -->
+  <g transform="translate(150, 100)">
+    <rect width="600" height="95" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="#3b82f6"/>
+    <text x="30" y="36" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">1</text>
+    <text x="60" y="34" fill="#f8fafc" font-size="16" font-weight="bold">Hero Section (The Bold Claim &amp; Persistent CTA)</text>
+    <text x="60" y="58" fill="#94a3b8" font-size="13">• Claim: Accessible Frontend AI Engineer (React 19 / Strict TypeScript / WCAG AA)</text>
+    <text x="60" y="78" fill="#38bdf8" font-size="13">• [Sticky CTA: Book 15-Min Walkthrough] + [Interactive Live Streaming UI Demo]</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <polygon points="445,210 455,210 450,225" fill="#38bdf8"/>
+
+  <!-- Step 2: Proof Engine -->
+  <g transform="translate(150, 235)">
+    <rect width="600" height="110" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="#10b981"/>
+    <text x="30" y="36" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">2</text>
+    <text x="60" y="34" fill="#f8fafc" font-size="16" font-weight="bold">Proof Engine: 2 Deep Interactive Case Studies (#work)</text>
+    <text x="60" y="58" fill="#94a3b8" font-size="13">• Case Study 1: Generative Streaming UI with Resilient Error Boundaries &amp; Skeletal Loading</text>
+    <text x="60" y="78" fill="#94a3b8" font-size="13">• Case Study 2: Schema-First Accessible Form Validation Engine (Zod / WCAG 2.1 AA)</text>
+    <text x="60" y="98" fill="#34d399" font-size="13">• Proof Elements: Live iframe sandboxes, GitHub repo links, Architecture Decision Records</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <polygon points="445,360 455,360 450,375" fill="#10b981"/>
+
+  <!-- Step 3: How I Work -->
+  <g transform="translate(150, 385)">
+    <rect width="600" height="85" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="#f59e0b"/>
+    <text x="30" y="36" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">3</text>
+    <text x="60" y="34" fill="#f8fafc" font-size="16" font-weight="bold">How I Work: Engineering Rigor &amp; AI Fluency (#about)</text>
+    <text x="60" y="58" fill="#94a3b8" font-size="13">• Disciplined human-in-the-loop AI co-piloting (Ethan Mollick's 4D Framework)</text>
+    <text x="60" y="76" fill="#fbbf24" font-size="13">• Non-negotiable code standards: Zero `any`, deterministic state, keyboard navigability</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <polygon points="445,485 455,485 450,500" fill="#f59e0b"/>
+
+  <!-- Step 4: The One Action -->
+  <g transform="translate(150, 510)">
+    <rect width="600" height="95" rx="12" fill="#1e293b" stroke="#ec4899" stroke-width="2.5"/>
+    <rect x="15" y="15" width="30" height="30" rx="6" fill="#ec4899"/>
+    <text x="30" y="36" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">4</text>
+    <text x="60" y="34" fill="#f8fafc" font-size="16" font-weight="bold">The One Action: Conversion Hub (#contact)</text>
+    <text x="60" y="58" fill="#f472b6" font-size="13" font-weight="600">• PRIMARY ACTION: Embedded 15-Minute Technical Walkthrough Booking (Cal.com)</text>
+    <text x="60" y="78" fill="#94a3b8" font-size="13">• Secondary channels: 1-Click Email Copy, Verified GitHub Codebase, LinkedIn Profile</text>
+  </g>
+</svg>

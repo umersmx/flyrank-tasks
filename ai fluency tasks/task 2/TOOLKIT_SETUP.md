@@ -21,3 +21,8 @@ To prevent vendor lock-in and enable cross-model validation during the 8-week po
 ## 2. Multi-Model Comparative Strategy (Why 4 Tools?)
 
 1. **Epistemic Vigilance (Ethan Mollick's Diligence)**:
+   - No single model is infallible. When deciding on sensitive frontend patterns (e.g. streaming SSR error handling in React 19), asking both Claude and ChatGPT reveals subtle discrepancies or deprecated API usages.
+2. **Real-Time Knowledge via Perplexity**:
+   - Standard LLMs have training cutoff dates. Perplexity grounds technical queries against live GitHub issues and official documentation for packages like Zod, TanStack Query, and Tailwind v4.
+3. **Multimodal Feedback via Gemini**:
+   - Uploading screenshot sketches of sitemaps and wireframes to Gemini allows rapid feedback on visual hierarchy and readability before writing CSS.
