@@ -41,4 +41,5 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - `chore`: Repository maintenance, gitignore, licensing, tooling updates
 
 
-<!-- milestone review step 26 verified 2026-08-09 -->
+
+<!-- milestone review step 29 verified 2026-08-09 -->
