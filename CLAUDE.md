@@ -36,6 +36,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - `refactor`: Code restructuring without changing external behavior
 - `perf`: Performance optimizations
 - `test`: Adding or correcting unit/integration tests
+- `build`: Changes to build systems, bundlers, or external dependencies
 
 
-<!-- milestone review step 17 verified 2026-08-08 -->
+<!-- milestone review step 20 verified 2026-08-09 -->
