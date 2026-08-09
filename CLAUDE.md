@@ -37,6 +37,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - `perf`: Performance optimizations
 - `test`: Adding or correcting unit/integration tests
 - `build`: Changes to build systems, bundlers, or external dependencies
+- `ci`: CI/CD configuration files and scripts
 
 
-<!-- milestone review step 20 verified 2026-08-09 -->
+<!-- milestone review step 23 verified 2026-08-09 -->
