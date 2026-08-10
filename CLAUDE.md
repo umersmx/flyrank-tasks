@@ -40,6 +40,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - `ci`: CI/CD configuration files and scripts
 - `chore`: Repository maintenance, gitignore, licensing, tooling updates
 
+---
 
 
-<!-- milestone review step 29 verified 2026-08-09 -->
+<!-- milestone review step 32 verified 2026-08-10 -->
