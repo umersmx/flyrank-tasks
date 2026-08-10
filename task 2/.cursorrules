@@ -1,0 +1,13 @@
+# Cursor Rules - FlyRank Frontend AI Engineering
+
+- Follow TypeScript strict mode for all frontend and utility code.
+- Always use Conventional Commits 1.0.0 for commit messages.
+- Prefer functional React components with explicit props typing.
+- Use Tailwind CSS or modular CSS aligned with modern UX best practices.
+- Avoid introducing unvalidated mock dependencies or unfinished placeholder blocks.
+- Ensure all interactive elements have semantic HTML tags and accessibility attributes.
+
+## Form & Mutation Rules (FE-02)
+- Forms must use schema validators with `.trim()` and RFC 5322 regex for emails.
+- All form controls require WCAG 2.1 AA a11y: `<label htmlFor>`, `aria-invalid`, `aria-describedby`, and `role="alert"`.
+- Form submissions must lock `isSubmitting` and disable trigger buttons to avoid duplicate mutations.
