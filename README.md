@@ -42,6 +42,7 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 | **Week 3** | `FL-03` | Kill your darlings: Curate Your Images | ✅ Complete | [ai fluency tasks/task 9/](./ai%20fluency%20tasks/task%209/) |
 | **Week 3** | `FL-03` | The Through-Line: Map Content & CTAs | ✅ Complete | [ai fluency tasks/task 10/](./ai%20fluency%20tasks/task%2010/) |
 | **Week 4** | `FL-04` | Empty but Live: Ship a Blank Page | ✅ Complete | [ai fluency tasks/task 11/](./ai%20fluency%20tasks/task%2011/) |
+| **Week 4** | `FL-04` | Three Roads: Choose Your Stack with AI | ✅ Complete | [ai fluency tasks/task 12/](./ai%20fluency%20tasks/task%2012/) |
 
 
-<!-- milestone review step 30 verified 2026-08-10 -->
+<!-- milestone review step 33 verified 2026-08-10 -->
