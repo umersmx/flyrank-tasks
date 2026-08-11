@@ -28,4 +28,5 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 ## 3. Concrete AI Mistakes Caught
 
 
-<!-- milestone review step 34 verified 2026-08-10 -->
+
+<!-- milestone review step 37 verified 2026-08-11 -->
