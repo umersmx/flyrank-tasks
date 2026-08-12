@@ -45,6 +45,7 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 | **Week 4** | `FL-04` | Three Roads: Choose Your Stack with AI | ✅ Complete | [ai fluency tasks/task 12/](./ai%20fluency%20tasks/task%2012/) |
 | **Week 4** | `FL-04` | Ship an Automation Workflow v2 | ✅ Complete | [ai fluency tasks/task 13/](./ai%20fluency%20tasks/task%2013/) |
 | **Week 4** | `FL-05` | Agent Concepts and MCP Basics | ✅ Complete | [ai fluency tasks/task 14/](./ai%20fluency%20tasks/task%2014/) |
+| **Week 5** | `FL-06` | Explain It Like You Built It | ✅ Complete | [ai fluency tasks/task 15/](./ai%20fluency%20tasks/task%2015/) |
 
 
-<!-- milestone review step 39 verified 2026-08-11 -->
+<!-- milestone review step 42 verified 2026-08-12 -->
