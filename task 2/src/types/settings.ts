@@ -9,3 +9,5 @@ export interface UserSettingsFormData {
 }
 
 export type FormErrors = Partial<Record<keyof UserSettingsFormData, string>>;
+
+export type SubmissionStatus = 'idle' | 'submitting' | 'success' | 'error';

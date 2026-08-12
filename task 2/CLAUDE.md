@@ -42,3 +42,54 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 
 ---
 
+## 3. Frontend Architecture & Code Standards
+
+### Component Guidelines
+- Use functional components with typed TypeScript interfaces:
+  ```tsx
+  interface ButtonProps {
+    variant?: 'primary' | 'secondary' | 'ghost';
+    isLoading?: boolean;
+    children: React.ReactNode;
+    onClick?: () => void;
+  }
+  ```
+- Colocate styles, tests, and component-specific utilities when appropriate.
+- Keep components focused on a single responsibility.
+- Use semantic HTML tags (`<main>`, `<nav>`, `<header>`, `<article>`, `<section>`, `<button>`).
+- Enforce accessibility (a11y): proper `aria-*` attributes, high contrast colors, and keyboard navigability.
+
+### State & Logic Separation
+- Separate UI presentation from business logic using custom hooks (`useFeatureName`).
+- Prevent direct side-effects inside render pipelines; utilize standard React lifecycle hooks or query wrappers.
+
+---
+
+## 4. AI-Assisted Development Workflow
+
+When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
+1. **Explicit Context**: Provide relevant schema, file paths, and target requirements before executing modifications.
+2. **Incremental Validation**: Always run builds, type-checks, and test suites after AI edits.
+3. **No Unfinished Placeholders**: Never introduce `// TODO` or placeholder implementations without explicit user sign-off.
+4. **Code Quality First**: Verify adherence to project conventions and design consistency.
+
+---
+
+## 5. Form Engineering & Validation Rules (FE-02 Learned Rules)
+
+The following three project rules are strictly enforced and testable:
+
+1. **Schema-First Form Validation & Trimming**:
+   - Every form must define an explicit data schema and validate inputs using isolated validator functions or Zod schemas.
+   - String inputs must be `.trim()`med before length/presence checks; bare truthy checks `if (!value)` fail code review because whitespace strings bypass them.
+   - Email fields must validate against RFC 5322 regex; naive `.includes('@')` checks fail review.
+
+2. **Non-Negotiable WCAG 2.1 AA Form Accessibility**:
+   - Every input must be linked to a `<label htmlFor={id}>` matching the input's `id`.
+   - Dynamic error states must set `aria-invalid={Boolean(error)}` and link to the error message element via `aria-describedby="{id}-error"`.
+   - Error messages must declare `role="alert"`, and async submission banners must declare `role="status"` with `aria-live="polite"`.
+
+3. **In-Flight Mutation Locking & Idempotency**:
+   - Every form submitting asynchronous actions must track an `isSubmitting` state.
+   - The submission handler must immediately guard with `if (isSubmitting) return;` to prevent race conditions.
+   - The submission trigger must render with `disabled={isSubmitting}` and `aria-busy={isSubmitting}` to prevent duplicate clicks.

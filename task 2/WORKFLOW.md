@@ -30,3 +30,33 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 1. **Whitespace-Only Bypass**: Round 1 validated `if (!name)`. An input containing `'   '` evaluated as truthy, successfully bypassing required validation. Caught and fixed in Round 2 using `.trim()`.
 2. **Naive Email Verification**: Round 1 used `!email.includes('@')`, accepting malformed inputs like `"alex@"` or `"@domain"`. Caught and replaced with `EMAIL_REGEX` validating top-level domains and formatting.
 3. **Double-Submit Race Condition**: Round 1 omitted in-flight submission locking. Rapid clicks triggered concurrent API requests. Caught and fixed with `isSubmitting` guards:
+```diff
+- setTimeout(() => { setSuccess(true); }, 500);
++ if (isSubmitting) return;
++ setStatus('submitting');
++ // ... disables <button disabled={isSubmitting} aria-busy={isSubmitting}>
+```
+
+---
+
+## 4. Accessibility (a11y) & Edge Cases
+
+Round 1 failed WCAG 2.1 AA: `<label>` tags lacked `htmlFor`, inputs lacked `id` references, and error messages had no ARIA linkages.
+
+```diff
+- <label className="form-label">Full Name</label>
+- <input className="form-input" type="text" value={name} />
++ <label htmlFor="fullName" className="form-label">Full Name *</label>
++ <input id="fullName" aria-required="true" aria-invalid={Boolean(errors.fullName)} aria-describedby="fullName-error" />
++ {errors.fullName && <p id="fullName-error" role="alert" className="form-error">{errors.fullName}</p>}
+```
+
+Round 2 guarantees full screen-reader announcements via `role="alert"`, `aria-describedby`, and live-region feedback (`role="status"`, `aria-live="polite"`).
+
+---
+
+## 5. Review Effort & Time Trade-Off
+
+- **Round 1**: Prompt authoring took **15 seconds**, but generated code required **25 minutes** of manual code auditing, fixing regex flaws, wiring missing a11y tags, and writing missing tests.
+- **Round 2**: Prompt formulation took **3 minutes**, generating a production-ready component, validation utility, and 5 passing unit tests on the first execution.
+- **Key Takeaway**: Prompting with constraints and verification loops feels slower up-front but is dramatically faster end-to-end.

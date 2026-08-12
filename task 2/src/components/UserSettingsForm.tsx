@@ -167,3 +167,79 @@ export const UserSettingsForm: React.FC<UserSettingsFormProps> = ({
           )}
         </div>
 
+        {/* Bio */}
+        <div className="form-group">
+          <label htmlFor="bio" className="form-label">
+            Bio
+          </label>
+          <textarea
+            id="bio"
+            name="bio"
+            rows={3}
+            className={`form-textarea ${errors.bio ? 'error' : ''}`}
+            value={formData.bio}
+            onChange={handleChange}
+            placeholder="Tell us about your engineering experience..."
+            disabled={isSubmitting}
+            maxLength={MAX_BIO_LENGTH}
+            aria-invalid={Boolean(errors.bio)}
+            aria-describedby="bio-count"
+          />
+          <div id="bio-count" className="char-count" aria-live="polite">
+            {formData.bio.length}/{MAX_BIO_LENGTH} characters
+          </div>
+          {errors.bio && (
+            <p id="bio-error" role="alert" className="form-error">
+              {errors.bio}
+            </p>
+          )}
+        </div>
+
+        {/* Role */}
+        <div className="form-group">
+          <label htmlFor="role" className="form-label">
+            Primary Role <span aria-hidden="true">*</span>
+          </label>
+          <select
+            id="role"
+            name="role"
+            className="form-select"
+            value={formData.role}
+            onChange={handleChange}
+            disabled={isSubmitting}
+          >
+            <option value="developer">Frontend / Fullstack Developer</option>
+            <option value="designer">UI/UX Designer</option>
+            <option value="manager">Engineering Manager</option>
+            <option value="researcher">AI Researcher</option>
+          </select>
+        </div>
+
+        {/* Email Notifications Toggle */}
+        <div className="checkbox-group">
+          <input
+            id="emailNotifications"
+            name="emailNotifications"
+            type="checkbox"
+            checked={formData.emailNotifications}
+            onChange={handleChange}
+            disabled={isSubmitting}
+          />
+          <label htmlFor="emailNotifications">
+            Subscribe to AI engineering digest and product updates
+          </label>
+        </div>
+
+        {/* Submit Action */}
+        <button
+          type="submit"
+          className="btn-submit"
+          disabled={isSubmitting}
+          aria-busy={isSubmitting}
+        >
+          {isSubmitting ? 'Saving Changes...' : 'Save Settings'}
+        </button>
+      </form>
+    </div>
+  );
+};

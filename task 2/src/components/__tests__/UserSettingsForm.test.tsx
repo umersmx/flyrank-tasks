@@ -87,3 +87,38 @@ describe('UserSettingsForm (Round 2 Verified Specification)', () => {
     await waitFor(() => {
       expect(
         screen.getByText(/Settings have been saved successfully/i)
+      ).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /Save Settings/i })).toBeEnabled();
+    });
+  });
+
+  it('successfully invokes onSave with trimmed data on valid submission', async () => {
+    const onSaveMock = vi.fn().mockResolvedValue(undefined);
+    render(<UserSettingsForm onSave={onSaveMock} />);
+
+    fireEvent.change(screen.getByLabelText(/Full Name/i), {
+      target: { value: '  Sarah Connor  ' },
+    });
+    fireEvent.change(screen.getByLabelText(/Email Address/i), {
+      target: { value: 'sarah@sky.net' },
+    });
+    fireEvent.change(screen.getByLabelText(/Bio/i), {
+      target: { value: 'Building resilient AI agents.' },
+    });
+
+    fireEvent.click(screen.getByRole('button', { name: /Save Settings/i }));
+
+    await waitFor(() => {
+      expect(onSaveMock).toHaveBeenCalledWith({
+        fullName: '  Sarah Connor  ',
+        email: 'sarah@sky.net',
+        bio: 'Building resilient AI agents.',
+        role: 'developer',
+        emailNotifications: false,
+      });
+      expect(
+        screen.getByText(/Settings have been saved successfully/i)
+      ).toBeInTheDocument();
+    });
+  });
+});

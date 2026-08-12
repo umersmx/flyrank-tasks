@@ -36,3 +36,9 @@ export function validateSettingsForm(data: UserSettingsFormData): { isValid: boo
   if (!validRoles.includes(data.role)) {
     errors.role = 'Please select a valid role.';
   }
+
+  return {
+    isValid: Object.keys(errors).length === 0,
+    errors,
+  };
+}

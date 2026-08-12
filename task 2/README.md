@@ -23,3 +23,29 @@ The feature was implemented independently across two branches:
 
 ```bash
 # Navigate to task 2
+cd "task 2"
+
+# Install dependencies
+npm install
+
+# Run automated unit tests
+npm test
+
+# Start dev server
+npm run dev
+
+# Production build
+npm run build
+```
+
+---
+
+## 📊 Summary of Findings & Mistakes Caught
+
+Read the complete comparative analysis in [WORKFLOW.md](WORKFLOW.md).
+
+Key AI mistakes caught and resolved in Round 2:
+1. **Whitespace-Only Bypass**: Round 1 evaluated `"   "` as truthy. Fixed with `.trim()` in `validation.ts`.
+2. **Weak Email Regex**: Round 1 used `.includes('@')` (accepting `test@`). Fixed with RFC 5322 regex validation.
+3. **Double-Submit Bug**: Round 1 omitted in-flight submission locks. Fixed with `isSubmitting` state and `disabled` buttons.
+4. **WCAG Accessibility Failures**: Round 1 lacked `htmlFor`, `id`, and ARIA linkages. Fixed with complete `aria-invalid`, `aria-describedby`, and `role="alert"` announcements.
