@@ -30,4 +30,4 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 1. **Whitespace-Only Bypass**: Round 1 validated `if (!name)`. An input containing `'   '` evaluated as truthy, successfully bypassing required validation. Caught and fixed in Round 2 using `.trim()`.
 
 
-<!-- milestone review step 40 verified 2026-08-12 -->
+<!-- milestone review step 43 verified 2026-08-12 -->
