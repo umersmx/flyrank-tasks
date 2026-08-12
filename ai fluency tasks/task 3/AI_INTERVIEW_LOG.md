@@ -38,3 +38,14 @@ Let's begin."
 > **Claude**: "Stop right there. That answer describes at least 70,000 other university students and bootcamp grads applying for tech roles this week. You fell into the classic 'and' trap: full-stack *and* web *and* AI tools *and* React *and* Python. 
 > 
 > Let's strip away everything. Think about the last two projects you spent late nights debugging. What was the exact technical problem that genuinely engaged you? Not what you think sounds impressive—what did you actually build?"
+
+---
+
+### Turn 2: Finding the Real Friction
+**Muhammad Umer**:
+> "I've been working on FlyRank frontend assignments with generative UI components. Specifically, when you connect an LLM API to a React frontend and stream tokens in real-time, it's really messy. The layout jumps around, keyboard navigation breaks while tokens are streaming, and if the API drops midway, standard error boundaries crash the whole page. I spent hours building schema validation with Zod, adding strict TypeScript types, and making sure the UI passes WCAG AA accessibility tests even while the model is responding."
+
+> **Claude**: "Now we're getting somewhere real. That is a completely different universe from 'I build full-stack web apps.' You are talking about the intersection of **frontend engineering, real-time streaming state, and strict accessibility for generative AI**. 
+> 
+> If you had to stake your entire portfolio on *one* sentence about this skill, how would you state it without using the word 'full-stack' or 'passionate'?"
+
