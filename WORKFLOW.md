@@ -28,6 +28,7 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 ## 3. Concrete AI Mistakes Caught
 
 1. **Whitespace-Only Bypass**: Round 1 validated `if (!name)`. An input containing `'   '` evaluated as truthy, successfully bypassing required validation. Caught and fixed in Round 2 using `.trim()`.
+2. **Naive Email Verification**: Round 1 used `!email.includes('@')`, accepting malformed inputs like `"alex@"` or `"@domain"`. Caught and replaced with `EMAIL_REGEX` validating top-level domains and formatting.
 
 
-<!-- milestone review step 43 verified 2026-08-12 -->
+<!-- milestone review step 46 verified 2026-08-13 -->
