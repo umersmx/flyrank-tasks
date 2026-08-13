@@ -45,6 +45,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 ## 3. Frontend Architecture & Code Standards
 
 ### Component Guidelines
+- Use functional components with typed TypeScript interfaces:
 
 
-<!-- milestone review step 44 verified 2026-08-13 -->
+<!-- milestone review step 47 verified 2026-08-13 -->
