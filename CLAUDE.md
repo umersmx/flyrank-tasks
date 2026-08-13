@@ -44,6 +44,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 
 ## 3. Frontend Architecture & Code Standards
 
+### Component Guidelines
 
 
-<!-- milestone review step 41 verified 2026-08-12 -->
+<!-- milestone review step 44 verified 2026-08-13 -->
