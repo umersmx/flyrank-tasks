@@ -46,6 +46,7 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 | **Week 4** | `FL-04` | Ship an Automation Workflow v2 | ✅ Complete | [ai fluency tasks/task 13/](./ai%20fluency%20tasks/task%2013/) |
 | **Week 4** | `FL-05` | Agent Concepts and MCP Basics | ✅ Complete | [ai fluency tasks/task 14/](./ai%20fluency%20tasks/task%2014/) |
 | **Week 5** | `FL-06` | Explain It Like You Built It | ✅ Complete | [ai fluency tasks/task 15/](./ai%20fluency%20tasks/task%2015/) |
+| **Week 5** | `FL-06` | Design Your Personal Agent | ✅ Complete | [ai fluency tasks/task 16/](./ai%20fluency%20tasks/task%2016/) |
 
 
-<!-- milestone review step 42 verified 2026-08-12 -->
+<!-- milestone review step 45 verified 2026-08-13 -->
