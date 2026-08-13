@@ -54,3 +54,11 @@ ai fluency tasks/task 3/
 
 ---
 
+## 🤖 4. AI as Thinking Partner: The Narrowing Interview
+
+Rather than generating generic marketing text, Claude was instructed to act as a **Socratic interrogator**. Over multiple conversational turns, it challenged initial generic claims:
+- **Challenge 1**: Pushed back against the generic *"full-stack developer who builds web and AI apps"* label.
+- **Challenge 2**: Uncovered genuine late-night engineering friction: handling streaming token UI glitches, layout shifts, Zod schema validation, and WCAG AA accessibility.
+- **Challenge 3**: Clarified the true decision-maker (the Frontend EM who is tired of fragile AI wrappers).
+- **Challenge 4**: Focused the conversion funnel down to one measurable, high-signal action: a 15-minute walkthrough call.
+
