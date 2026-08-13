@@ -30,3 +30,12 @@
 The brief requires: *"plus one before/after: a generic AI line next to your edited version."*
 
 | Content Beat | Generic AI Line (The Trap) | Hard-Edited Voice (My Authentic Words) | Why the Edit Wins Trust |
+| :--- | :--- | :--- | :--- |
+| **Case 1: The Problem** | *"In today's fast-paced AI landscape, developing cutting-edge generative interfaces presents multifaceted latency challenges, causing subpar user engagement and suboptimal digital experiences."* | *"When an LLM streams tokens into a React component, text jumps around like crazy, keyboard focus vanishes, and if the API drops midway, the whole page crashes to white."* | Cuts 25 buzzwords down to the physical, visual bug any frontend engineer instantly recognizes. |
+| **Case 1: What I Did** | *"I leveraged industry-standard state-of-the-art React best practices to spearhead an innovative, seamless streaming architecture with robust error mechanisms."* | *"I decoupled the streaming buffer from the DOM tree, wrapped generative cards in isolated error boundaries with cached fallback states, and locked down layout shifts using fixed skeletal bounds."* | Replaces meaningless corporate verbs (*"leveraged," "spearheaded"*) with actual architectural decisions. |
+| **Case 2: The Result** | *"The revolutionary validation framework successfully drove exponential developer productivity and fostered unparalleled user satisfaction metrics."* | *"Zero uncaught hydration exceptions across 50 simulated network drops, 100% WCAG 2.1 AA keyboard compliance, and forms that never submit twice when a user double-clicks."* | Swaps imaginary *"unparalleled metrics"* for concrete, testable engineering guarantees. |
+
+---
+
+## 📦 4. Case Study 1: Generative Streaming UI & Resilient Error Boundaries
+
