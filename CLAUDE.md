@@ -46,6 +46,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 
 ### Component Guidelines
 - Use functional components with typed TypeScript interfaces:
+  ```tsx
 
 
-<!-- milestone review step 47 verified 2026-08-13 -->
+<!-- milestone review step 50 verified 2026-08-14 -->
