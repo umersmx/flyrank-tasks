@@ -40,3 +40,19 @@ Prompt:
 
 ---
 
+## 📦 Session 3: Interview for Case Study 2 (Schema Form Validation)
+
+> **Claude**: "Now for the user settings form. What problem did you set out to solve?"
+
+**Muhammad Umer**:
+> "Most form validation I see from junior developers is lazy: `if (!value)` checks and red text. People can bypass it by typing spaces. Email checks only look for an `@` symbol. Worse, screen readers never announce the errors because nobody hooks up `aria-describedby` or `role='alert'`. And when users smash the submit button on slow Wi-Fi, it fires three API calls at once."
+
+> **Claude**: "What concrete decisions did you make to fix those three problems?"
+
+**Muhammad Umer**:
+> "First, every string field runs `.trim()` before any length checks, and emails must pass RFC 5322 regex. Second, I enforced WCAG 2.1 AA: every input has a permanent label matching its ID, and error states dynamically inject `aria-invalid="true"` linked to `aria-describedby="{id}-error"`. Third, the submit handler immediately returns if `isSubmitting` is true, and the button gets disabled and marked `aria-busy`."
+
+> **Claude**: "What is the honest result and what would you improve?"
+
+**Muhammad Umer**:
+> "All 18 Vitest unit tests pass covering whitespace injections and rapid-fire submit clicks, and Lighthouse accessibility scored 100/100. Next time, I'd use a dedicated form state machine like TanStack Form to handle multi-step flows without writing boilerplate blur handlers."
