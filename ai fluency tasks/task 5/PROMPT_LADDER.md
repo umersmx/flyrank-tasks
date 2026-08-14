@@ -137,3 +137,41 @@ const userSettingsSchema = z.object({
   username: z.string().min(3, 'Username must be at least 3 characters'),
   email: z.string().email('Invalid email address'),
   bio: z.string().max(160, 'Bio cannot exceed 160 characters'),
+});
+
+type UserSettingsFormData = z.infer<typeof userSettingsSchema>;
+
+export const UserSettingsForm = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm<UserSettingsFormData>({
+    resolver: zodResolver(userSettingsSchema),
+  });
+  // ...
+```
+
+#### Notes on Run 2:
+* **What changed in prompt**: Added a specified output format layer requiring a Zod schema and inferred TypeScript types.
+* **What actually improved in output**: Centralized validation rules out of component render logic into a robust `z.object()` declaration with built-in email formatting.
+* **What still failed (HONEST "MADE IT WORSE" MOMENT)**:
+  > ⚠️ **The Output Got Worse**: By asking for Zod without restricting dependencies, the AI unprompted imported `react-hook-form` and `@hookform/resolvers/zod`. This broke the project build because neither package was installed in our project! It also hid raw React form mechanics behind external library abstraction and still had zero ARIA attributes.
+* **What to try next**: Add **Constraints** forbidding third-party form wrappers, mandating native React 19 hooks only, and requiring string trimming.
+
+---
+
+### Run 3: Adding Constraints (Fixing the Regression)
+
+#### Prompt:
+```text
+Write a React form component with validation.
+We are building a User Settings profile form in React 19 with TypeScript strict mode enabled. The form allows users to update their username (min 3 chars), email address, and a short bio (max 160 chars).
+Structure the validation by defining a decoupled Zod schema (userSettingsSchema) and infer TypeScript types directly from it. Return validation errors formatted as a typed record keyed by field name.
+[ADDED LAYER: Constraints]
+Do NOT use external form libraries like react-hook-form or Formik; use ONLY native React 19 hooks and Zod. All string inputs must be explicitly .trim()med before validation so whitespace-only submissions fail.
+```
+
+#### Output Excerpt:
+```tsx
+import React, { useState } from 'react';
+import { z } from 'zod';
+
+export const userSettingsSchema = z.object({
+  username: z.string().trim().min(3, 'Username must be at least 3 characters'),
