@@ -53,3 +53,13 @@ In **Run 2**, adding the *Specified Output Format* layer (`"Zod schema validatio
 
 **Takeaway**: Asking an AI model for an advanced structural pattern without negative constraints creates permission for dependency bloat. This directly informed **Run 3's constraints layer** banning external form wrappers.
 
+---
+
+## 🏆 The Final Reusable Prompt (Parameter Ready)
+
+```markdown
+# Context & Objective
+Act as a Principal Frontend Engineer. Author a production-grade React 19 form component in strict TypeScript for {FORM_NAME} with the following fields:
+{FIELD_SPECIFICATIONS}
+
+# Architecture & Validation
