@@ -48,6 +48,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - Use functional components with typed TypeScript interfaces:
   ```tsx
   interface ButtonProps {
+    variant?: 'primary' | 'secondary' | 'ghost';
 
 
-<!-- milestone review step 53 verified 2026-08-15 -->
+<!-- milestone review step 56 verified 2026-08-15 -->
