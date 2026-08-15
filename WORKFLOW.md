@@ -31,6 +31,7 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 2. **Naive Email Verification**: Round 1 used `!email.includes('@')`, accepting malformed inputs like `"alex@"` or `"@domain"`. Caught and replaced with `EMAIL_REGEX` validating top-level domains and formatting.
 3. **Double-Submit Race Condition**: Round 1 omitted in-flight submission locking. Rapid clicks triggered concurrent API requests. Caught and fixed with `isSubmitting` guards:
 ```diff
+- setTimeout(() => { setSuccess(true); }, 500);
 
 
-<!-- milestone review step 55 verified 2026-08-15 -->
+<!-- milestone review step 58 verified 2026-08-15 -->
