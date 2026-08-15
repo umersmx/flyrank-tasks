@@ -32,6 +32,7 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 3. **Double-Submit Race Condition**: Round 1 omitted in-flight submission locking. Rapid clicks triggered concurrent API requests. Caught and fixed with `isSubmitting` guards:
 ```diff
 - setTimeout(() => { setSuccess(true); }, 500);
++ if (isSubmitting) return;
 
 
-<!-- milestone review step 61 verified 2026-08-15 -->
+<!-- milestone review step 64 verified 2026-08-15 -->
