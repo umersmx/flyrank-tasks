@@ -49,6 +49,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
   ```tsx
   interface ButtonProps {
     variant?: 'primary' | 'secondary' | 'ghost';
+    isLoading?: boolean;
 
 
-<!-- milestone review step 56 verified 2026-08-15 -->
+<!-- milestone review step 59 verified 2026-08-15 -->
