@@ -50,6 +50,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
   interface ButtonProps {
     variant?: 'primary' | 'secondary' | 'ghost';
     isLoading?: boolean;
+    children: React.ReactNode;
 
 
-<!-- milestone review step 59 verified 2026-08-15 -->
+<!-- milestone review step 62 verified 2026-08-15 -->
