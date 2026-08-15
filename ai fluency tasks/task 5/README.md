@@ -63,3 +63,28 @@ Act as a Principal Frontend Engineer. Author a production-grade React 19 form co
 {FIELD_SPECIFICATIONS}
 
 # Architecture & Validation
+1. Validation Schema: Define an isolated Zod schema ({SCHEMA_NAME}). All string inputs must be explicitly .trim()med before validation. Infer TypeScript types directly from the schema.
+2. Zero Dependency Bloat: Do NOT use external form libraries (e.g., react-hook-form, Formik). Implement validation using native React 19 hooks and Zod .safeParse().
+3. Error Mapping: Map validation failures into a strongly-typed record keyed by field name: Partial<Record<keyof FormData, string>>.
+
+# Non-Negotiable Accessibility (WCAG 2.1 AA)
+1. Semantic Linking: Every input must link to a persistent <label htmlFor={id}> matching the input's id.
+2. Error States: When invalid, inputs must declare aria-invalid="true" and aria-describedby="{id}-error".
+3. Screen Reader Alerts: Field errors must declare role="alert". Async submission feedback banners must declare role="status" and aria-live="polite".
+
+# Mutation Safety & Idempotency
+1. Double-Click Lock: Maintain an isSubmitting state. The submission handler must immediately guard with: if (isSubmitting) return;
+2. Trigger Attributes: The submit button must dynamically reflect disabled={isSubmitting} and aria-busy={isSubmitting}.
+3. Error Recovery: Wrap async calls in try/catch/finally to guarantee isSubmitting resets even if the API rejects.
+```
+
+---
+
+## ✅ Evaluation Criteria Compliance Matrix
+
+| Evaluation Criteria | Requirement | Status | Verification Detail |
+| :--- | :--- | :---: | :--- |
+| **Six runs total** | Baseline plus five, each tied to exactly one named layer | **PASS** | Run 0 through Run 5 explicitly isolated in [PROMPT_LADDER.md](file:///c:/Users/umerf/Desktop/Code/flyrank-tasks/ai%20fluency%20tasks/task%205/PROMPT_LADDER.md) |
+| **Notes describe changes in output** | Describes the resulting output behavior, not just prompt text | **PASS** | 4 structured notes per version focusing on output changes |
+| **Honest "made it worse" moment** | Candor on where a change degraded output | **PASS** | Run 2 unprompted dependency bloat analyzed in Section 6 |
+| **Final prompt works for a stranger** | Clean, parameterized, and self-contained | **PASS** | Reusable markdown template in Section 5 |

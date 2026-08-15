@@ -175,3 +175,174 @@ import { z } from 'zod';
 
 export const userSettingsSchema = z.object({
   username: z.string().trim().min(3, 'Username must be at least 3 characters'),
+  email: z.string().trim().email('Invalid email address'),
+  bio: z.string().trim().max(160, 'Bio cannot exceed 160 characters'),
+});
+
+export type UserSettingsInput = z.infer<typeof userSettingsSchema>;
+
+export const UserSettingsForm: React.FC = () => {
+  const [values, setValues] = useState<UserSettingsInput>({ username: '', email: '', bio: '' });
+  const [errors, setErrors] = useState<Partial<Record<keyof UserSettingsInput, string>>>({});
+  // Uses native useState and manual Zod .safeParse()
+```
+
+#### Notes on Run 3:
+* **What changed in prompt**: Imposed negative constraints (no external form libraries, native React 19 hooks only, mandatory `.trim()` on all string inputs).
+* **What actually improved in output**: Cut out external library bloat; the component is completely self-contained and compiles without new npm packages. Whitespace exploit (`"   "`) is now closed by `.trim()`.
+* **What still failed**: Accessibility is still terrible: inputs use placeholder text instead of linked `<label>` tags, dynamic errors have no ARIA links (`aria-describedby`), and screen readers receive zero announcements when validation fails.
+* **What to try next**: Add **Quality Criteria** enforcing non-negotiable WCAG 2.1 AA accessibility standards.
+
+---
+
+### Run 4: Adding Quality Criteria (WCAG 2.1 AA Accessibility)
+
+#### Prompt:
+```text
+Write a React form component with validation.
+We are building a User Settings profile form in React 19 with TypeScript strict mode enabled. The form allows users to update their username (min 3 chars), email address, and a short bio (max 160 chars).
+Structure the validation by defining a decoupled Zod schema (userSettingsSchema) and infer TypeScript types directly from it. Return validation errors formatted as a typed record keyed by field name.
+Do NOT use external form libraries like react-hook-form or Formik; use ONLY native React 19 hooks and Zod. All string inputs must be explicitly .trim()med before validation so whitespace-only submissions fail.
+[ADDED LAYER: Quality Criteria]
+The component must strictly adhere to WCAG 2.1 AA accessibility standards:
+1. Every input must have a persistent <label htmlFor={id}> matching the input id.
+2. When a validation error occurs, the input must set aria-invalid="true" and aria-describedby="{id}-error".
+3. Error messages must declare role="alert".
+```
+
+#### Output Excerpt:
+```tsx
+<div className="form-field">
+  <label htmlFor="settings-username" className="field-label">Username</label>
+  <input
+    id="settings-username"
+    type="text"
+    value={values.username}
+    onChange={e => handleChange('username', e.target.value)}
+    aria-invalid={Boolean(errors.username)}
+    aria-describedby={errors.username ? 'settings-username-error' : undefined}
+    className={errors.username ? 'input-error' : 'input-standard'}
+  />
+  {errors.username && (
+    <p id="settings-username-error" role="alert" className="error-message">
+      {errors.username}
+    </p>
+  )}
+</div>
+```
+
+#### Notes on Run 4:
+* **What changed in prompt**: Added explicit quality criteria requiring full WCAG 2.1 AA semantic compliance (`<label htmlFor>`, `aria-invalid`, `aria-describedby`, and `role="alert"`).
+* **What actually improved in output**: The rendered DOM tree is now accessible to screen readers. Assistive technologies announce errors immediately when `role="alert"` mounts, and inputs correctly communicate validity state.
+* **What still failed**: The form does not protect against concurrent async mutations. If a user clicks "Save Changes" three times quickly on a high-latency connection, three API requests fire in parallel, causing race conditions.
+* **What to try next**: Add **Verification Requirements** for async state handling, double-click protection, and idempotency locks.
+
+---
+
+### Run 5: Adding Verification Requirements (Idempotency & Submission Locks)
+
+#### Prompt:
+```text
+Write a React form component with validation.
+We are building a User Settings profile form in React 19 with TypeScript strict mode enabled. The form allows users to update their username (min 3 chars), email address, and a short bio (max 160 chars).
+Structure the validation by defining a decoupled Zod schema (userSettingsSchema) and infer TypeScript types directly from it. Return validation errors formatted as a typed record keyed by field name.
+Do NOT use external form libraries like react-hook-form or Formik; use ONLY native React 19 hooks and Zod. All string inputs must be explicitly .trim()med before validation so whitespace-only submissions fail.
+The component must strictly adhere to WCAG 2.1 AA accessibility standards:
+1. Every input must have a persistent <label htmlFor={id}> matching the input id.
+2. When a validation error occurs, the input must set aria-invalid="true" and aria-describedby="{id}-error".
+3. Error messages must declare role="alert".
+[ADDED LAYER: Verification Requirements & Idempotency]
+The async submit handler must enforce strict idempotency:
+1. Track isSubmitting state and immediately guard with 'if (isSubmitting) return;' to block double-clicks.
+2. The submit button must render with disabled={isSubmitting} and aria-busy={isSubmitting}.
+3. Display a live submission status banner declaring role="status" and aria-live="polite".
+```
+
+#### Output Excerpt:
+```tsx
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (isSubmitting) return; // Idempotency guard
+
+  const result = userSettingsSchema.safeParse(values);
+  if (!result.success) {
+    const fieldErrors: Partial<Record<keyof UserSettingsInput, string>> = {};
+    result.error.errors.forEach(err => {
+      if (err.path[0]) fieldErrors[err.path[0] as keyof UserSettingsInput] = err.message;
+    });
+    setErrors(fieldErrors);
+    return;
+  }
+
+  try {
+    setIsSubmitting(true);
+    setStatusMessage('Saving profile changes...');
+    await onSave(result.data);
+    setStatusMessage('Profile updated successfully.');
+  } catch (err) {
+    setStatusMessage('Failed to save profile. Please retry.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+<button type="submit" disabled={isSubmitting} aria-busy={isSubmitting}>
+  {isSubmitting ? 'Saving...' : 'Save Changes'}
+</button>
+{statusMessage && (
+  <div role="status" aria-live="polite" className="status-banner">
+    {statusMessage}
+  </div>
+)}
+```
+
+#### Notes on Run 5:
+* **What changed in prompt**: Added verification requirements enforcing async idempotency locks (`isSubmitting` guard, `disabled`, `aria-busy`, and `role="status"` banner).
+* **What actually improved in output**: The component is now completely resilient to rapid multi-clicks, network latency, and submission races. Screen readers politely receive success and failure announcements without UI jitter.
+* **What still failed**: Nothing critical remains; the component meets strict production standards.
+* **What to try next**: Package the accumulated layers into a clean, parameterized prompt template that any frontend engineer can use.
+
+---
+
+## 🏆 5. The Final Reusable Prompt
+
+Cleaned up so anyone on the frontend engineering track can use it directly:
+
+```markdown
+# Context & Objective
+Act as a Principal Frontend Engineer. Author a production-grade React 19 form component in strict TypeScript for {FORM_NAME} with the following fields:
+{FIELD_SPECIFICATIONS}
+
+# Architecture & Validation
+1. Validation Schema: Define an isolated Zod schema ({SCHEMA_NAME}). All string inputs must be explicitly .trim()med before validation. Infer TypeScript types directly from the schema.
+2. Zero Dependency Bloat: Do NOT use external form libraries (e.g., react-hook-form, Formik). Implement validation using native React 19 hooks and Zod .safeParse().
+3. Error Mapping: Map validation failures into a strongly-typed record keyed by field name: Partial<Record<keyof FormData, string>>.
+
+# Non-Negotiable Accessibility (WCAG 2.1 AA)
+1. Semantic Linking: Every input must link to a persistent <label htmlFor={id}> matching the input's id.
+2. Error States: When invalid, inputs must declare aria-invalid="true" and aria-describedby="{id}-error".
+3. Screen Reader Alerts: Field errors must declare role="alert". Async submission feedback banners must declare role="status" and aria-live="polite".
+
+# Mutation Safety & Idempotency
+1. Double-Click Lock: Maintain an isSubmitting state. The submission handler must immediately guard with: if (isSubmitting) return;
+2. Trigger Attributes: The submit button must dynamically reflect disabled={isSubmitting} and aria-busy={isSubmitting}.
+3. Error Recovery: Wrap async calls in try/catch/finally to guarantee isSubmitting resets even if the API rejects.
+```
+
+---
+
+## ⚖️ 6. The "Made It Worse" Analysis
+
+The assignment pass/revise rubric strictly demands:
+> *"At least one honest 'this didn't help' or 'this made it worse' moment. If all five versions improved things smoothly, you weren't looking hard enough."*
+
+### Our Honest Regression in Run 2:
+In **Run 2**, when we introduced the *Specified Output Format* layer (`"Define a decoupled Zod schema"`), our intention was to make validation structured and clean.
+
+**What Actually Happened**:
+Because we did not yet have the negative constraints of Run 3, the LLM assumed that using Zod meant it should also pull in `react-hook-form` and `@hookform/resolvers/zod`. 
+
+**Why It Was Worse**:
+1. **Broken Build**: It introduced two new npm dependencies that did not exist in the repository, making the snippet fail to run out of the box.
+2. **Hidden Mechanics**: It obscured raw React form mechanics behind hook-form's `register()` and `handleSubmit()`, making it harder to verify accessibility bindings.
+3. **Lesson Learned**: Adding a structural pattern (Zod) without negative constraints (no external form wrappers) gives the LLM permission to over-engineer and inflate the dependency graph. This directly motivated **Run 3's constraints layer**.

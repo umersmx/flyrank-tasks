@@ -55,3 +55,14 @@ Repository Folder: https://github.com/umersmx/flyrank-tasks/tree/main/ai%20fluen
 The brief requires:
 > *"A prompt ladder document containing the weak baseline plus five versions, the output (or a representative excerpt) for each, your four notes per version, and the final reusable prompt."*
 
+Click **Choose Files** and upload:
+1. **`PROMPT_LADDER.md`** from `ai fluency tasks/task 5/PROMPT_LADDER.md` (or export it as a PDF).
+
+---
+
+## 3. Evaluation Checklist (Pass / Revise)
+
+- [x] **Six runs total**: Baseline plus five, each tied to exactly one named layer.
+- [x] **Notes describe changes in the output**: Focused on resulting behavior, not just prompt changes.
+- [x] **Honest "made it worse" moment**: Documented in Run 2 (dependency bloat from react-hook-form).
+- [x] **Final prompt works for a stranger**: Clean, modular, parameterized template provided.
