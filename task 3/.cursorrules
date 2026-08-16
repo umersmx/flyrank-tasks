@@ -1,0 +1,9 @@
+# Cursor Rules — Task 3 (FE-03)
+
+- **Framework**: React 18 + TypeScript + Vite.
+- **Styling**: Vanilla CSS with custom properties in `src/index.css`. Glassmorphism and responsive grid systems.
+- **Icons**: `lucide-react`.
+- **Architecture**: MVVM / Custom Hooks (`src/hooks/`). Do not mix raw API fetch logic directly inside presentation components.
+- **Concurrency**: All async data fetching must support `AbortController` cancellation.
+- **Accessibility**: Include ARIA labels on icon buttons, keyboard handlers (`onKeyDown`) for non-button interactive elements, and Escape key dismissal for modals.
+- **Testing**: Maintain Vitest unit tests in `src/test/` for all custom hooks and core business logic.
