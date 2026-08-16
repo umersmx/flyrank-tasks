@@ -33,6 +33,7 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 ```diff
 - setTimeout(() => { setSuccess(true); }, 500);
 + if (isSubmitting) return;
++ setStatus('submitting');
 
 
-<!-- milestone review step 64 verified 2026-08-15 -->
+<!-- milestone review step 67 verified 2026-08-16 -->
