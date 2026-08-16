@@ -53,6 +53,7 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 
 ## 🛠️ Environment & Prerequisites
 
+Ensure the following core tools are installed on your workstation:
 
 
-<!-- milestone review step 63 verified 2026-08-15 -->
+<!-- milestone review step 66 verified 2026-08-16 -->
