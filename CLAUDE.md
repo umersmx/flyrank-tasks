@@ -52,6 +52,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
     isLoading?: boolean;
     children: React.ReactNode;
     onClick?: () => void;
+  }
 
 
-<!-- milestone review step 65 verified 2026-08-15 -->
+<!-- milestone review step 68 verified 2026-08-16 -->
