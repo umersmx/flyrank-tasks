@@ -53,6 +53,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
     children: React.ReactNode;
     onClick?: () => void;
   }
+  ```
 
 
-<!-- milestone review step 68 verified 2026-08-16 -->
+<!-- milestone review step 71 verified 2026-08-17 -->
