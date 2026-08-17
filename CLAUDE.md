@@ -54,6 +54,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
     onClick?: () => void;
   }
   ```
+- Colocate styles, tests, and component-specific utilities when appropriate.
 
 
-<!-- milestone review step 71 verified 2026-08-17 -->
+<!-- milestone review step 74 verified 2026-08-17 -->
