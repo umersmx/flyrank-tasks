@@ -56,6 +56,7 @@ This repository contains the weekly assignments, hands-on tasks, and capstone pr
 Ensure the following core tools are installed on your workstation:
 
 ```bash
+# Node.js LTS (v20+ recommended)
 
 
-<!-- milestone review step 72 verified 2026-08-17 -->
+<!-- milestone review step 75 verified 2026-08-17 -->
