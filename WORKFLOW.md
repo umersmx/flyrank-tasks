@@ -34,6 +34,7 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 - setTimeout(() => { setSuccess(true); }, 500);
 + if (isSubmitting) return;
 + setStatus('submitting');
++ // ... disables <button disabled={isSubmitting} aria-busy={isSubmitting}>
 
 
-<!-- milestone review step 70 verified 2026-08-16 -->
+<!-- milestone review step 73 verified 2026-08-17 -->
