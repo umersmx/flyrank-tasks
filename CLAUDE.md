@@ -56,6 +56,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
   ```
 - Colocate styles, tests, and component-specific utilities when appropriate.
 - Keep components focused on a single responsibility.
+- Use semantic HTML tags (`<main>`, `<nav>`, `<header>`, `<article>`, `<section>`, `<button>`).
 
 
-<!-- milestone review step 77 verified 2026-08-17 -->
+<!-- milestone review step 80 verified 2026-08-18 -->
