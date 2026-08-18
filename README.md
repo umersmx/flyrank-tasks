@@ -57,6 +57,7 @@ Ensure the following core tools are installed on your workstation:
 
 ```bash
 # Node.js LTS (v20+ recommended)
+node -v
 
 
-<!-- milestone review step 75 verified 2026-08-17 -->
+<!-- milestone review step 78 verified 2026-08-18 -->
