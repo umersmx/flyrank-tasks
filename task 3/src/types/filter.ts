@@ -8,3 +8,4 @@ export interface FilterState {
   year: string;
   genre: string;
   sortBy: SortOption;
+}

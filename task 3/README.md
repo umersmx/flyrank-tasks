@@ -48,3 +48,54 @@ task 3/
     │   ├── omdbApi.ts         # OMDb API client with in-memory caching
     │   └── mockData.ts        # 15+ curated blockbuster dataset
     ├── hooks/
+    │   ├── useDebounce.ts     # Debounce utility hook
+    │   ├── useMovieSearch.ts  # MVVM search hook with AbortController
+    │   ├── useWatchlist.ts    # LocalStorage watchlist state & analytics
+    │   └── useMovieDetails.ts # Single title detail fetcher
+    ├── components/
+    │   ├── Navbar.tsx         # Brand header with actions
+    │   ├── SearchBar.tsx      # Debounced search bar
+    │   ├── FilterBar.tsx      # Filter & sort controls
+    │   ├── MovieGrid.tsx      # Grid renderer with loading skeletons
+    │   ├── MovieCard.tsx      # Poster card with bookmark toggle
+    │   ├── MovieModal.tsx     # Fullscreen title intelligence modal
+    │   ├── WatchlistDrawer.tsx# Saved titles side drawer
+    │   ├── StatsModal.tsx     # Watchlist analytics dashboard
+    │   └── ApiKeyModal.tsx    # OMDb API key switcher
+    └── test/
+        ├── setup.ts           # Vitest environment & localStorage mock
+        ├── useDebounce.test.ts# Debounce timing tests
+        ├── useWatchlist.test.ts# Watchlist state & stats tests
+        └── omdbApi.test.ts    # Service query tests
+```
+
+---
+
+## 🚀 Running Locally
+
+```bash
+# 1. Navigate to task 3
+cd "task 3"
+
+# 2. Install dependencies
+npm install
+
+# 3. Run automated tests
+npm test
+
+# 4. Start local development server
+npm run dev
+
+# 5. Typecheck & production build
+npm run build
+```
+
+---
+
+## 📑 Required Assignment Deliverables
+
+Per FlyRank Week 3 assignment instructions:
+1. **The completed application**: React + TypeScript source files in `src/`.
+2. **Prompts used during development**: Documented in [PROMPTS.md](PROMPTS.md).
+3. **Explanation of AI assistance**: Documented in [AI_ASSISTANCE.md](AI_ASSISTANCE.md).
+4. **Examples of manual improvements & refactoring**: Documented in [MANUAL_REFACTORING.md](MANUAL_REFACTORING.md).

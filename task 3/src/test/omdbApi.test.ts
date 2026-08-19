@@ -30,3 +30,9 @@ describe('OMDb API & Mock Fallback Service', () => {
   });
 
   it('retrieves detailed movie information for a valid imdbID', async () => {
+    const result = await getMovieDetails('tt1375666'); // Inception
+    expect(result.movie.Title).toBe('Inception');
+    expect(result.movie.Director).toContain('Nolan');
+    expect(result.movie.Ratings.length).toBeGreaterThan(0);
+  });
+});

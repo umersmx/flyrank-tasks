@@ -117,3 +117,55 @@ export const StatsModal: React.FC<StatsModalProps> = ({
             {/* Visual Progress Bar */}
             <div
               style={{
+                width: '100%',
+                height: '6px',
+                background: 'rgba(255,255,255,0.1)',
+                borderRadius: '999px',
+                marginTop: '0.5rem',
+                overflow: 'hidden',
+              }}
+            >
+              <div
+                style={{
+                  width: `${completionRate}%`,
+                  height: '100%',
+                  background: 'var(--accent-gradient)',
+                  transition: 'width 0.3s ease',
+                }}
+              />
+            </div>
+          </div>
+
+          <div
+            style={{
+              background: 'var(--bg-tertiary)',
+              border: '1px solid var(--border-glass)',
+              borderRadius: 'var(--radius-md)',
+              padding: '1.25rem',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+              <Star size={16} color="#f59e0b" />
+              <span>Avg Rating</span>
+            </div>
+            <div style={{ fontSize: '2rem', fontWeight: 800, marginTop: '0.5rem', color: '#fcd34d' }}>
+              {stats.avgRating > 0 ? `${stats.avgRating} / 5` : 'N/A'}
+            </div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+              Personal star reviews
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          className="btn btn-secondary"
+          style={{ width: '100%' }}
+          onClick={onClose}
+        >
+          Close Insights
+        </button>
+      </div>
+    </div>
+  );
+};

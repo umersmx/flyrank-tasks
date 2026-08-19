@@ -59,3 +59,10 @@ describe('useWatchlist hook', () => {
     });
     expect(result.current.watchlist.length).toBe(1);
 
+    act(() => {
+      result.current.removeFromWatchlist('tt1375666');
+    });
+    expect(result.current.watchlist.length).toBe(0);
+    expect(result.current.isInWatchlist('tt1375666')).toBe(false);
+  });
+});

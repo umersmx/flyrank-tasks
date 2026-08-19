@@ -194,3 +194,110 @@ export const MovieModal: React.FC<MovieModalProps> = ({
             </div>
 
             {/* Details Column */}
+            <div className="modal-details">
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+                  <h2 className="modal-title">{movie.Title}</h2>
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    style={{ padding: '0.4rem 0.75rem', fontSize: '0.8rem' }}
+                    onClick={handleShare}
+                    title="Share Movie Link"
+                  >
+                    {copied ? <Check size={14} color="#10b981" /> : <Share2 size={14} />}
+                    {copied ? 'Copied' : 'Share'}
+                  </button>
+                </div>
+                <div className="modal-pill-row" style={{ marginTop: '0.5rem' }}>
+                  <span className="badge badge-gold">
+                    <Star size={12} fill="#f59e0b" /> {movie.imdbRating || 'N/A'} IMDb
+                  </span>
+                  {movie.Runtime && (
+                    <span className="badge">
+                      <Clock size={12} /> {movie.Runtime}
+                    </span>
+                  )}
+                  {movie.Year && (
+                    <span className="badge">
+                      <Calendar size={12} /> {movie.Year}
+                    </span>
+                  )}
+                  {movie.Rated && <span className="badge">{movie.Rated}</span>}
+                </div>
+              </div>
+
+              {/* Genre Pills */}
+              {movie.Genre && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                  {movie.Genre.split(',').map((g) => (
+                    <span
+                      key={g.trim()}
+                      className="filter-pill"
+                      style={{ fontSize: '0.75rem', padding: '0.25rem 0.65rem' }}
+                    >
+                      {g.trim()}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Plot */}
+              <div>
+                <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '0.35rem' }}>Overview</h4>
+                <p className="modal-plot">{movie.Plot || 'No synopsis available.'}</p>
+              </div>
+
+              {/* Meta Table */}
+              <div className="modal-meta-table">
+                <span className="modal-meta-label">Director:</span>
+                <span className="modal-meta-val">{movie.Director || 'N/A'}</span>
+
+                <span className="modal-meta-label">Cast:</span>
+                <span className="modal-meta-val">{movie.Actors || 'N/A'}</span>
+
+                <span className="modal-meta-label">Writer:</span>
+                <span className="modal-meta-val">{movie.Writer || 'N/A'}</span>
+
+                {movie.Awards && movie.Awards !== 'N/A' && (
+                  <>
+                    <span className="modal-meta-label">Awards:</span>
+                    <span className="modal-meta-val" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <Award size={14} color="#f59e0b" /> {movie.Awards}
+                    </span>
+                  </>
+                )}
+
+                {movie.BoxOffice && movie.BoxOffice !== 'N/A' && (
+                  <>
+                    <span className="modal-meta-label">Box Office:</span>
+                    <span className="modal-meta-val" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <DollarSign size={14} color="#10b981" /> {movie.BoxOffice}
+                    </span>
+                  </>
+                )}
+              </div>
+
+              {/* Personal Notes (if in watchlist) */}
+              {watchlistItem && (
+                <div style={{ marginTop: '0.5rem', borderTop: '1px solid var(--border-glass)', paddingTop: '1rem' }}>
+                  <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', display: 'block', marginBottom: '0.4rem' }}>
+                    Personal Notes & Review
+                  </label>
+                  <textarea
+                    className="select-control"
+                    style={{ width: '100%', minHeight: '70px', resize: 'vertical' }}
+                    placeholder="Add your reflections, review, or thoughts here..."
+                    value={notes}
+                    onChange={(e) => setNotes(e.target.value)}
+                    onBlur={handleNotesBlur}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+};

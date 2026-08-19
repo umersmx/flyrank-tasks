@@ -35,3 +35,16 @@ export function useMovieDetails(imdbId: string | null): UseMovieDetailsReturn {
       .catch((err: unknown) => {
         if (err instanceof DOMException && err.name === 'AbortError') return;
         const msg = err instanceof Error ? err.message : 'Could not fetch movie details';
+        setError(msg);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
+    return () => {
+      controller.abort();
+    };
+  }, [imdbId]);
+
+  return { movie, loading, error, source };
+}

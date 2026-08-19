@@ -26,3 +26,17 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           autoComplete="off"
           spellCheck="false"
         />
+        {value && (
+          <button
+            type="button"
+            className="search-clear"
+            onClick={() => onChange('')}
+            aria-label="Clear search input"
+          >
+            <X size={18} />
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};

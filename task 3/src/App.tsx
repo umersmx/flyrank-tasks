@@ -102,3 +102,81 @@ export function App() {
 
           {/* Real-time Debounced Search */}
           <SearchBar
+            value={filter.query}
+            onChange={handleSearchQueryChange}
+          />
+        </section>
+
+        {/* Dynamic Filters & Sorters */}
+        <FilterBar
+          filter={filter}
+          onChange={setFilter}
+          totalResults={totalResults}
+          source={source}
+        />
+
+        {/* Results Grid */}
+        <MovieGrid
+          movies={movies}
+          loading={loading}
+          error={error}
+          isInWatchlist={isInWatchlist}
+          onToggleWatchlist={handleToggleWatchlist}
+          onSelectMovie={(id) => setSelectedMovieId(id)}
+          onResetFilters={handleResetFilters}
+        />
+      </main>
+
+      {/* Movie Details Modal */}
+      <MovieModal
+        imdbId={selectedMovieId}
+        onClose={() => setSelectedMovieId(null)}
+        watchlistItem={selectedMovieId ? getWatchlistItem(selectedMovieId) : undefined}
+        onAddToWatchlist={addToWatchlist}
+        onRemoveFromWatchlist={removeFromWatchlist}
+        onUpdateStatus={updateStatus}
+        onUpdateUserRating={updateUserRating}
+        onUpdateNotes={updateNotes}
+      />
+
+      {/* Watchlist Side Drawer */}
+      <WatchlistDrawer
+        isOpen={isWatchlistOpen}
+        onClose={() => setIsWatchlistOpen(false)}
+        watchlist={watchlist}
+        onRemove={removeFromWatchlist}
+        onUpdateStatus={updateStatus}
+        onSelectMovie={(id) => setSelectedMovieId(id)}
+        onClearAll={clearWatchlist}
+      />
+
+      {/* Analytics Modal */}
+      <StatsModal
+        isOpen={isStatsOpen}
+        onClose={() => setIsStatsOpen(false)}
+        stats={stats}
+      />
+
+      {/* OMDb API Key Settings Modal */}
+      <ApiKeyModal
+        isOpen={isApiKeyOpen}
+        onClose={() => setIsApiKeyOpen(false)}
+        onKeyChange={handleKeyChange}
+      />
+
+      {/* Footer */}
+      <footer className="app-footer">
+        <div className="footer-content">
+          <p>
+            <strong>CinePulse AI</strong> · Built for FlyRank Frontend AI Engineering Assignment 3
+          </p>
+          <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+            Demonstrating ViewModel separation, custom hooks architecture, OMDb API parallelization, and localStorage state persistence.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;

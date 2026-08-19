@@ -62,3 +62,74 @@ const executeSearch = useCallback(async () => {
   }
 }, [debouncedQuery, filter, page]);
 ```
+
+---
+
+### 2. Preventing Card Event Bubbling
+
+#### ❌ AI-Generated Code:
+```tsx
+// AI Draft: Clicking the bookmark button triggers card onClick, opening the modal
+<div className="movie-card" onClick={() => onSelect(movie.imdbID)}>
+  <button onClick={() => onToggleWatchlist(movie)}>Bookmark</button>
+</div>
+```
+
+#### ✅ Manual Refactoring:
+```tsx
+// Refactored in MovieCard.tsx:
+const handleWatchlistClick = (e: React.MouseEvent) => {
+  e.stopPropagation(); // Prevents triggering card onSelect modal
+  onToggleWatchlist(movie);
+};
+
+<article
+  className="movie-card"
+  onClick={() => onSelect(movie.imdbID)}
+  onKeyDown={handleKeyDown}
+  tabIndex={0}
+  role="button"
+  aria-label={`${movie.Title}, ${movie.Type} released in ${movie.Year}`}
+>
+  {/* ... */}
+  <button
+    type="button"
+    className={`card-watchlist-btn ${inWatchlist ? 'in-watchlist' : ''}`}
+    onClick={handleWatchlistClick}
+    aria-label={inWatchlist ? `Remove ${movie.Title}` : `Add ${movie.Title}`}
+  >
+    <Bookmark size={18} fill={inWatchlist ? '#ffffff' : 'none'} />
+  </button>
+</article>
+```
+
+---
+
+### 3. Defensive LocalStorage Initialization
+
+#### ❌ AI-Generated Code:
+```typescript
+// AI Draft: Throws unhandled TypeError if storage contains malformed JSON
+const [watchlist, setWatchlist] = useState(
+  JSON.parse(localStorage.getItem('watchlist') || '[]')
+);
+```
+
+#### ✅ Manual Refactoring:
+```typescript
+// Refactored in useWatchlist.ts:
+const [watchlist, setWatchlist] = useState<WatchlistItem[]>(() => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed)) {
+        return parsed;
+      }
+    }
+  } catch (e) {
+    console.error('Failed to load watchlist from localStorage:', e);
+  }
+  return [];
+});
+```

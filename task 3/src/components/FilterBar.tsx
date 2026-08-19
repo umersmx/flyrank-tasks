@@ -94,3 +94,68 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           onChange={(e) => handleGenreChange(e.target.value)}
           aria-label="Filter by genre"
         >
+          {GENRES.map((g) => (
+            <option key={g} value={g === 'All Genres' ? 'all' : g}>
+              {g}
+            </option>
+          ))}
+        </select>
+
+        {/* Year Filter */}
+        <select
+          className="select-control"
+          value={filter.year}
+          onChange={(e) => handleYearChange(e.target.value)}
+          aria-label="Filter by year"
+        >
+          <option value="">Any Year</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="201">2010s</option>
+          <option value="200">2000s</option>
+          <option value="199">1990s</option>
+        </select>
+
+        {/* Sort Options */}
+        <select
+          className="select-control"
+          value={filter.sortBy}
+          onChange={(e) => handleSortChange(e.target.value as SortOption)}
+          aria-label="Sort movies"
+        >
+          <option value="rating-desc">Highest Rated</option>
+          <option value="year-desc">Newest First</option>
+          <option value="year-asc">Oldest First</option>
+          <option value="title-asc">Title (A-Z)</option>
+        </select>
+
+        {isFiltered && (
+          <button
+            type="button"
+            className="btn btn-secondary"
+            style={{ padding: '0.45rem 0.8rem', fontSize: '0.8rem' }}
+            onClick={handleReset}
+          >
+            Reset
+          </button>
+        )}
+      </div>
+
+      {/* Info Tag */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', width: '100%', justifyContent: 'space-between', marginTop: '0.5rem', borderTop: '1px solid var(--border-glass)', paddingTop: '0.75rem', fontSize: '0.85rem' }}>
+        <span style={{ color: 'var(--text-secondary)' }}>
+          Found <strong style={{ color: 'var(--text-primary)' }}>{totalResults}</strong> titles
+        </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <span className={`source-badge ${source}`}>
+            <Sparkles size={12} />
+            {source === 'omdb' ? 'Live OMDb Data' : 'Curated Offline Dataset'}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};

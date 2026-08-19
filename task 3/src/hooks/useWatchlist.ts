@@ -118,3 +118,38 @@ export function useWatchlist(): UseWatchlistReturn {
       if (item.status === 'watching') watching++;
       if (item.status === 'planned') planned++;
 
+      if (item.userRating && item.userRating > 0) {
+        ratingSum += item.userRating;
+        ratedCount++;
+      }
+
+      if (item.movie.Type === 'movie') totalMovies++;
+      if (item.movie.Type === 'series') totalSeries++;
+    }
+
+    const avgRating = ratedCount > 0 ? Number((ratingSum / ratedCount).toFixed(1)) : 0;
+
+    return {
+      total,
+      completed,
+      watching,
+      planned,
+      avgRating,
+      totalMovies,
+      totalSeries,
+    };
+  }, [watchlist]);
+
+  return {
+    watchlist,
+    addToWatchlist,
+    removeFromWatchlist,
+    updateStatus,
+    updateUserRating,
+    updateNotes,
+    isInWatchlist,
+    getWatchlistItem,
+    stats,
+    clearWatchlist,
+  };
+}

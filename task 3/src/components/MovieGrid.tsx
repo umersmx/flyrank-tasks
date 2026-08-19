@@ -48,3 +48,33 @@ export const MovieGrid: React.FC<MovieGridProps> = ({
   }
 
   if (movies.length === 0) {
+    return (
+      <div className="empty-state">
+        <Film size={48} color="var(--text-muted)" />
+        <h2>No matching titles found</h2>
+        <p style={{ maxWidth: '450px' }}>
+          Try searching for another movie or TV series, changing the filter criteria, or adding your OMDb API key in settings.
+        </p>
+        {onResetFilters && (
+          <button type="button" className="btn btn-secondary" onClick={onResetFilters}>
+            Show Curated Library
+          </button>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <section className="movie-grid" aria-label="Movie search results">
+      {movies.map((movie) => (
+        <MovieCard
+          key={movie.imdbID}
+          movie={movie}
+          inWatchlist={isInWatchlist(movie.imdbID)}
+          onToggleWatchlist={onToggleWatchlist}
+          onSelect={onSelectMovie}
+        />
+      ))}
+    </section>
+  );
+};
