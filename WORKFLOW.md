@@ -38,4 +38,5 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 ```
 
 
-<!-- milestone review step 79 verified 2026-08-18 -->
+
+<!-- milestone review step 82 verified 2026-08-19 -->
