@@ -11,3 +11,7 @@
 
 ---
 
+## 2. Chapter 2: Role Prompting (Assigning Roles)
+- Giving Claude a persona (e.g. *"Principal TypeScript Architect"*) sets the baseline vocabulary, technical depth, and expected engineering standards.
+- A strong role prevents the model from generating beginner tutorials or toy examples.
+
