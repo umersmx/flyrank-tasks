@@ -59,6 +59,7 @@ Ensure the following core tools are installed on your workstation:
 # Node.js LTS (v20+ recommended)
 node -v
 
+# Git
 
 
-<!-- milestone review step 81 verified 2026-08-18 -->
+<!-- milestone review step 84 verified 2026-08-19 -->
