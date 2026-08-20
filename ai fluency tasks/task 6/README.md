@@ -86,3 +86,20 @@ Immediately follow with valid TypeScript adhering to this exact order:
 # Architectural Constraints
 - All string values must be `.trim()`med before validation.
 - Unknown/null objects must be modeled as `z.record(z.string(), z.unknown()).nullable().optional()`—never use `z.any()`.
+- Zero conversational preamble or outro. Begin output with `<field_audit>` and end with the closing typescript code fence.
+
+# Input Payload:
+{INPUT_JSON}
+```
+
+---
+
+## ✅ Evaluation Criteria Compliance Matrix
+
+| Evaluation Criteria | Requirement | Status | Verification Detail |
+| :--- | :--- | :---: | :--- |
+| **Five+ iterations beyond naive version** | Six runs total, each tied to a named technique | **PASS** | Role, Context, Few-Shot, Output Structure, Step Decomposition |
+| **Each note explains observed output difference** | Focuses on output behavior, not prompt wording | **PASS** | Detailed notes analyzing elimination of `any`, trimming, and enum generation |
+| **Cross-model comparison says something specific** | Detailed analysis of Tone, Accuracy, Structure, Failure Points | **PASS** | Evaluated Claude vs. GPT-4o with specific behavioral differences |
+| **Final template is reusable** | Works for a stranger without personal context | **PASS** | Parameterized template with `{SCHEMA_NAME}` and `{INPUT_JSON}` |
+| **Work is on a real task from FL-01 audit** | Grounded in FL-01 Target Task 1 | **PASS** | TypeScript & Zod Scaffolding from FL-01 weekly audit |
