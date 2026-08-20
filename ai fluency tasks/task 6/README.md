@@ -74,3 +74,15 @@ Analyze each payload key inside <field_audit> tags:
 - Primitive type & data shape.
 - Optional vs. Nullable policy (explain why a key is required, nullable, or optional).
 - Sanitation & boundary checks (trimming, email regex, min/max lengths, integer checks).
+
+STAGE 2: CODE IMPLEMENTATION (```typescript)
+Immediately follow with valid TypeScript adhering to this exact order:
+1. Zod import: `import { z } from 'zod';`
+2. Enums / Literal unions (separately exported)
+3. Sub-object schemas
+4. Root schema named `{SCHEMA_NAME}Schema`
+5. Derived TypeScript types (prefixed with `export type`)
+
+# Architectural Constraints
+- All string values must be `.trim()`med before validation.
+- Unknown/null objects must be modeled as `z.record(z.string(), z.unknown()).nullable().optional()`—never use `z.any()`.
