@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 580" width="880" height="580">
+  <defs>
+    <style>
+      .bg { fill: #FAFAFA; }
+      .box { fill: #FFFFFF; stroke: #E2E8F0; stroke-width: 1.5; rx: 8px; }
+      .box-active { fill: #FFFFFF; stroke: #059669; stroke-width: 2; rx: 8px; }
+      .box-dark { fill: #0F172A; stroke: #1E293B; stroke-width: 1.5; rx: 8px; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Geist', 'Inter', sans-serif; font-size: 14px; font-weight: 700; fill: #0F172A; }
+      .title-white { font-family: -apple-system, BlinkMacSystemFont, 'Geist', 'Inter', sans-serif; font-size: 14px; font-weight: 700; fill: #FFFFFF; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 11px; font-weight: 500; fill: #64748B; }
+      .subtitle-white { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 11px; font-weight: 400; fill: #94A3B8; }
+      .badge { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 10px; font-weight: 600; fill: #059669; }
+      .cta-text { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 11px; font-weight: 600; fill: #059669; }
+      .arrow { stroke: #CBD5E1; stroke-width: 2; stroke-dasharray: 4,4; fill: none; }
+      .arrow-active { stroke: #059669; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#059669" />
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#94A3B8" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="880" height="580" fill="#FAFAFA" />
+
+  <!-- Outer Canvas Border -->
+  <rect x="20" y="20" width="840" height="540" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+
+  <!-- Diagram Header -->
+  <text x="45" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Geist', 'Inter', sans-serif" font-size="16" font-weight="700" fill="#0F172A">Portfolio Content Map &amp; CTA Ladder</text>
+  <text x="45" y="73" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="400" fill="#64748B">Visual through-line: Every section and micro-interaction ladders up to the One Action.</text>
+
+  <!-- Level 0: Global Nav -->
+  <rect x="45" y="95" width="790" height="42" class="box" />
+  <circle cx="65" cy="116" r="10" fill="#0F172A" />
+  <text x="60" y="120" font-family="sans-serif" font-size="9" font-weight="800" fill="#FFF">MU</text>
+  <text x="85" y="120" class="title">Muhammad Umer</text>
+  <rect x="205" y="106" width="145" height="20" rx="10" fill="#ECFDF5" />
+  <text x="215" y="120" class="badge">● Open to Fall 2026 Roles</text>
+  <text x="680" y="121" class="cta-text">CTA: [Book Walkthrough]</text>
+
+  <!-- Arrow down to Hero -->
+  <line x1="440" y1="137" x2="440" y2="155" class="arrow-active" marker-end="url(#arrowhead)" />
+
+  <!-- Level 1: Hero & One-Line Claim -->
+  <rect x="45" y="160" width="790" height="85" class="box" />
+  <text x="65" y="185" class="badge">SECTION 1: HERO &amp; VALUE CLAIM</text>
+  <text x="65" y="205" class="title">"I engineer resilient frontends for generative AI web apps..."</text>
+  <text x="65" y="224" class="subtitle">Proof Anchor: React 19 streaming architecture, zero CLS, WCAG 2.1 AA keyboard support.</text>
+  <rect x="620" y="178" width="195" height="50" rx="6" fill="#F1F5F9" />
+  <text x="635" y="198" font-family="sans-serif" font-size="10" font-weight="600" fill="#0F172A">Ladder CTA:</text>
+  <text x="635" y="215" class="cta-text">[See the Code ↓] / [Book Call]</text>
+
+  <!-- Arrow down to Proof Engine -->
+  <line x1="440" y1="245" x2="440" y2="265" class="arrow-active" marker-end="url(#arrowhead)" />
+
+  <!-- Level 2: Proof Engine (Case Studies) -->
+  <g transform="translate(45, 270)">
+    <!-- Case 1 (Star / Lead) -->
+    <rect x="0" y="0" width="385" height="135" class="box-active" />
+    <rect x="15" y="12" width="130" height="18" rx="4" fill="#ECFDF5" />
+    <text x="22" y="25" class="badge">★ LEAD CASE (STRONGEST)</text>
+    <text x="15" y="48" class="title">1. Generative Streaming UI Engine</text>
+    <text x="15" y="66" class="subtitle">• Problem: Layout shifts, token errors, whiteout crashes.</text>
+    <text x="15" y="82" class="subtitle">• Decided: Isolated error boundaries + 50ms frame buffer.</text>
+    <text x="15" y="98" class="subtitle">• Proof: 60fps steady frame rate, 50 simulated drops.</text>
+    <text x="15" y="120" class="cta-text">CTA: [Launch Live Streaming Sandbox →]</text>
+
+    <!-- Case 2 -->
+    <rect x="405" y="0" width="385" height="135" class="box" />
+    <rect x="420" y="12" width="105" height="18" rx="4" fill="#F1F5F9" />
+    <text x="427" y="25" font-family="sans-serif" font-size="10" font-weight="600" fill="#64748B">CASE STUDY 2</text>
+    <text x="420" y="48" class="title">2. Schema-First Form Validation Engine</text>
+    <text x="420" y="66" class="subtitle">• Problem: Whitespace bypasses, unannounced a11y bugs.</text>
+    <text x="420" y="82" class="subtitle">• Decided: Strict Zod validation + in-flight mutex lock.</text>
+    <text x="420" y="98" class="subtitle">• Proof: 100% WCAG AA compliant, 0 duplicate mutations.</text>
+    <text x="420" y="120" class="cta-text">CTA: [Test Boundary Edge Cases →]</text>
+  </g>
+
+  <!-- Arrow down to Level 3 -->
+  <line x1="440" y1="405" x2="440" y2="420" class="arrow-active" marker-end="url(#arrowhead)" />
+
+  <!-- Level 3: Standards & The One Action -->
+  <g transform="translate(45, 425)">
+    <!-- Standards (Left) -->
+    <rect x="0" y="0" width="385" height="105" class="box" />
+    <text x="15" y="22" class="badge">SECTION 3: HOW I WORK</text>
+    <text x="15" y="42" class="title">Engineering Principles</text>
+    <text x="15" y="60" class="subtitle">1. Frame, Never Upstage (Design serves the code proof)</text>
+    <text x="15" y="76" class="subtitle">2. Defensive Schema Guards (Fail fast, no raw 'any')</text>
+    <text x="15" y="92" class="cta-text">CTA: [Review Public Git Commits →]</text>
+
+    <!-- The One Action (Right) -->
+    <rect x="405" y="0" width="385" height="105" class="box-dark" />
+    <text x="420" y="22" font-family="sans-serif" font-size="10" font-weight="700" fill="#10B981">SECTION 4: THE ONE ACTION</text>
+    <text x="420" y="44" class="title-white">Let's examine the code together.</text>
+    <text x="420" y="62" class="subtitle-white">15-minute technical walkthrough to break sandboxes &amp; discuss fit.</text>
+    <rect x="420" y="73" width="220" height="24" rx="4" fill="#059669" />
+    <text x="432" y="89" font-family="sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">★ [Book 15-Min Walkthrough on Cal.com]</text>
+  </g>
+</svg>
