@@ -60,6 +60,7 @@ Ensure the following core tools are installed on your workstation:
 node -v
 
 # Git
+git --version
 
 
-<!-- milestone review step 84 verified 2026-08-19 -->
+<!-- milestone review step 87 verified 2026-08-20 -->
