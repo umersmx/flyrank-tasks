@@ -60,4 +60,5 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - Enforce accessibility (a11y): proper `aria-*` attributes, high contrast colors, and keyboard navigability.
 
 
-<!-- milestone review step 83 verified 2026-08-19 -->
+
+<!-- milestone review step 86 verified 2026-08-20 -->
