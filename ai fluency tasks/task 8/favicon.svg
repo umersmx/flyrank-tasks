@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+  </defs>
+  <!-- Background Container with subtle border -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="url(#favBg)" stroke="#334155" stroke-width="1" />
+  
+  <!-- Monogram MU -->
+  <text x="7" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Geist', 'Inter', sans-serif" font-size="13" font-weight="800" fill="#FAFAFA" letter-spacing="-0.5">MU</text>
+  
+  <!-- Accent Signal Period -->
+  <circle cx="24" cy="20" r="2.2" fill="#059669" />
+</svg>
