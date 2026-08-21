@@ -59,6 +59,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - Use semantic HTML tags (`<main>`, `<nav>`, `<header>`, `<article>`, `<section>`, `<button>`).
 - Enforce accessibility (a11y): proper `aria-*` attributes, high contrast colors, and keyboard navigability.
 
+### State & Logic Separation
 
 
-<!-- milestone review step 86 verified 2026-08-20 -->
+<!-- milestone review step 89 verified 2026-08-21 -->
