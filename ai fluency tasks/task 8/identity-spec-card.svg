@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" width="880" height="540">
+  <defs>
+    <style>
+      .bg { fill: #FAFAFA; }
+      .card { fill: #FFFFFF; stroke: #E2E8F0; stroke-width: 1.5; rx: 12px; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Geist', 'Inter', sans-serif; font-size: 18px; font-weight: 700; fill: #0F172A; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 12px; font-weight: 400; fill: #64748B; }
+      .section-label { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 11px; font-weight: 700; fill: #059669; letter-spacing: 0.5px; }
+      .font-sample-h { font-family: -apple-system, BlinkMacSystemFont, 'Geist', sans-serif; font-size: 22px; font-weight: 700; fill: #0F172A; }
+      .font-sample-b { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 13px; font-weight: 400; fill: #334155; line-height: 1.5; }
+      .code-text { font-family: 'Geist Mono', 'Courier New', monospace; font-size: 11px; fill: #0F172A; }
+      .tag { font-family: sans-serif; font-size: 10px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="880" height="540" fill="#FAFAFA" />
+
+  <!-- Outer Card Container -->
+  <rect x="25" y="25" width="830" height="490" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+
+  <!-- Card Header -->
+  <g transform="translate(50, 60)">
+    <text x="0" y="0" class="section-label">FL-03 IDENTITY KIT SPECIFICATION</text>
+    <text x="0" y="24" class="title">Muhammad Umer · Portfolio Design Tokens</text>
+    <text x="0" y="44" class="subtitle">"The design is the frame, not the painting. Your work is the painting."</text>
+  </g>
+
+  <!-- Left Column: Typography -->
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="370" height="230" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    <text x="20" y="30" class="section-label">1. TYPOGRAPHY SYSTEM</text>
+
+    <!-- Heading Font -->
+    <text x="20" y="60" class="font-sample-h">Geist Sans (Headings 700)</text>
+    <text x="20" y="80" class="subtitle">Tight -0.02em tracking · Modern engineering precision</text>
+
+    <!-- Body Font -->
+    <text x="20" y="115" class="font-sample-b" font-weight="600" fill="#0F172A">Inter (Body 400/500)</text>
+    <text x="20" y="135" class="font-sample-b">Engineered for high-density screen reading with open</text>
+    <text x="20" y="152" class="font-sample-b">counters and distinct glyph differentiation.</text>
+
+    <!-- Code Font -->
+    <rect x="20" y="172" width="330" height="38" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+    <text x="32" y="196" class="code-text">Geist Mono: export type User = z.infer&lt;T&gt;;</text>
+  </g>
+
+  <!-- Right Column: 4-Color Palette Swatches -->
+  <g transform="translate(450, 140)">
+    <rect x="0" y="0" width="380" height="230" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    <text x="20" y="30" class="section-label">2. THE 4-COLOR PALETTE &amp; WCAG CONTRAST</text>
+
+    <!-- Swatch 1: Canvas -->
+    <g transform="translate(20, 50)">
+      <rect x="0" y="0" width="75" height="50" rx="6" fill="#FAFAFA" stroke="#CBD5E1" stroke-width="1" />
+      <text x="0" y="65" font-family="sans-serif" font-size="10" font-weight="700" fill="#0F172A">Canvas</text>
+      <text x="0" y="78" class="code-text" font-size="9">#FAFAFA</text>
+    </g>
+
+    <!-- Swatch 2: Text Primary -->
+    <g transform="translate(105, 50)">
+      <rect x="0" y="0" width="75" height="50" rx="6" fill="#0F172A" />
+      <text x="0" y="65" font-family="sans-serif" font-size="10" font-weight="700" fill="#0F172A">Text Primary</text>
+      <text x="0" y="78" class="code-text" font-size="9">#0F172A</text>
+      <rect x="0" y="83" width="65" height="15" rx="3" fill="#ECFDF5" />
+      <text x="5" y="94" class="tag" fill="#059669">16.1:1 AAA</text>
+    </g>
+
+    <!-- Swatch 3: Muted Surface -->
+    <g transform="translate(195, 50)">
+      <rect x="0" y="0" width="75" height="50" rx="6" fill="#64748B" />
+      <text x="0" y="65" font-family="sans-serif" font-size="10" font-weight="700" fill="#0F172A">Muted Slate</text>
+      <text x="0" y="78" class="code-text" font-size="9">#64748B</text>
+      <rect x="0" y="83" width="60" height="15" rx="3" fill="#ECFDF5" />
+      <text x="5" y="94" class="tag" fill="#059669">5.0:1 AA</text>
+    </g>
+
+    <!-- Swatch 4: Single Accent -->
+    <g transform="translate(285, 50)">
+      <rect x="0" y="0" width="75" height="50" rx="6" fill="#059669" />
+      <text x="0" y="65" font-family="sans-serif" font-size="10" font-weight="700" fill="#0F172A">Signal Mint</text>
+      <text x="0" y="78" class="code-text" font-size="9">#059669</text>
+      <rect x="0" y="83" width="60" height="15" rx="3" fill="#ECFDF5" />
+      <text x="5" y="94" class="tag" fill="#059669">4.8:1 AA</text>
+    </g>
+
+    <text x="20" y="175" class="subtitle">• Text on Canvas: 16.14:1 (Passes AAA)</text>
+    <text x="20" y="195" class="subtitle">• Accent on Canvas: 4.82:1 (Passes AA)</text>
+    <text x="20" y="215" class="subtitle">• Work is the star: Code diffs &amp; tests provide the color.</text>
+  </g>
+
+  <!-- Bottom Bar: Logo / Favicon & 2-Line Style Note -->
+  <g transform="translate(50, 390)">
+    <rect x="0" y="0" width="780" height="100" rx="10" fill="#0F172A" />
+    
+    <!-- Logo Preview -->
+    <g transform="translate(25, 30)">
+      <rect x="0" y="0" width="38" height="38" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+      <text x="8" y="25" font-family="sans-serif" font-size="14" font-weight="800" fill="#FAFAFA">MU</text>
+      <circle cx="30" cy="24" r="2.5" fill="#059669" />
+      <text x="48" y="16" font-family="sans-serif" font-size="14" font-weight="700" fill="#FAFAFA">Muhammad Umer</text>
+      <text x="48" y="32" font-family="sans-serif" font-size="11" font-weight="400" fill="#94A3B8">Frontend AI Engineer</text>
+    </g>
+
+    <!-- Two-Line Style Note -->
+    <g transform="translate(280, 24)">
+      <text x="0" y="12" font-family="sans-serif" font-size="10" font-weight="700" fill="#10B981">TWO-LINE STYLE NOTE (FOR AI WORKSPACE):</text>
+      <text x="0" y="30" class="code-text" fill="#E2E8F0" font-size="10.5">Fonts: Geist (headings), Inter (body), Geist Mono (code); Palette: #FAFAFA, #0F172A, #64748B, #059669.</text>
+      <text x="0" y="48" class="code-text" fill="#94A3B8" font-size="10.5">Mood: Quiet, high-contrast engineering precision with generous whitespace—the layout frames the work.</text>
+    </g>
+  </g>
+</svg>

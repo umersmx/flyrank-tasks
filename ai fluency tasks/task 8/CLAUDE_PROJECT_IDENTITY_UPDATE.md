@@ -33,3 +33,56 @@ Mood: Quiet, high-contrast engineering precision with generous whitespace—the 
 
 ---
 
+## 🧪 3. Verification Prompt: Pressure-Testing Consistency
+
+To verify that Claude adheres strictly to the identity kit when scaffolding frontend components, we ran the following prompt:
+
+### Prompt:
+> *"Scaffold a hero section component in React 19 for my portfolio, introducing my one-line claim and primary CTA button."*
+
+### Observed AI Output:
+```tsx
+import React from 'react';
+
+export function PortfolioHero() {
+  return (
+    <section className="bg-[#FAFAFA] text-[#0F172A] py-20 px-6 max-w-5xl mx-auto">
+      <div className="flex items-center gap-2 mb-6">
+        <span className="w-2.5 h-2.5 rounded-full bg-[#059669] animate-pulse" />
+        <span className="text-xs font-medium uppercase tracking-wider text-[#64748B]">
+          Available for Fall 2026 Roles
+        </span>
+      </div>
+
+      <h1 className="font-['Geist'] text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-6">
+        I engineer resilient frontends for generative AI web apps—taming streaming layout shifts, token errors, and accessibility in React 19 and TypeScript.
+      </h1>
+
+      <p className="font-['Inter'] text-lg text-[#64748B] max-w-2xl mb-8 leading-relaxed">
+        Most AI demos look slick until tokens fail mid-stream or users navigate with a keyboard. I build the error boundaries, schema guards, and state machines that keep production interfaces bulletproof.
+      </p>
+
+      <div className="flex flex-wrap items-center gap-4">
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[#059669] hover:bg-[#047857] text-white font-medium transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-[#059669] focus:ring-offset-2"
+        >
+          Book 15-Min Walkthrough
+        </a>
+        <a
+          href="#work"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[#E2E8F0] hover:bg-white text-[#0F172A] font-medium transition-colors"
+        >
+          Explore Case Studies ↓
+        </a>
+      </div>
+    </section>
+  );
+}
+```
+
+### Verification Result:
+- ✅ Background is strictly `#FAFAFA`, with text `#0F172A`.
+- ✅ Heading uses `Geist` at `font-bold` (`700`); body copy uses `Inter`.
+- ✅ Accent `#059669` is used exclusively for the primary CTA and status dot.
+- ✅ Zero decorative orbs, neon glows, or clashing colors.

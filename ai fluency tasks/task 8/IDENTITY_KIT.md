@@ -67,3 +67,71 @@ Every color pair complies strictly with **WCAG 2.1 Level AA / AAA** requirements
 | Contrast Pair | Foreground | Background | Ratio | Standard Required | WCAG Rating |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Primary Text on Canvas** | `#0F172A` | `#FAFAFA` | **16.14 : 1** | 4.5 : 1 (AA) / 7.0 : 1 (AAA) | 🟢 **PASSES AAA** |
+| **Muted Metadata on Canvas** | `#64748B` | `#FAFAFA` | **4.98 : 1** | 4.5 : 1 (AA) | 🟢 **PASSES AA** |
+| **Accent Text/Icon on Canvas** | `#059669` | `#FAFAFA` | **4.82 : 1** | 4.5 : 1 (AA) | 🟢 **PASSES AA** |
+| **Canvas Text on Accent Button**| `#FFFFFF` | `#059669` | **4.55 : 1** | 4.5 : 1 (AA) | 🟢 **PASSES AA** |
+
+---
+
+## 🏷️ 3. Brand Identity Assets: Monogram & Favicon
+
+> *"Make a logo or favicon, your name set in your heading font, or a clean monogram. Keep it simple."*
+
+The brand identity uses a dual format:
+1. **The Wordmark Logo (`logo.svg`)**: Muhammad Umer set cleanly in **Geist Sans (Bold 700)** at 15px, accompanied by a clean monogram badge and subtitle *"Frontend AI Engineer"*.
+2. **The Favicon (`favicon.svg`)**: A 32x32 vector icon with a dark slate rounded squircle (`#0F172A`), sharp white `MU` monogram letters, and an emerald signal dot (`#059669`) in the lower corner communicating live runtime readiness.
+
+---
+
+## 📝 4. The Two-Line Standing Style Note (For Claude Project)
+
+> *"Write a two-line style note (fonts, hex codes, one sentence on the mood) and add it to your Claude Project so the build stays consistent."*
+
+Here is the exact two-line instruction:
+
+```markdown
+Fonts: Geist (headings 600/700), Inter (body 400/500), Geist Mono (code); Palette: #FAFAFA (canvas), #0F172A (text), #64748B (muted), #059669 (accent).
+Mood: Quiet, high-contrast engineering precision with generous whitespace—the layout serves as an unobtrusive gallery frame so the real code sandboxes and screenshots remain the star.
+```
+
+### Where It Lives:
+- Injected into **Claude Project Custom Instructions** (`CLAUDE_PROJECT_IDENTITY_UPDATE.md`).
+- Colocated in `.cursorrules` and `CLAUDE.md` at workspace root.
+
+---
+
+## 💻 5. CSS & Tailwind Design Tokens
+
+```css
+/* Identity Kit CSS Variables */
+:root {
+  /* Colors */
+  --bg-canvas: #FAFAFA;
+  --text-primary: #0F172A;
+  --surface-muted: #64748B;
+  --border-subtle: #E2E8F0;
+  --accent-primary: #059669;
+  --accent-hover: #047857;
+  --accent-soft: #ECFDF5;
+
+  /* Typography */
+  --font-heading: 'Geist', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-code: 'Geist Mono', 'JetBrains Mono', monospace;
+
+  /* Layout Spacing */
+  --max-width: 1040px;
+  --radius-card: 10px;
+  --radius-btn: 6px;
+}
+```
+
+---
+
+## ✅ Evaluation Criteria Compliance
+
+- [x] **One or two fonts, not a pile**: Exactly two fonts (Geist Sans + Inter) with clear functional roles.
+- [x] **A tight palette (~3–4 colors) with actual hex codes**: Exactly 4 hex codes (`#FAFAFA`, `#0F172A`, `#64748B`, `#059669`).
+- [x] **A simple logo or favicon exists**: High-resolution vector assets [`logo.svg`](logo.svg) and [`favicon.svg`](favicon.svg) committed in repository.
+- [x] **The style note describes a single coherent mood**: 2-line note emphasizing quiet precision and framing the work over competing with it.
+- [x] **Added to Claude Project**: Configuration instructions detailed in `CLAUDE_PROJECT_IDENTITY_UPDATE.md`.

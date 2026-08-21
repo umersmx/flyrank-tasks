@@ -59,3 +59,26 @@ Summary of Deliverables:
 Master Directory: https://github.com/umersmx/flyrank-tasks/tree/main/ai%20fluency%20tasks/task%208
 ```
 
+---
+
+### Field 3: `Files` (What to Upload)
+
+The brief requires:
+> *"The identity kit on one page, fonts named, palette with hex codes, the logo/favicon, and the two-line style note."*
+
+Click **Choose Files** and upload:
+1. **`IDENTITY_KIT.md`** (or export to PDF).
+2. **`identity-spec-card.svg`** (Visual token specimen card).
+3. **`logo.svg`** and **`favicon.svg`** (Vector brand assets).
+
+Then click **Save submission**.
+
+---
+
+## 3. Evaluation Checklist (Pass / Revise)
+
+- [x] **One or two fonts, not a pile**: Geist Sans + Inter.
+- [x] **A tight palette (~3–4 colors) with actual hex codes**: `#FAFAFA`, `#0F172A`, `#64748B`, `#059669`.
+- [x] **A simple logo or favicon exists**: Created vector `logo.svg` and `favicon.svg`.
+- [x] **The style note describes a single coherent mood**: Frames the work rather than competing with it.
+- [x] **Added to Claude Project**: Documented in `CLAUDE_PROJECT_IDENTITY_UPDATE.md`.
