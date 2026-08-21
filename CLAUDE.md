@@ -61,6 +61,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 
 ### State & Logic Separation
 - Separate UI presentation from business logic using custom hooks (`useFeatureName`).
+- Prevent direct side-effects inside render pipelines; utilize standard React lifecycle hooks or query wrappers.
 
 
-<!-- milestone review step 92 verified 2026-08-21 -->
+<!-- milestone review step 95 verified 2026-08-21 -->
