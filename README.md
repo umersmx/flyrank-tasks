@@ -62,6 +62,7 @@ node -v
 # Git
 git --version
 
+# AI Assistant Toolchain
 
 
-<!-- milestone review step 90 verified 2026-08-21 -->
+<!-- milestone review step 93 verified 2026-08-21 -->
