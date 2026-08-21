@@ -60,6 +60,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - Enforce accessibility (a11y): proper `aria-*` attributes, high contrast colors, and keyboard navigability.
 
 ### State & Logic Separation
+- Separate UI presentation from business logic using custom hooks (`useFeatureName`).
 
 
-<!-- milestone review step 89 verified 2026-08-21 -->
+<!-- milestone review step 92 verified 2026-08-21 -->
