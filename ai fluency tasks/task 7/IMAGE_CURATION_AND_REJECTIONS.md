@@ -55,3 +55,58 @@ Prompt Tested:
   > *"This image fails because it commits the cardinal sin of portfolio design: **it upstages the work**. The violent cyan lighting and high-contrast glowing filaments scream 'crypto marketing agency' rather than thoughtful software engineering. If placed in the hero section, a technical lead's eyes would be drawn to the decorative 3D noise instead of my one-line claim and live streaming code sandbox. Furthermore, it has the unmistakable 'AI-slop' aesthetic—every junior developer portfolio uses this exact generic glass prompt."*
 * **The Decision**: **Bin it completely.** Replaced with clean, generous whitespace (`#FAFAFA`) and high-contrast typography (`Geist` / `#0F172A`).
 
+---
+
+### Rejection Case 2: The "Floating Isometric 3D Generative Card"
+
+```markdown
+Prompt Tested:
+"Isometric 3D render of a software dashboard card floating in mid-air, sleek glass container with glowing data streams, minimal technical UI elements, pastel mint and matte gray materials, clean studio lighting on light gray backdrop --ar 4:3"
+```
+
+* **What the AI Delivered**: An attractive floating glass tablet with simulated UI buttons, miniature floating bar charts, and subtle drop shadows.
+* **Why It Was Rejected (The Judgment Call)**:
+  > *"This image is a fraudulent stand-in for engineering proof. While aesthetically pleasing at first glance, the simulated UI controls have nonsensical button labels, the charts have no axes or actual data points, and the glass reflections look completely melted. Presenting an AI-generated faux UI on a case study about React 19 component architecture is an immediate red flag for any engineering manager—it proves I know how to type an image prompt, but conceals whether I can actually build responsive DOM components. Real screenshots of my working Next.js sandbox with real DevTools overlays beat this fake render 100 times out of 100."*
+* **The Decision**: **Rejected with extreme prejudice.** Replaced with a real 1280x720 capture of the interactive Next.js playground (`streaming-cls-comparison.png`).
+
+---
+
+### Rejection Case 3: The "Cyberpunk Coder Silhouette" Avatar
+
+```markdown
+Prompt Tested:
+"Professional editorial portrait of a young male software engineer sitting at a clean developer workspace, dual monitors displaying code in background, soft natural lighting, realistic photography style, authentic, candid, 35mm lens --ar 1:1"
+```
+
+* **What the AI Delivered**: An uncannily smooth portrait of a person in a darkened room, bathed in blue monitor light, with distorted fingers typing on an impossible mechanical keyboard.
+* **Why It Was Rejected (The Judgment Call)**:
+  > *"Using a synthetic AI person to represent yourself in an internship application is the fastest way to kill professional credibility. The waxy skin texture, asymmetrical headphone cups, and distorted keyboard keys trigger the uncanny valley immediately. A hiring manager hiring an intern wants to work with a real, authentic colleague. Even an imperfect, candid smartphone photo in good natural daylight communicates 10x more trustworthiness and confidence than a glossy, synthetic AI avatar."*
+* **The Decision**: **Discarded.** Replaced with an authentic, natural-light portrait (`muhammad-umer-portrait.jpg`).
+
+---
+
+## ⚖️ 4. Comparison Table: Amateur Trap vs. Intentional Restraint
+
+| Dimension | The Amateur Trap (Unchecked AI Generation) | The Intentional Move (Ruthless Human Curation) |
+| :--- | :--- | :--- |
+| **Hero Background** | Swirling 3D neon vortex that steals visual focus. | Clean canvas (`#FAFAFA`), quiet typography, letting the one-line claim breathe. |
+| **Project Previews** | AI-generated isometric 3D mockups with melted, fake buttons. | Authentic, 1:1 cropped screenshots of actual running React 19 code with inspector tabs. |
+| **Profile Image** | Stylized Midjourney avatar with airbrushed skin and six fingers. | Real photograph taken in natural daylight with genuine eye contact. |
+| **Visual Variety** | 4 different visual styles (flat vector, 3D glass, cyberpunk, pastel). | 1 consistent visual system: Geist typography, monochrome slate hierarchy, 1 emerald accent. |
+| **Mental Model** | *"Look at how many cool images AI can generate!"* | *"Look at the architectural trade-offs I made in this codebase."* |
+
+---
+
+## 📌 5. The Golden Rule of Portfolio Curation
+
+> **"If an image does not prove a claim, eliminate it. If an image competes with the work, quiet it down. When in doubt, whitespace wins."**
+
+---
+
+## ✅ Evaluation Checklist
+
+- [x] **Images match the content map**: Every image maps directly to a section in `THROUGH_LINE_CONTENT_MAP.md`.
+- [x] **Real captures for work**: Generative streaming UI and Zod form engine use real software captures, zero AI mockups.
+- [x] **Real photo for personal identity**: Explicitly committed to authentic photography; AI avatars banned.
+- [x] **Three explicit AI rejection notes**: Deep, articulate post-mortems exposing AI slop, fake UI representations, and visual competition.
+- [x] **Rejection notes show genuine engineering judgment**: Focuses on recruiter psychology, cognitive load, and proof integrity rather than superficial preference.

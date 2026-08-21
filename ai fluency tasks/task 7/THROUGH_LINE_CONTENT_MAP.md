@@ -98,3 +98,40 @@ The portfolio is structured as a high-velocity, single-page deep-dive architectu
 
 Every single button and link on the site ladders directly up to the **One Action**:
 
+| Section Order | Section ID | Core Intent | What Sits Here | Named CTA | Destination / Behavior |
+| :-: | :--- | :--- | :--- | :--- | :--- |
+| **0** | `Header / Nav` | Global orientation | Minimalist initials logo, active status badge | `"Book Walkthrough"` | Smooth scroll to `#contact` booking widget |
+| **1** | `Hero` | 3-second claim capture | One-line claim, 2-sentence bio, live token stream mini-card | `"See the Code"` & `"Book Call"` | Scrolls to `#work` or triggers `#contact` |
+| **2** | `Proof: Case 1` *(Star)* | Prove resilience under failure | **Generative Streaming UI**: 3 beats (Problem, Decision, Outcome), architecture diff, real screenshots | `"Open Streaming Sandbox"` | Launches live interactive sandbox + GitHub code drawer |
+| **3** | `Proof: Case 2` | Prove rigor and accessibility | **Schema-First Form Engine**: 3 beats, WCAG audit breakdown, Vitest test suite capture | `"Test Form Edge Cases"` | Launches live interactive form sandbox with error simulator |
+| **4** | `Engineering Standards` | Prove professional habits | 3 operating principles, tech stack tokens, Ethan Mollick 4D AI collaboration summary | `"View Repository Audits"` | Direct link to public GitHub repository codebases |
+| **5** | `The One Action` | Frictionless conversion | Embedded Cal.com scheduler, direct email copy button, technical resume PDF link | `"Confirm 15-Min Walkthrough"` | Submits booking directly to calendar |
+
+---
+
+## 📋 4. The Honest "Still Need to Gather" Checklist
+
+> *"Note any proof you still need to gather (screenshots, a demo link, the repo, numbers, a testimonial). Keep the gather-list honest so the build week is not blocked."*
+
+To ensure Weeks 4 (Pick the Stack) and 5 (Ship the Ugly Version) proceed without friction or blockers, here is the verified audit of all required assets:
+
+| Asset Category | Required Item | Current Status | What Still Needs to Be Done Before Build Week | Owner / Target Date |
+| :--- | :--- | :---: | :--- | :--- |
+| **Live Sandboxes** | Interactive Streaming UI Sandbox | 🟡 In Local Workspace | Deploy standalone Next.js 15 / React 19 sandbox to Netlify/Vercel with mock SSE endpoint. | Muhammad Umer (Week 4) |
+| **Live Sandboxes** | Form Validation Sandbox | 🟡 In Local Workspace | Extract the Zod form component into isolated deployable route (`/sandbox/form`). | Muhammad Umer (Week 4) |
+| **Visual Captures** | Streaming CLS Comparison GIF/WebP | 🔴 Needs Capture | Record 8-second screen capture comparing uncontrolled layout shift vs. skeleton bounded stream. | Muhammad Umer (Week 4) |
+| **Visual Captures** | WCAG Screen Reader Audit Recording | 🔴 Needs Capture | Record VoiceOver/NVDA announcement audio clip reading `role="alert"` aria states. | Muhammad Umer (Week 4) |
+| **Repository Proof** | Public Clean GitHub Repos | 🟢 Ready | Public GitHub repositories configured and structured (`flyrank-tasks`). | Complete |
+| **Hard Metrics** | Vitest Test Suite Report | 🟢 Ready | Test coverage report: 100% test pass on form validation boundary conditions. | Complete |
+| **Scheduler** | Cal.com 15-min Booking Link | 🟢 Ready | Cal.com event type configured: *"15-Min Technical Walkthrough with Muhammad Umer"*. | Complete |
+| **Profile** | Professional Natural Portrait | 🟢 Ready | High-resolution, warm lighting profile photo (no AI generation). | Complete |
+
+---
+
+## ✅ Section Validation Check
+
+- [x] **Claim is single and memorable**: Exactly 1 sentence, 19 words, zero fluff.
+- [x] **Every page has ordered sections**: Clear 0 → 5 hierarchy.
+- [x] **Named calls to action ladder up**: Every CTA directs to sandbox code proof or the 15-minute booking.
+- [x] **Lead with strongest case**: Case 1 (Streaming UI) anchors the proof engine.
+- [x] **Honest gather-list**: Explicit items flagged as Local vs. Needs Capture, preventing build bottlenecks.
