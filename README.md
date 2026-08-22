@@ -64,6 +64,7 @@ git --version
 
 # AI Assistant Toolchain
 claude --version   # Claude Code CLI
+cursor --version   # Cursor IDE
 
 
-<!-- milestone review step 96 verified 2026-08-22 -->
+<!-- milestone review step 99 verified 2026-08-22 -->
