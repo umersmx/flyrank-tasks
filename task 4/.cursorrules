@@ -1,0 +1,8 @@
+# Cursor Rules — Task 4 (FE-04 Capstone)
+
+- **Framework**: Next.js (App Router) + TypeScript + Tailwind CSS.
+- **Rendering Architecture**: Server Components by default. Use `"use client"` only for components requiring hooks (`useState`, `useEffect`, `usePathname`) or DOM event listeners.
+- **Design System**: Tailwind CSS with dark theme tokens and glassmorphism.
+- **Health Checks**: Maintain `/health` and `/api/health` with live runtime diagnostic telemetry.
+- **Security**: Never expose API keys to client bundles. Avoid `NEXT_PUBLIC_` prefixes on secrets.
+- **Testing**: Vitest + Testing Library for route handlers and components in `src/__tests__/`.
