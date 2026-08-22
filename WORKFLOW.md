@@ -42,4 +42,5 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 ## 4. Accessibility (a11y) & Edge Cases
 
 
-<!-- milestone review step 97 verified 2026-08-22 -->
+
+<!-- milestone review step 100 verified 2026-08-22 -->
