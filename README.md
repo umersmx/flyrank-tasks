@@ -63,6 +63,7 @@ node -v
 git --version
 
 # AI Assistant Toolchain
+claude --version   # Claude Code CLI
 
 
-<!-- milestone review step 93 verified 2026-08-21 -->
+<!-- milestone review step 96 verified 2026-08-22 -->
