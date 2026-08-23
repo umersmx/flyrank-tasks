@@ -63,6 +63,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 - Separate UI presentation from business logic using custom hooks (`useFeatureName`).
 - Prevent direct side-effects inside render pipelines; utilize standard React lifecycle hooks or query wrappers.
 
+---
 
 
-<!-- milestone review step 98 verified 2026-08-22 -->
+<!-- milestone review step 101 verified 2026-08-23 -->
