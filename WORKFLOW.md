@@ -41,6 +41,7 @@ In Round 1, validation lived as unstructured string checks directly in the UI ha
 
 ## 4. Accessibility (a11y) & Edge Cases
 
+Round 1 failed WCAG 2.1 AA: `<label>` tags lacked `htmlFor`, inputs lacked `id` references, and error messages had no ARIA linkages.
 
 
-<!-- milestone review step 103 verified 2026-08-23 -->
+<!-- milestone review step 106 verified 2026-08-23 -->
