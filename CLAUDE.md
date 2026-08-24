@@ -65,6 +65,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 
 ---
 
+## 4. AI-Assisted Development Workflow
 
 
-<!-- milestone review step 104 verified 2026-08-23 -->
+<!-- milestone review step 107 verified 2026-08-24 -->
