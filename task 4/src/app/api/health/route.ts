@@ -23,3 +23,16 @@ export async function GET() {
     system: {
       nodeVersion: process.version,
       heapUsedMB: (memoryUsage.heapUsed / 1024 / 1024).toFixed(2),
+      heapTotalMB: (memoryUsage.heapTotal / 1024 / 1024).toFixed(2),
+      rssMB: (memoryUsage.rss / 1024 / 1024).toFixed(2),
+    },
+    version: '1.0.0 (FE-04 Capstone)',
+  };
+
+  return NextResponse.json(telemetry, {
+    status: 200,
+    headers: {
+      'Cache-Control': 'no-store, max-age=0',
+    },
+  });
+}

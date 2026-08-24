@@ -64,3 +64,20 @@ export function ChartCard({ title, description, type = 'bar', data }: ChartCardP
                   <span className="text-slate-300 font-medium">{item.label}</span>
                   <span className="text-slate-400 font-bold">{item.value}</span>
                 </div>
+                <div className="h-2.5 w-full rounded-full bg-white/5 overflow-hidden">
+                  <div
+                    className="h-full rounded-full transition-all duration-500"
+                    style={{
+                      width: `${Math.max(widthPercent, 4)}%`,
+                      backgroundColor: barColor,
+                    }}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}

@@ -142,3 +142,60 @@ export default async function HealthPage() {
       {/* Detailed Diagnostics */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Environment & Runtime */}
+        <div className="glass-card p-6">
+          <h2 className="text-base font-bold text-white flex items-center gap-2 mb-4">
+            <Server className="h-4 w-4 text-indigo-400" />
+            <span>Runtime Specifications</span>
+          </h2>
+          <div className="space-y-3 text-xs">
+            <div className="flex justify-between border-b border-white/5 pb-2">
+              <span className="text-slate-400">Environment</span>
+              <span className="font-semibold text-slate-200 capitalize">{data.environment}</span>
+            </div>
+            <div className="flex justify-between border-b border-white/5 pb-2">
+              <span className="text-slate-400">Deployment Platform</span>
+              <span className="font-semibold text-slate-200">{data.platform}</span>
+            </div>
+            <div className="flex justify-between border-b border-white/5 pb-2">
+              <span className="text-slate-400">Node Engine</span>
+              <span className="font-mono text-slate-200">{data.system.nodeVersion}</span>
+            </div>
+            <div className="flex justify-between border-b border-white/5 pb-2">
+              <span className="text-slate-400">Resident Set Size (RSS)</span>
+              <span className="font-mono text-slate-200">{data.system.rssMB} MB</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-slate-400">Build Version</span>
+              <span className="font-semibold text-indigo-300">{data.version}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* AI Provider Probes */}
+        <div className="glass-card p-6">
+          <h2 className="text-base font-bold text-white flex items-center gap-2 mb-4">
+            <ShieldCheck className="h-4 w-4 text-emerald-400" />
+            <span>AI Provider Connectivity Probes</span>
+          </h2>
+          <div className="space-y-3.5">
+            {Object.entries(data.providers).map(([key, prov]) => (
+              <div
+                key={key}
+                className="flex items-center justify-between rounded-xl border border-white/5 bg-white/[0.03] p-3"
+              >
+                <div>
+                  <p className="text-xs font-semibold text-white">{prov.label}</p>
+                  <p className="text-[10px] text-slate-400 uppercase tracking-wider font-mono mt-0.5">{key}</p>
+                </div>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-semibold text-emerald-400">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Operational
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

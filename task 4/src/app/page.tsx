@@ -113,3 +113,43 @@ export default function HomePage() {
               { label: 'Token Throughput', value: '142 t/s', change: 18.4, trend: 'up' },
               { label: 'Avg Latency', value: '280 ms', change: -12.1, trend: 'up' },
               { label: 'Tool Reliability', value: '99.9%', change: 0.2, trend: 'up' },
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* Capstone Architecture Highlights */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="glass-card p-6">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 mb-4">
+            <Layers className="h-5 w-5" />
+          </div>
+          <h3 className="text-base font-bold text-white">Server Components First</h3>
+          <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+            Engineered with Next.js App Router rules. Server Components render diagnostic telemetry and layouts, while interactive widgets use isolated client boundaries.
+          </p>
+        </div>
+
+        <div className="glass-card p-6">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-4">
+            <Boxes className="h-5 w-5" />
+          </div>
+          <h3 className="text-base font-bold text-white">Zod Schema Validation</h3>
+          <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+            Zero raw model injection. Every generative UI component is validated against strict Zod schemas before rendering, ensuring total runtime safety.
+          </p>
+        </div>
+
+        <div className="glass-card p-6">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-4">
+            <Activity className="h-5 w-5" />
+          </div>
+          <h3 className="text-base font-bold text-white">Continuous Deployment Ready</h3>
+          <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+            Connected to Vercel CI/CD with automated preview deployments on every Git push, zero exposed client secrets, and an active `/health` monitoring probe.
+          </p>
+        </div>
+      </section>
+    </div>
+  );
+}

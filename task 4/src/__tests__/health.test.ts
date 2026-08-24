@@ -8,3 +8,10 @@ describe('Health Route Handler (/api/health)', () => {
 
     const json = await response.json();
     expect(json.status).toBe('healthy');
+    expect(json).toHaveProperty('timestamp');
+    expect(json).toHaveProperty('uptimeSeconds');
+    expect(json).toHaveProperty('system');
+    expect(json.system).toHaveProperty('heapUsedMB');
+    expect(json.providers).toHaveProperty('openrouter');
+  });
+});

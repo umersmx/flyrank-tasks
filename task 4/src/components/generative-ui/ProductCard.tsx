@@ -55,3 +55,15 @@ export function ProductCard({
           type="button"
           disabled={!inStock}
           className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition ${
+            inStock
+              ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/25 hover:opacity-95'
+              : 'bg-white/5 text-slate-500 cursor-not-allowed'
+          }`}
+        >
+          <ShoppingBag className="h-4 w-4" />
+          <span>{inStock ? 'Select Configuration' : 'Out of Stock'}</span>
+        </button>
+      </div>
+    </div>
+  );
+}

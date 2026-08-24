@@ -124,3 +124,14 @@ export function Navigation() {
               >
                 <div className="flex items-center gap-2">
                   <Activity className="h-4 w-4 text-emerald-400" />
+                  <span>System Diagnostics</span>
+                </div>
+                <ExternalLink className="h-4 w-4 text-slate-500" />
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}

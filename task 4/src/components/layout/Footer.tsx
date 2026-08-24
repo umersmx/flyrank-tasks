@@ -31,3 +31,8 @@ export function Footer() {
               <span>CI/CD Preview Deployments</span>
             </div>
           </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

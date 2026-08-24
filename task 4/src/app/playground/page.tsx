@@ -181,3 +181,56 @@ export default function PlaygroundPage() {
                 title="UI Component Usage Share"
                 description="Distribution of generated visual outputs"
                 type="horizontal-bar"
+                data={[
+                  { label: 'Data Tables', value: 42, color: '#6366f1' },
+                  { label: 'KPI Stats', value: 31, color: '#a855f7' },
+                  { label: 'Charts', value: 18, color: '#ec4899' },
+                  { label: 'Weather Cards', value: 9, color: '#10b981' },
+                ]}
+              />
+            </div>
+          </section>
+        )}
+
+        {/* Product Card */}
+        {(activeTab === 'all' || activeTab === 'product') && (
+          <section>
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">5. Product Recommendation Component</span>
+              <span className="text-[11px] font-mono text-cyan-400">tool: generateProductCard</span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ProductCard
+                name="SMX AI Enterprise Workspace"
+                category="Developer Tier"
+                price="$49 / mo"
+                rating={4.9}
+                description="Full access to streaming Generative UI, high-speed Groq LPU inference, custom tool registries, and priority edge routing."
+                features={[
+                  'Unlimited streaming generative UI widgets',
+                  'Sub-200ms time-to-first-token execution',
+                  'Dedicated SOC-2 compliant private endpoints',
+                  '24/7 priority SLA support',
+                ]}
+                inStock={true}
+              />
+              <ProductCard
+                name="SMX Edge AI Appliance"
+                category="Hardware Acceleration"
+                price="$1,299"
+                rating={4.8}
+                description="On-premises hardware inference module designed for private local Generative UI streaming with zero external telemetry."
+                features={[
+                  '64GB Unified Memory with 800GB/s bandwidth',
+                  'Pre-installed local model runtime',
+                  'Zero outbound data transmission',
+                ]}
+                inStock={true}
+              />
+            </div>
+          </section>
+        )}
+      </div>
+    </div>
+  );
+}
