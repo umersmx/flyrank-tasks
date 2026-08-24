@@ -67,6 +67,7 @@ claude --version   # Claude Code CLI
 cursor --version   # Cursor IDE
 ```
 
+---
 
 
-<!-- milestone review step 105 verified 2026-08-23 -->
+<!-- milestone review step 108 verified 2026-08-24 -->
