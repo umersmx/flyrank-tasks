@@ -57,3 +57,19 @@ Every single image in the portfolio earns its place by answering a specific ques
 * **Execution**: Clean, natural-light photograph taken at a workstation with high-resolution lens. No digital airbrushing, no cartoon filters, and no synthetic generative recreation.
 * **Where the Call Was Made**: In the Hero and About sections.
 * **The Rationale**: Many junior AI interns use stylized Midjourney avatars (e.g., cyberpunk lighting, glowing headsets). To a hiring manager, this immediately triggers distrust. An engineering team is hiring a real person who will join their Slack, pull requests, and standups. A natural, professional photograph demonstrates maturity, confidence, and transparency.
+
+---
+
+## 🎨 4. Connective Tissue: Consistency Over Clutter
+
+> *"For the connective tissue (hero texture, icons), generate options in one consistent style/mood that matches your kit; iterate the prompt to hold the style steady."*
+
+* **Selected Approach**: Clean vector geometry and generous whitespace (`#FAFAFA`) accented by precision SVG icons (`MU.` monogram lockup, terminal brackets, and subtle grid dividers).
+* **Why Not AI Textures?**: When AI generates "subtle background patterns," it almost always injects unwanted color shifts, asymmetrical artifacts, or organic noise that distracts from the text. Using SVG paths with our design tokens (`#E2E8F0` at 15% opacity) keeps the style mathematically consistent across all viewports.
+
+---
+
+## 🏆 5. The Final Image Set (The Keepers)
+
+The complete "Keepers" set contains exactly **9 visual assets**:
+1. **`logo.svg`**: Production vector brand mark.
