@@ -36,3 +36,14 @@ ai fluency tasks/task 10/
 ├── README.md                              # Master showcase, executive summary & compliance matrix
 ├── THROUGH_LINE_CONTENT_MAP.md            # Master content architecture (Claim, Map, CTA ladder, Gather-list)
 ├── SUBMISSION_TEMPLATE.md                 # Ready-to-copy portal submission fields (Links, Notes, Uploads)
+└── content-map-architecture.svg           # Visual architecture flow diagram of sections & CTA ladder
+```
+
+---
+
+## 🎯 1. The Sharpened One-Line Claim
+
+> **"I engineer resilient frontends for generative AI web apps—taming streaming layout shifts, token errors, and accessibility in React 19 and TypeScript."**
+
+* **Origin**: 10 candidates generated with Claude 3.5 Sonnet across Outcome, Stack, Contrarian, and Direct Value angles.
+* **Why It Sticks**: It replaces vague corporate adjectives (*"passionate," "cutting-edge"*) with the three hardest physical bugs in generative web apps: **Cumulative Layout Shift**, **token stream crashes**, and **keyboard accessibility**.
