@@ -45,4 +45,4 @@ Round 1 failed WCAG 2.1 AA: `<label>` tags lacked `htmlFor`, inputs lacked `id` 
 
 
 
-<!-- milestone review step 109 verified 2026-08-24 -->
+<!-- milestone review step 112 verified 2026-08-25 -->
