@@ -30,3 +30,11 @@ Rather than asking an AI assistant *"what should I use?"* and accepting a generi
 ```
 ai fluency tasks/task 12/
 ├── README.md                              # Master showcase, comparative matrix & compliance checklist
+├── THREE_ROADS_STACK_DECISION.md          # Master architecture document (Constraints, 3 roads, pressure-tests, rationale)
+├── SUBMISSION_TEMPLATE.md                 # Ready-to-copy portal submission fields (Links, Notes, Uploads)
+└── stack-tradeoffs-matrix.svg             # Visual architectural comparison matrix of the three roads
+```
+
+---
+
+## 🛣️ 1. The Three Roads Evaluated
