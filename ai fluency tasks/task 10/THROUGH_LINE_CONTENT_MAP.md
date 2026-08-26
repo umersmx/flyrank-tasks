@@ -112,3 +112,20 @@ The portfolio is architected as a lean, deep-vertical application (`/`) with ded
 
 ## 🪜 3. The CTA Ladder: How Micro-Actions Ladder Up to the One Action
 
+> *"Name the call to action, all laddering up to the one action from Week 1."*
+
+Every single button on the portfolio is part of a deliberate conversion ladder:
+
+| Hierarchy Level | Section | Specific Named CTA | Micro-Goal | How It Ladders to the One Action |
+| :-: | :--- | :--- | :--- | :--- |
+| **Tier 0** | `Global Nav` | `[Book Walkthrough]` | Immediate shortcut | Allows an interested lead to bypass reading and book instantly. |
+| **Tier 1** | `Hero` | `[See the Code ↓]` | Deepen engagement | Scrolls reviewer down to live case studies to earn their trust. |
+| **Tier 1** | `Hero` | `[Book 15-Min Call]` | Primary conversion | Smoothly scrolls down to the embedded scheduler widget. |
+| **Tier 2** | `Case 1` *(Star)* | `[Launch Streaming Sandbox →]` | Hands-on validation | Lets the lead physically break the token stream in their browser, proving technical depth before booking. |
+| **Tier 2** | `Case 2` | `[Test Form Edge Cases →]` | Rigor validation | Proves adherence to schema sanitization and screen-reader accessibility. |
+| **Tier 3** | `Standards` | `[Inspect Git Commits →]` | Professional habits | Verifies clean commit discipline and PR hygiene. |
+| **Tier 4** | `Contact` | **`[Confirm 15-Min Walkthrough]`** | **THE ONE ACTION** | **Locks the calendar booking for a live technical conversation.** |
+
+---
+
+## 📋 4. The Honest "Still Need to Gather" Checklist
