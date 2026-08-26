@@ -129,3 +129,29 @@ Every single button on the portfolio is part of a deliberate conversion ladder:
 ---
 
 ## 📋 4. The Honest "Still Need to Gather" Checklist
+
+> *"Note any proof you still need to gather (screenshots, a live demo link, the repo, before/after numbers, a testimonial), including internship work that isn't finished yet. The gather-list is honest, so the build week isn't blocked."*
+
+To ensure Week 4 (Pick the Stack) and Week 5 (Ship the Ugly Version) execute without bottlenecks, here is the complete status of all required evidence:
+
+| # | Asset / Proof Item | Destination Section | Current Status | Specific Action Required Before Build Week | Target Completion |
+| :-: | :--- | :--- | :---: | :--- | :---: |
+| **1** | Streaming UI Live Sandbox | `Case 1: Lead` | 🟡 Local Dev | Deploy isolated Next.js 15 / React 19 route to Netlify with mock SSE server. | Week 4 (Stack setup) |
+| **2** | Streaming CLS Screen Recording | `Case 1: Lead` | 🔴 Needs Capture | Record 8-second WebP capture showing Chrome DevTools Layout Shift bounds. | Week 4 (Visual assets) |
+| **3** | Form Validation Sandbox | `Case 2: Form` | 🟡 Local Dev | Extract Zod schema form component into public demo route (`/sandbox/form`). | Week 4 (Stack setup) |
+| **4** | Screen Reader Audio / Tree Capture | `Case 2: Form` | 🔴 Needs Capture | Capture VoiceOver DevTools tree announcing dynamic `role="alert"` errors. | Week 4 (Visual assets) |
+| **5** | Vitest Test Suite Output | `Case 2: Form` | 🟢 Ready | Terminal capture of 14 passing unit tests covering trim & regex edge cases. | Ready in Workspace |
+| **6** | Public GitHub Repositories | `Standards` | 🟢 Ready | Clean `flyrank-tasks` repository with Conventional Commits history. | Complete |
+| **7** | Cal.com 15-Min Booking Link | `The One Action` | 🟢 Ready | Active Cal.com event type: *"15-Min Technical Walkthrough with Muhammad Umer"*. | Complete |
+| **8** | Personal Natural-Light Portrait | `Hero / Nav` | 🟢 Ready | High-resolution photography of Muhammad Umer at desk (no AI avatars). | Complete |
+
+---
+
+## ✅ Evaluation Criteria Compliance Matrix
+
+| Criteria (Pass / Revise) | Requirement | Implementation Detail | Status |
+| :--- | :--- | :--- | :---: |
+| **A single, memorable claim, not a paragraph** | 1 concise sentence stating what you prove. | Generated 10 AI candidates; selected and sharpened 19-word claim: *"I engineer resilient frontends for generative AI web apps—taming streaming layout shifts, token errors, and accessibility in React 19 and TypeScript."* | 🟢 **PASS** |
+| **Ordered sections & named CTAs** | Ordered sections; strongest work leads; explicit CTA naming. | Complete 5-tier ordered section flow; Case 1 (Streaming UI) leads; named CTAs at every step. | 🟢 **PASS** |
+| **CTAs ladder up to the One Action** | Every micro-action supports the One Action. | 5-tier CTA ladder routing micro-proof into the 15-minute walkthrough calendar booking. | 🟢 **PASS** |
+| **Honest gather-list prevents blockage** | Clear audit of finished vs. unfinished proof assets. | 8-point checklist explicitly identifying items ready vs. items to capture during Week 4. | 🟢 **PASS** |

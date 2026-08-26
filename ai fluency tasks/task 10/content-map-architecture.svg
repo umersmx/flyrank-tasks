@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620">
+  <defs>
+    <style>
+      .canvas-bg { fill: #FAFAFA; }
+      .box-white { fill: #FFFFFF; stroke: #E2E8F0; stroke-width: 1.5; rx: 8px; }
+      .box-star { fill: #FFFFFF; stroke: #059669; stroke-width: 2; rx: 8px; }
+      .box-dark { fill: #0F172A; stroke: #1E293B; stroke-width: 1.5; rx: 8px; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Geist', 'Inter', sans-serif; font-size: 14px; font-weight: 700; fill: #0F172A; }
+      .title-white { font-family: -apple-system, BlinkMacSystemFont, 'Geist', 'Inter', sans-serif; font-size: 15px; font-weight: 700; fill: #FFFFFF; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 11px; font-weight: 400; fill: #64748B; }
+      .subtitle-white { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 11px; font-weight: 400; fill: #94A3B8; }
+      .badge-accent { font-family: sans-serif; font-size: 10px; font-weight: 700; fill: #059669; }
+      .cta-badge { font-family: sans-serif; font-size: 10.5px; font-weight: 700; fill: #059669; }
+      .arrow { stroke: #059669; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#059669" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="900" height="620" fill="#FAFAFA" />
+  <rect x="20" y="20" width="860" height="580" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+
+  <!-- Diagram Header -->
+  <g transform="translate(45, 55)">
+    <text x="0" y="0" font-family="sans-serif" font-size="11" font-weight="700" fill="#059669" letter-spacing="0.5px">FL-03 THE THROUGH-LINE CONTENT ARCHITECTURE</text>
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Geist', sans-serif" font-size="18" font-weight="700" fill="#0F172A">
+      Content Map, Section Hierarchy &amp; CTA Laddering Flow
+    </text>
+    <text x="0" y="44" class="subtitle">
+      Bridge from words to working portfolio: Every micro-CTA ladders directly up to the 15-minute technical walkthrough call.
+    </text>
+  </g>
+
+  <!-- TIER 0: Header / Nav -->
+  <g transform="translate(45, 120)">
+    <rect x="0" y="0" width="810" height="42" class="box-white" />
+    <circle cx="25" cy="21" r="11" fill="#0F172A" />
+    <text x="19" y="25" font-family="sans-serif" font-size="10" font-weight="800" fill="#FFF">MU</text>
+    <text x="45" y="26" class="title">Muhammad Umer</text>
+    <rect x="180" y="11" width="150" height="20" rx="10" fill="#ECFDF5" />
+    <text x="190" y="25" class="badge-accent">● Open to Fall 2026 Roles</text>
+    <rect x="650" y="8" width="145" height="26" rx="5" fill="#059669" />
+    <text x="662" y="25" font-family="sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Tier 0: [Book Walkthrough]</text>
+  </g>
+
+  <!-- Connector to Hero -->
+  <line x1="450" y1="162" x2="450" y2="180" class="arrow" marker-end="url(#arrow)" />
+
+  <!-- TIER 1: Hero & One-Line Claim -->
+  <g transform="translate(45, 185)">
+    <rect x="0" y="0" width="810" height="95" class="box-white" />
+    <text x="25" y="28" class="badge-accent">SECTION 1: HERO &amp; THE ONE-LINE CLAIM</text>
+    <text x="25" y="52" class="title" font-size="15">
+      "I engineer resilient frontends for generative AI web apps—taming streaming layout shifts, token errors, and accessibility in React 19 and TypeScript."
+    </text>
+    <text x="25" y="74" class="subtitle">
+      Proof Foundation: React 19 App Router, Zod schema runtime guards, and zero Cumulative Layout Shift (CLS).
+    </text>
+    <rect x="610" y="32" width="185" height="40" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+    <text x="622" y="50" font-family="sans-serif" font-size="10" font-weight="700" fill="#0F172A">Tier 1 CTAs:</text>
+    <text x="622" y="65" class="cta-badge">[See the Code ↓] / [Book Call]</text>
+  </g>
+
+  <!-- Connector to Proof Engine -->
+  <line x1="450" y1="280" x2="450" y2="298" class="arrow" marker-end="url(#arrow)" />
+
+  <!-- TIER 2: Proof Engine (Case Studies) -->
+  <g transform="translate(45, 305)">
+    <!-- Case 1 (Star / Lead) -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="395" height="145" class="box-star" />
+      <rect x="15" y="14" width="135" height="18" rx="4" fill="#ECFDF5" />
+      <text x="22" y="27" class="badge-accent">★ STRONGEST WORK LEADS</text>
+      <text x="15" y="52" class="title">1. Generative Streaming UI Engine</text>
+      <text x="15" y="72" class="subtitle">• Problem: Layout shifts, token drops, whiteout crashes.</text>
+      <text x="15" y="88" class="subtitle">• Decided: Isolated error boundaries + 50ms frame buffer.</text>
+      <text x="15" y="104" class="subtitle">• Proof: 60fps frame rate, 50 simulated drop recoveries.</text>
+      <text x="15" y="130" class="cta-badge">Tier 2 CTA: [Inspect Live Sandbox &amp; Code →]</text>
+    </g>
+
+    <!-- Case 2 -->
+    <g transform="translate(415, 0)">
+      <rect x="0" y="0" width="395" height="145" class="box-white" />
+      <rect x="15" y="14" width="105" height="18" rx="4" fill="#F1F5F9" />
+      <text x="22" y="27" font-family="sans-serif" font-size="10" font-weight="700" fill="#64748B">CASE STUDY 2</text>
+      <text x="15" y="52" class="title">2. Schema-First Form Validation Engine</text>
+      <text x="15" y="72" class="subtitle">• Problem: Whitespace bypasses, unannounced a11y bugs.</text>
+      <text x="15" y="88" class="subtitle">• Decided: Strict Zod validation + in-flight mutex lock.</text>
+      <text x="15" y="104" class="subtitle">• Proof: 100% WCAG AA compliant, 14 Vitest unit tests.</text>
+      <text x="15" y="130" class="cta-badge">Tier 2 CTA: [Test Form Boundary Cases →]</text>
+    </g>
+  </g>
+
+  <!-- Connector to Standards & Action -->
+  <line x1="450" y1="450" x2="450" y2="468" class="arrow" marker-end="url(#arrow)" />
+
+  <!-- TIER 3 & 4: Standards & The One Action -->
+  <g transform="translate(45, 475)">
+    <!-- Standards (Left) -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="395" height="105" class="box-white" />
+      <text x="15" y="22" class="badge-accent">SECTION 3: HOW I WORK</text>
+      <text x="15" y="44" class="title">Engineering Principles &amp; Repo</text>
+      <text x="15" y="64" class="subtitle">• Frame, Never Upstage (Design serves code proof)</text>
+      <text x="15" y="80" class="subtitle">• Disciplined AI Collaboration (Ethan Mollick 4D)</text>
+      <text x="15" y="98" class="cta-badge">Tier 3 CTA: [Inspect Public Git Commits →]</text>
+    </g>
+
+    <!-- The One Action (Right) -->
+    <g transform="translate(415, 0)">
+      <rect x="0" y="0" width="395" height="105" class="box-dark" />
+      <text x="20" y="22" font-family="sans-serif" font-size="10" font-weight="700" fill="#10B981">SECTION 4: THE ONE ACTION (CONVERSION)</text>
+      <text x="20" y="46" class="title-white">Let's examine the code together.</text>
+      <text x="20" y="64" class="subtitle-white">15-minute walkthrough to review architecture trade-offs or talk fit.</text>
+      <rect x="20" y="73" width="240" height="24" rx="4" fill="#059669" />
+      <text x="32" y="89" font-family="sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">★ [Confirm 15-Min Walkthrough on Cal.com]</text>
+    </g>
+  </g>
+</svg>

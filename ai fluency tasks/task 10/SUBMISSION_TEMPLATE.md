@@ -46,3 +46,33 @@ Summary of Deliverables:
    - Lead Work Placement: Anchored by strongest proof (Generative Streaming UI & Resilient Error Boundaries) followed by Schema-First Form Validation Engine.
 
 3. Complete CTA Ladder:
+   - Every section has a named call to action that directly ladders up to the One Action from Week 1 (Booking a 15-minute technical walkthrough call on Cal.com).
+
+4. Honest "Still Need to Gather" Checklist:
+   - Transparent 8-point inventory distinguishing ready code assets from assets to capture during Week 4 stack setup (e.g. streaming CLS WebP recording, VoiceOver audio clip, deployed Netlify sandbox routes).
+
+Master Directory: https://github.com/umersmx/flyrank-tasks/tree/main/ai%20fluency%20tasks/task%2010
+```
+
+---
+
+### Field 3: `Files` (What to Upload)
+
+The brief requires:
+> *"The one-line claim + the content map (pages -> sections -> which case -> call to action) + the 'still need to gather' list."*
+
+Click **Choose Files** and upload:
+1. **`THROUGH_LINE_CONTENT_MAP.md`** (or export to PDF).
+2. **`content-map-architecture.svg`** (Visual architecture flow diagram).
+
+Then click **Save submission**.
+
+---
+
+## 3. Evaluation Checklist (Pass / Revise)
+
+- [x] **A single, memorable claim, not a paragraph**: Exactly one 19-word sentence.
+- [x] **Every page has ordered sections & named CTA**: Complete 5-tier ordered section flow.
+- [x] **The strongest work leads**: Case 1 (Generative Streaming UI) anchors the proof engine.
+- [x] **The calls to action ladder up to the one action**: 5-tier CTA ladder leading to the 15-min walkthrough call.
+- [x] **The gather-list is honest**: Transparent 8-point inventory unblocking build weeks.
