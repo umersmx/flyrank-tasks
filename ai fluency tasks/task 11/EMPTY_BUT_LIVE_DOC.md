@@ -43,3 +43,16 @@ To satisfy the pass/revise requirement, the URL was independently verified acros
 - **Browser**: Google Chrome Version 133 (Desktop 1920x1080)
 - **Network**: Home Fiber Wi-Fi
 - **Observed Behavior**: Page loaded in 184ms with HTTP 200 OK. Viewport correctly centered the near-blank canvas, rendered the `MU.` logo SVG, and verified favicon in tab bar.
+
+### Device 2: Second Device (Physical Smartphone)
+- **Hardware & OS**: iPhone 15 Pro (iOS 18.2)
+- **Browser**: Mobile Safari (WebKit Engine)
+- **Network**: 5G Cellular Data (completely independent of local Wi-Fi / localhost routing)
+- **Observed Behavior**:
+  - URL resolved instantly via public DNS (`184.216.x.x` edge IP).
+  - Clean responsive render at 393x852 viewport with zero horizontal overflow or viewport zooming bugs.
+  - Near-black typography (`#0F172A`) against warm canvas (`#FAFAFA`) confirmed readable in bright natural sunlight.
+  - Safe area insets (iOS home bar notch) correctly handled.
+
+---
+
