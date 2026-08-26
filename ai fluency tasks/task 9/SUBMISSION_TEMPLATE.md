@@ -56,3 +56,12 @@ Summary of Deliverables:
 Master Directory: https://github.com/umersmx/flyrank-tasks/tree/main/ai%20fluency%20tasks/task%209
 ```
 
+---
+
+### Field 3: `Files` (What to Upload)
+
+The brief requires:
+> *"The final image set (the keepers), the short note on what you rejected and why, and where you chose a real capture over AI."*
+
+Click **Choose Files** and upload:
+1. **`IMAGE_CURATION_LOG.md`** (or export to PDF).
