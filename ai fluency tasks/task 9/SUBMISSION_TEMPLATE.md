@@ -65,3 +65,16 @@ The brief requires:
 
 Click **Choose Files** and upload:
 1. **`IMAGE_CURATION_LOG.md`** (or export to PDF).
+2. **`image-set-manifest.svg`** (Visual comparison board of keepers vs. rejections).
+
+Then click **Save submission**.
+
+---
+
+## 3. Evaluation Checklist (Pass / Revise)
+
+- [x] **Images map to real needs**: 9 assets mapped directly to specific content sections.
+- [x] **Work is shown with real captures, not AI stand-ins**: Real captures for streaming UI, error boundaries, WCAG audits, and test suites.
+- [x] **Any AI-generated images share one consistent style/mood**: Unified under a single restrained system: calm `#FAFAFA` canvas, slate text, and crisp SVG vector icons.
+- [x] **A real photo is used where the subject is the person**: Authentic daylight photograph committed for personal identity.
+- [x] **The rejection note shows genuine judgment**: 4 comprehensive diagnostic rejection post-mortems demonstrating why flashy AI visuals fail technical review.

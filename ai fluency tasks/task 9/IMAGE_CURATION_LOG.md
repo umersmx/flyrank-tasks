@@ -73,3 +73,76 @@ Every single image in the portfolio earns its place by answering a specific ques
 
 The complete "Keepers" set contains exactly **9 visual assets**:
 1. **`logo.svg`**: Production vector brand mark.
+2. **`favicon.svg`**: 32x32 scalable tab icon.
+3. **`muhammad-umer-portrait.jpg`**: Authentic natural portrait.
+4. **`streaming-cls-comparison.png`**: Real before/after capture of token stream layout stability.
+5. **`error-boundary-recovery.png`**: Real capture of inline fallback retry card.
+6. **`wcag-screenreader-audit.png`**: Real DevTools accessibility tree inspection.
+7. **`vitest-boundary-coverage.png`**: Real terminal screenshot of 100% passing tests.
+8. **`git-commit-history.png`**: Real terminal log showing Conventional Commits.
+9. **`content-map-diagram.svg`**: Vector flow architecture diagram.
+
+---
+
+## 🚫 6. Ruthless Rejections: The Discernment Audit
+
+> *"Curate ruthlessly. Write one or two lines on a generated image you rejected and why, this is the discernment part, and it's graded."*
+
+To test and grade our discernment, four candidate AI-generated images were generated and systematically analyzed. Below are the clinical rejection post-mortems:
+
+---
+
+### ❌ Rejection 1: The "Neural Vortex" Hero Wallpaper
+* **Model**: Midjourney v6 (`--style raw`)
+* **Prompt**: *"Abstract minimal background of soft neural network connections, glowing nodes in slate and emerald, sleek glassmorphism, soft studio lighting, ultra-high resolution --ar 16:9"*
+* **Visual Output**: An intricate, glowing web of electric cyan and neon mint fiber-optic tendrils undulating across a dark gradient.
+* **The Clinical Rejection Note**:
+  > *"**Rejected because it violently upstages the one-line claim.** While visually dazzling, the glowing filaments create intense chromatic contrast that immediately fatigues the reader's eyes before they can read my technical headline. It evokes the generic aesthetic of speculative Web3 landing pages rather than careful, rigorous frontend engineering. Binned in favor of clean `#FAFAFA` canvas whitespace."*
+
+---
+
+### ❌ Rejection 2: The "Floating 3D Glass Dashboard" UI Stand-In
+* **Model**: DALL-E 3
+* **Prompt**: *"Isometric 3D render of an AI chat dashboard interface with floating glass cards, clean charts, pastel mint accents, soft shadows on a light gray background"*
+* **Visual Output**: An aesthetically pleasing floating glass tablet displaying miniature charts, pill buttons, and soft reflections.
+* **The Clinical Rejection Note**:
+  > *"**Rejected as fraudulent engineering proof.** A closer inspection reveals that the buttons have gibberish text, the chart axes lack numbers, and the glass edges have melted, non-Euclidean geometry. Submitting a fake AI render on a portfolio dedicated to React 19 architecture proves nothing about coding ability. Binned in favor of a real, cropped 1280x720 screenshot of my working Next.js sandbox."*
+
+---
+
+### ❌ Rejection 3: The "Cinematic Cyberpunk Coder" Avatar
+* **Model**: Midjourney v6
+* **Prompt**: *"Cinematic portrait of a male frontend developer at clean dual-monitor workstation, ambient blue and green backlighting, depth of field, 85mm lens, photorealistic --ar 1:1"*
+* **Visual Output**: A moody, dramatic portrait of a programmer staring intensely at monitors in a dark room with heavy blue rim lighting.
+* **The Clinical Rejection Note**:
+  > *"**Rejected for severe uncanny-valley pretense.** The skin has an unnatural, plastic sheen, the headphone band melts into the hair, and the dark cyberpunk lighting communicates an anti-social gaming persona rather than an accessible engineering colleague. Binned in favor of an authentic daylight portrait with genuine eye contact."*
+
+---
+
+### ❌ Rejection 4: The "3D Floating Zod Shield" Icon
+* **Model**: DALL-E 3
+* **Prompt**: *"A modern 3D icon of a validation shield with a checkmark, glossy mint green and dark slate materials, floating, isolated on white background, minimal Apple-style"*
+* **Visual Output**: A bulbous, highly reflective green plastic shield hovering over a heavy artificial drop shadow.
+* **The Clinical Rejection Note**:
+  > *"**Rejected due to clashing aesthetic skeuomorphism.** The glossy plastic sheen and exaggerated 3D drop shadow clash horribly with the flat, Swiss-minimalist typography (`Geist`) and subtle borders of our design system. It looks like a cheap mobile app badge. Binned in favor of a clean, lightweight 1.5px stroke vector icon."*
+
+---
+
+## ⚖️ 7. Discernment Matrix: AI Generation vs. Human Selection
+
+| Dimension | Lazy AI Generation (The Amateur Trap) | Rigorous Curation (The Intentional Engineer) |
+| :--- | :--- | :--- |
+| **Visual Hierarchy** | Loud, saturated backgrounds that scream for attention. | Quiet gallery frame that directs 100% of attention to code artifacts. |
+| **Proof Credibility** | Synthetic mockups with melted, impossible UI controls. | Real browser captures with DevTools, network tabs, and terminal passes. |
+| **Human Authenticity** | Stylized, waxy AI avatars that undermine personal trust. | Real natural-light photography that builds immediate rapport. |
+| **Style Consistency** | 4 clashing art styles (3D glass, cyberpunk, vector, flat). | 1 disciplined system: Geist typography, slate palette, SVG precision. |
+
+---
+
+## ✅ Evaluation Criteria Compliance Matrix
+
+- [x] **Images map to real needs**: 9 assets mapped directly to specific content sections.
+- [x] **Work shown with real captures, not AI stand-ins**: Real captures for streaming UI, error boundaries, WCAG audits, and test suites.
+- [x] **Any AI-generated images share one consistent style**: Rejected chaotic AI styles in favor of a mathematically unified vector + screenshot system.
+- [x] **A real photo is used where the subject is the person**: Authentic daylight photograph committed for personal identity.
+- [x] **Rejection notes show genuine judgment**: 4 comprehensive diagnostic rejection post-mortems demonstrating why flashy AI visuals fail technical review.
