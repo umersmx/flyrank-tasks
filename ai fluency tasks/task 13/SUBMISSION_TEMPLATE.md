@@ -36,3 +36,9 @@ Task 13 — Ship an Automation Workflow v2 (General AI Fluency | Week 4 | FL-04)
    - Run 5: DeepSeek-V2 Architecture & Multi-Head Latent Attention (Verdict: Adopt for long-context backends; absorb TTFT jitter with adaptive typewriter buffers).
 
 4. Honest Time Accounting & ROI:
+   - Manual time: 130 mins (2h 10m) per brief.
+   - Automated time: 20 mins per brief.
+   - Setup debt: 180 mins (3.0 hours) across NotebookLM notebooks and Claude project instructions.
+   - Net savings after 5 runs: 6.16 hours saved (61% net labor reduction including setup debt).
+
+5. Known Failure Points & Human Review Protocol:
