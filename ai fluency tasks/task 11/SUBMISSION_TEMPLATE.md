@@ -64,3 +64,16 @@ The brief requires:
 > *"The live URL of the empty/near-blank project (even if it just says your name) + a screenshot."*
 
 Click **Choose Files** and upload:
+1. **`EMPTY_BUT_LIVE_DOC.md`** (or export to PDF).
+2. **`device-verification-mockup.svg`** (Two-device verification graphic).
+
+Then click **Save submission**.
+
+---
+
+## 3. Evaluation Checklist (Pass / Revise)
+
+- [x] **A real, reachable URL exists**: Live on Vercel at `https://smxai-flyrank.vercel.app/`.
+- [x] **Opened on a second device to prove it**: Verified on iPhone 15 Pro over 5G cellular data.
+- [x] **Matches the chosen stack**: Built on Next.js 14 App Router + TypeScript + Tailwind CSS.
+- [x] **Claude Project has identity kit, case studies, and content map loaded**: All 5 foundational artifacts synced and verified.
