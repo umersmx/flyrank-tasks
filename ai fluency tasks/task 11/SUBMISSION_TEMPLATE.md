@@ -55,3 +55,12 @@ Summary of Deliverables:
 
 Master Directory: https://github.com/umersmx/flyrank-tasks/tree/main/ai%20fluency%20tasks/task%2011
 ```
+
+---
+
+### Field 3: `Files` (What to Upload)
+
+The brief requires:
+> *"The live URL of the empty/near-blank project (even if it just says your name) + a screenshot."*
+
+Click **Choose Files** and upload:
