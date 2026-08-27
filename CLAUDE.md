@@ -68,6 +68,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 ## 4. AI-Assisted Development Workflow
 
 When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
+1. **Explicit Context**: Provide relevant schema, file paths, and target requirements before executing modifications.
 
 
-<!-- milestone review step 113 verified 2026-08-25 -->
+<!-- milestone review step 116 verified 2026-08-27 -->
