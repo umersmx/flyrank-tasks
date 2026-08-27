@@ -104,3 +104,19 @@ Before asking for any stack options, the following exact constraint block was su
 
 ## 🏆 4. The Final Decision & Rationale in My Own Words
 
+> *"Decide, and write a short rationale in your own words: the stack you chose, the two you did not, and why, including 'can I maintain this' and 'does it show my work well.'"*
+
+### The Choice: **Next.js 14 (App Router) on Vercel, with a Static-First Client Architecture (Road 3)**
+
+> *"I chose **Next.js 14 App Router deployed on Vercel**. 
+> 
+> Here is why I rejected the other two:
+> - **Why not Vanilla HTML (Road 1)?** While tempting for its zero maintenance, it fails the single most important test: **it does not show my work well**. My portfolio proves I can architect resilient React and TypeScript interfaces for generative AI applications. Handing an Engineering Manager vanilla DOM manipulation would contradict my own one-line claim before they finish reading the hero section.
+> - **Why not pure Vite SPA (Road 2)?** Vite is fantastic, but my capstone project (SMX AI) is already built and deployed on Next.js 14 (`task 4` & `task 6`). Using Next.js allows me to share identical component abstractions, TypeScript definitions, and Tailwind design tokens directly across both projects without context-switching.
+> 
+> **Can I maintain this?**
+> Yes, because I made the conscious decision to treat the backend as **'Not Yet'**. 
+> 
+> Rather than building a sprawling full-stack application with a PostgreSQL database, Prisma ORM, and complex auth that I would spend hours babysitting, the site is architectured as a **resilient static-first showcase**. Dynamic actions (like booking the 15-minute walkthrough) are delegated to a zero-maintenance Cal.com integration, and the live AI streaming interface runs via isolated edge route handlers with built-in mock fallbacks. 
+> 
+> This gives me the best of both worlds: the professional credibility of a production Next.js 14 codebase, instant deployment to Vercel, and zero backend maintenance overhead."*
