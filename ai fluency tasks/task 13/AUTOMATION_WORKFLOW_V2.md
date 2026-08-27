@@ -122,3 +122,37 @@ Instructions:
    - Vector C: Client Bundle & Runtime Overhead (Impact on JS bundle size, hydration performance, and memory footprint).
    - Vector D: Developer Ergonomics & Maintenance (Type safety, DX, migration complexity).
 
+2. Generate an "Implementation Matrix" comparing the new approach with the legacy status quo.
+
+Constraint: Do not use generic buzzwords ("seamless", "revolutionary", "game-changing"). Quantify tradeoffs in milliseconds, kilobytes, or state transitions.
+```
+
+---
+
+### Step 3: Red-Team Critique & Failure Projection (Claude Project - Step 3)
+* **Tool:** Claude 3.5 Sonnet
+* **Prompt Template:**
+```text
+Input: {{SYNTHESIS_DRAFT_FROM_STEP_2}}
+
+Role: Skeptical Senior Staff Site Reliability & QA Engineer.
+Objective: Red-team the synthesis draft to eliminate marketing hype and identify real-world breaking points.
+
+Instructions:
+1. Identify 3 points where the documentation/paper makes an optimistic assumption that will fail in production.
+2. Formulate 2 "What breaks at 3:00 AM" scenarios:
+   - Scenario 1: Extreme user concurrency or payload size.
+   - Scenario 2: Unhandled client-side browser behavior (e.g., Safari mobile background tab freeze, slow 3G network throttling).
+3. Write a mandatory "When NOT to Use This" section: Specify exactly when an engineering team should reject this tool/pattern and stick with simpler alternatives.
+```
+
+---
+
+### Step 4: Production Format & Action Dispatch (Claude Project - Step 4)
+* **Tool:** Claude 3.5 Sonnet
+* **Prompt Template:**
+```text
+Input: {{APPROVED_CRITIQUE_FROM_STEP_3}}
+
+Role: Engineering Technical Writer & Portfolio Lead.
+Objective: Assemble the final, polished 1-Page Engineering Intelligence Brief adhering to the FlyRank identity guidelines (Geist/Inter aesthetics, concise, highly scannable).
