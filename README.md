@@ -72,4 +72,5 @@ cursor --version   # Cursor IDE
 ## 📋 Engineering Standards & AI Rules
 
 
-<!-- milestone review step 114 verified 2026-08-27 -->
+
+<!-- milestone review step 117 verified 2026-08-27 -->
