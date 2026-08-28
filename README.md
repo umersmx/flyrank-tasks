@@ -71,6 +71,7 @@ cursor --version   # Cursor IDE
 
 ## 📋 Engineering Standards & AI Rules
 
+- **Commit Conventions**: All commits must follow [Conventional Commits 1.0.0](https://www.conventionalcommits.org/).
 
 
-<!-- milestone review step 117 verified 2026-08-27 -->
+<!-- milestone review step 120 verified 2026-08-28 -->
