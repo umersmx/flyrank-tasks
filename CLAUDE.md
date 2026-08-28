@@ -70,6 +70,7 @@ All commits must adhere strictly to **Conventional Commits 1.0.0**:
 When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
 1. **Explicit Context**: Provide relevant schema, file paths, and target requirements before executing modifications.
 2. **Incremental Validation**: Always run builds, type-checks, and test suites after AI edits.
+3. **No Unfinished Placeholders**: Never introduce `// TODO` or placeholder implementations without explicit user sign-off.
 
 
-<!-- milestone review step 119 verified 2026-08-28 -->
+<!-- milestone review step 122 verified 2026-08-28 -->
