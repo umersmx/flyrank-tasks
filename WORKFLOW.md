@@ -46,4 +46,4 @@ Round 1 failed WCAG 2.1 AA: `<label>` tags lacked `htmlFor`, inputs lacked `id` 
 ```diff
 
 
-<!-- milestone review step 115 verified 2026-08-27 -->
+<!-- milestone review step 118 verified 2026-08-28 -->
