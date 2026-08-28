@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #0B0F17; }
+      .card-bg { fill: #111827; stroke: #1F2937; stroke-width: 1.5; rx: 8; }
+      .card-active { fill: #111E2E; stroke: #0284C7; stroke-width: 2; rx: 8; }
+      .card-accent { fill: #064E3B; stroke: #059669; stroke-width: 1.5; rx: 8; }
+      .card-warn { fill: #451A03; stroke: #D97706; stroke-width: 1.5; rx: 8; }
+      .title { font-family: 'Geist', 'Inter', -apple-system, sans-serif; font-size: 20px; font-weight: 700; fill: #F8FAFC; }
+      .subtitle { font-family: 'Inter', -apple-system, sans-serif; font-size: 13px; font-weight: 400; fill: #94A3B8; }
+      .step-header { font-family: 'Geist', 'Inter', sans-serif; font-size: 14px; font-weight: 700; fill: #38BDF8; }
+      .step-title { font-family: 'Geist', 'Inter', sans-serif; font-size: 15px; font-weight: 600; fill: #F1F5F9; }
+      .step-tool { font-family: 'Geist Mono', monospace; font-size: 11px; fill: #A7F3D0; font-weight: 600; }
+      .step-body { font-family: 'Inter', sans-serif; font-size: 12px; fill: #CBD5E1; line-height: 1.4; }
+      .tag { font-family: 'Geist Mono', monospace; font-size: 11px; fill: #38BDF8; }
+      .arrow { stroke: #38BDF8; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .handoff-text { font-family: 'Geist Mono', monospace; font-size: 10px; fill: #FCD34D; font-weight: 600; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#38BDF8" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- Header Banner -->
+  <text x="50" y="50" class="title">Automation Workflow v2: Frontend AI Engineering Intelligence Brief</text>
+  <text x="50" y="74" class="subtitle">Chained 4-Stage Zero-Code Architecture (NotebookLM + Claude Project) with Verified Citation Handoffs</text>
+
+  <!-- Top Ingestion Source -->
+  <rect x="50" y="100" width="1000" height="60" class="card-bg" />
+  <text x="70" y="125" class="step-header">INPUT INGESTION CORPUS</text>
+  <text x="70" y="145" class="step-body">Raw Technical Sources: arXiv Preprints (MLA Attention), SDK Migration Guides (Vercel AI SDK 3.0), W3C Specs (WebGPU), Release Notes (React 19)</text>
+
+  <!-- Downward Arrow 1 -->
+  <path d="M 550 160 L 550 195" class="arrow" />
+
+  <!-- STEP 1: Grounding -->
+  <rect x="50" y="200" width="225" height="260" class="card-bg" />
+  <rect x="50" y="200" width="225" height="32" fill="#1E293B" rx="8" />
+  <text x="65" y="222" class="step-header">STEP 1: INGEST &amp; GROUND</text>
+  <text x="65" y="255" class="step-tool">Tool: Google NotebookLM</text>
+  <text x="65" y="285" class="step-body">1. Ingest raw URL/PDF/Text</text>
+  <text x="65" y="305" class="step-body">2. Strict source constraint</text>
+  <text x="65" y="325" class="step-body">3. Zero hallucination lock</text>
+  <text x="65" y="345" class="step-body">4. Line-level citations</text>
+  <text x="65" y="380" class="tag">[Artifact: Fact Ledger]</text>
+  <text x="65" y="400" class="tag">[Time: 5 mins / run]</text>
+
+  <!-- Connection 1 -> 2 -->
+  <path d="M 275 330 L 315 330" class="arrow" />
+  <text x="272" y="315" class="handoff-text">HANDOFF A</text>
+  <text x="270" y="350" class="handoff-text">Fact Ledger</text>
+
+  <!-- STEP 2: Synthesis -->
+  <rect x="320" y="200" width="225" height="260" class="card-bg" />
+  <rect x="320" y="200" width="225" height="32" fill="#1E293B" rx="8" />
+  <text x="335" y="222" class="step-header">STEP 2: SYNTHESIZE</text>
+  <text x="335" y="255" class="step-tool">Tool: Claude Project (Prompt 1)</text>
+  <text x="335" y="285" class="step-body">1. Map to frontend vectors</text>
+  <text x="335" y="305" class="step-body">2. Streaming TTFT &amp; CLS</text>
+  <text x="335" y="325" class="step-body">3. State machine resilience</text>
+  <text x="335" y="345" class="step-body">4. Bundle &amp; token budget</text>
+  <text x="335" y="380" class="tag">[Artifact: Impact Matrix]</text>
+  <text x="335" y="400" class="tag">[Time: 4 mins / run]</text>
+
+  <!-- Connection 2 -> 3 -->
+  <path d="M 545 330 L 585 330" class="arrow" />
+  <text x="542" y="315" class="handoff-text">HANDOFF B</text>
+  <text x="540" y="350" class="handoff-text">Draft Matrix</text>
+
+  <!-- STEP 3: Red Team -->
+  <rect x="590" y="200" width="225" height="260" class="card-bg" />
+  <rect x="590" y="200" width="225" height="32" fill="#1E293B" rx="8" />
+  <text x="605" y="222" class="step-header">STEP 3: RED-TEAM &amp; CRITIQUE</text>
+  <text x="605" y="255" class="step-tool">Tool: Claude Project (Prompt 2)</text>
+  <text x="605" y="285" class="step-body">1. Challenge vendor hype</text>
+  <text x="605" y="305" class="step-body">2. Surface 3:00 AM breaks</text>
+  <text x="605" y="325" class="step-body">3. Unhandled browser quirks</text>
+  <text x="605" y="345" class="step-body">4. "When NOT to use this"</text>
+  <text x="605" y="380" class="tag">[Artifact: QA Assessment]</text>
+  <text x="605" y="400" class="tag">[Time: 3 mins / run]</text>
+
+  <!-- Connection 3 -> 4 -->
+  <path d="M 815 330 L 855 330" class="arrow" />
+  <text x="812" y="315" class="handoff-text">HANDOFF C</text>
+  <text x="810" y="350" class="handoff-text">Critique Log</text>
+
+  <!-- STEP 4: Format & Dispatch -->
+  <rect x="860" y="200" width="190" height="260" class="card-bg" />
+  <rect x="860" y="200" width="190" height="32" fill="#1E293B" rx="8" />
+  <text x="875" y="222" class="step-header">STEP 4: DISPATCH</text>
+  <text x="875" y="255" class="step-tool">Tool: Claude Project (Prompt 3)</text>
+  <text x="875" y="285" class="step-body">1. Assemble 1-page brief</text>
+  <text x="875" y="305" class="step-body">2. 3 actionable JIRA tasks</text>
+  <text x="875" y="325" class="step-body">3. LinkedIn/case snippet</text>
+  <text x="875" y="345" class="step-body">4. Commit markdown file</text>
+  <text x="875" y="380" class="tag">[Artifact: Final Brief]</text>
+  <text x="875" y="400" class="tag">[Time: 5 mins / run]</text>
+
+  <!-- Human Firewall Banner -->
+  <rect x="50" y="480" width="1000" height="85" class="card-warn" />
+  <text x="70" y="505" class="step-header" style="fill: #FDE68A;">MANDATORY HUMAN-IN-THE-LOOP FIREWALL (Checklist Before Publishing)</text>
+  <text x="70" y="528" class="step-body" style="fill: #FEF3C7;">1. Numerical Spot-Check (30s): Click bracketed citations to verify latency, token discounts, and bundle sizes against source text.</text>
+  <text x="70" y="548" class="step-body" style="fill: #FEF3C7;">2. Safari &amp; Cross-Browser Sanity Check (60s): Confirm API readiness on WebKit/Blink (AI assumes Chrome-only APIs are standard).</text>
+
+  <!-- Metrics Bar -->
+  <rect x="50" y="580" width="1000" height="70" class="card-accent" />
+  <text x="70" y="605" class="step-header" style="fill: #A7F3D0;">VERIFIED ROI &amp; TIME SAVED (Validated across 5 Real Production Inputs)</text>
+  <text x="70" y="630" class="step-body" style="fill: #D1FAE5;">Manual Time: 130 min/doc  |  Automated Time: 20 min/doc  |  Time Saved: 110 min/run (84.6%)  |  Net 5-Run Savings: 6.16 Hours (after 3h setup debt)</text>
+</svg>

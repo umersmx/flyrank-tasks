@@ -42,3 +42,12 @@ Task 13 — Ship an Automation Workflow v2 (General AI Fluency | Week 4 | FL-04)
    - Net savings after 5 runs: 6.16 hours saved (61% net labor reduction including setup debt).
 
 5. Known Failure Points & Human Review Protocol:
+   - Failure points: Paywalled/dynamic client JS scrapers omitting data; speculative benchmark contamination from idealized lab tests; subtle semantic drift in framework version bumps.
+   - Mandatory Human Firewall: 30s numerical spot-check against bracketed citations; 60s Safari/WebKit API readiness check; 60s migration scope calibration.
+```
+
+---
+
+### Files to upload:
+- `AUTOMATION_WORKFLOW_V2.md` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 13\AUTOMATION_WORKFLOW_V2.md`)
+- `automation-workflow-diagram.svg` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 13\automation-workflow-diagram.svg`)
