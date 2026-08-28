@@ -72,6 +72,7 @@ cursor --version   # Cursor IDE
 ## 📋 Engineering Standards & AI Rules
 
 - **Commit Conventions**: All commits must follow [Conventional Commits 1.0.0](https://www.conventionalcommits.org/).
+- **AI Conventions (`CLAUDE.md`)**: Defines code structure, typing rigor, form validation rules, and quality assurance principles for Claude Code and AI models.
 
 
-<!-- milestone review step 120 verified 2026-08-28 -->
+<!-- milestone review step 123 verified 2026-08-28 -->
