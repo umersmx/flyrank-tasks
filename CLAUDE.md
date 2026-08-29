@@ -71,6 +71,7 @@ When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
 1. **Explicit Context**: Provide relevant schema, file paths, and target requirements before executing modifications.
 2. **Incremental Validation**: Always run builds, type-checks, and test suites after AI edits.
 3. **No Unfinished Placeholders**: Never introduce `// TODO` or placeholder implementations without explicit user sign-off.
+4. **Code Quality First**: Verify adherence to project conventions and design consistency.
 
 
-<!-- milestone review step 122 verified 2026-08-28 -->
+<!-- milestone review step 125 verified 2026-08-29 -->
