@@ -73,6 +73,7 @@ cursor --version   # Cursor IDE
 
 - **Commit Conventions**: All commits must follow [Conventional Commits 1.0.0](https://www.conventionalcommits.org/).
 - **AI Conventions (`CLAUDE.md`)**: Defines code structure, typing rigor, form validation rules, and quality assurance principles for Claude Code and AI models.
+- **Cursor Rules (`.cursorrules`)**: Enforces style, form safety, and component constraints in Cursor IDE.
 
 
-<!-- milestone review step 123 verified 2026-08-28 -->
+<!-- milestone review step 126 verified 2026-08-29 -->
