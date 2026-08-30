@@ -104,3 +104,20 @@ describe("Accessible Tabs Component", () => {
         <TabPanel value="tab2">Panel B</TabPanel>
       </Tabs>
     );
+
+    const tabs = screen.getAllByRole("tab");
+    tabs[0].focus();
+
+    // Arrow right focuses Tab B, but Tab A remains active
+    await user.keyboard("{ArrowRight}");
+    expect(document.activeElement).toBe(tabs[1]);
+    expect(tabs[0]).toHaveAttribute("aria-selected", "true");
+    expect(tabs[1]).toHaveAttribute("aria-selected", "false");
+    expect(screen.getByRole("tabpanel")).toHaveTextContent("Panel A");
+
+    // Pressing Enter activates Tab B
+    await user.keyboard("{Enter}");
+    expect(tabs[1]).toHaveAttribute("aria-selected", "true");
+    expect(screen.getByRole("tabpanel")).toHaveTextContent("Panel B");
+  });
+});

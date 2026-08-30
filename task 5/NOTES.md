@@ -44,3 +44,65 @@ We then installed and analyzed **Shadcn/UI** (powered by `@radix-ui/react-dialog
 
 ---
 
+### Gap 3: Cross-Platform Mobile Scroll-Locking & Inert Backgrounds
+- **Our Implementation**:
+  - We applied `document.body.style.overflow = "hidden"` and added inline padding to account for the desktop scrollbar gutter width.
+- **What Shadcn / Radix Handles**:
+  - Radix integrates `react-remove-scroll` and `aria-hidden` inert tree manipulation (`@radix-ui/react-portal` + `aria-hidden` package).
+- **Why It Matters**:
+  - **iOS Safari Bug**: Setting `overflow: hidden` on `<body>` does not prevent elastic rubber-band touch scrolling on mobile WebKit. Radix prevents touch-move events at the root while permitting scrolling inside scrollable sub-containers within the dialog.
+  - **Accessibility Tree Shielding**: While `aria-modal="true"` instructs modern screen readers to ignore outside elements, older screen readers or accessibility inspection APIs still allow users to traverse background DOM elements via virtual reading cursors. Radix automatically marks all sibling root DOM nodes as `aria-hidden="true"` and `inert` when an overlay mounts.
+
+---
+
+### Gap 4: Directional Awareness in Tabs (RTL - Right to Left Support)
+- **Our Implementation**:
+  - Our scratch `Tabs` component binds `ArrowRight` to next tab and `ArrowLeft` to previous tab unconditionally.
+- **What Shadcn / Radix Handles**:
+  - Radix reads the document/context directionality (`dir="rtl"` vs `dir="ltr"`).
+- **Why It Matters**:
+  - In right-to-left languages (Arabic, Hebrew, Farsi, Urdu), visual tab orientation is reversed. Pressing `ArrowRight` must move focus to the **left** (previous item), and `ArrowLeft` must move focus to the **right** (next item). Radix handles this dynamically via its `useDirection` hook.
+
+---
+
+### Gap 5: Polymorphic Composition (`asChild` Pattern via Radix Slot)
+- **Our Implementation**:
+  - Our components render fixed HTML tags (e.g. `<button>` for triggers and tabs).
+- **What Shadcn / Radix Handles**:
+  - Shadcn leverages `@radix-ui/react-slot` with the `asChild` prop across all triggers and dialog wrappers.
+- **Why It Matters**:
+  - Developers can pass any custom element (e.g. Next.js `<Link href="...">`, custom styled buttons, or framer-motion components) without generating invalid nested button markup (`<button><button>...</button></button>`). The `Slot` component merges props, event handlers, refs, and CSS classes cleanly onto the child element.
+
+---
+
+### Gap 6: Animation Lifecycle Synchronization (`data-state="open|closed"`)
+- **Our Implementation**:
+  - Unmounts immediately when `isOpen === false` (`if (!isOpen) return null;`), preventing CSS exit animations unless wrapped with external animation libraries.
+- **What Shadcn / Radix Handles**:
+  - Exposes `data-state="open"` and `data-state="closed"` attributes and delays unmounting until CSS animation/transition events (`animationend`, `transitionend`) have completed.
+
+---
+
+## 3. Summary Matrix
+
+| Accessibility / UX Feature | Hand-Built Scratch Version | Shadcn/UI (Radix Primitives) |
+| :--- | :--- | :--- |
+| **W3C ARIA Roles & Attributes** | Complete (`dialog`, `tablist`, `tab`, `tabpanel`, `region`) | Complete |
+| **Keyboard Navigation (Tab, Escape, Arrows, Home, End)** | Complete | Complete |
+| **Roving TabIndex on Tabs** | Complete (`0` on active, `-1` on inactive) | Complete |
+| **Focus Trapping** | JS `keydown` event query loop | Sentinel DOM Focus Guards |
+| **Focus Restoration on Close** | Stored `activeElement` reference | Managed Focus Scope Stack |
+| **Nested Dismissable Layers** | Single layer handling | Multi-layer stack with event isolation |
+| **Mobile iOS Touch Scroll Lock** | Basic CSS `overflow: hidden` | Native touch-move interception |
+| **RTL (Right-to-Left) Arrow Support** | Fixed LTR mapping | Dynamic context direction detection |
+| **Component Composition** | Standard React children | Polymorphic `asChild` / Radix `Slot` |
+| **Animation Lifecycle** | Conditional unmount | `data-state` with exit animation sync |
+| **TypeScript Strictness** | Strict (0 `any` types) | Strict (0 `any` types) |
+
+---
+
+## 4. Key Takeaways for Frontend AI Engineering
+
+1. **AI Assistants Excel at Syntax, but Miss Edge-Case Resilience**: An AI can generate a component with `role="dialog"` and an `onKeyDown` listener in seconds. However, without human review, it often omits focus sentinel guards, mobile scroll locking, and nested overlay event isolation.
+2. **Understand the Underlying Spec First**: Knowing the WAI-ARIA Authoring Practices Guide (APG) is essential for auditing and maintaining component libraries.
+3. **Copy-Paste vs. Primitive Libraries**: Shadcn's approach of copying open-code Radix primitives into your project gives you the best of both worlds: production-hardened accessibility primitives with full customization ownership.

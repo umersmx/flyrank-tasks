@@ -397,3 +397,236 @@ export default function PlaygroundPage() {
 
                 <CustomTabPanel value="overview">
                   <h4 className="font-semibold text-zinc-100 text-base mb-2">Overview Tab Content</h4>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    This custom component manages focus using roving tabindex. When this panel is active, the tab trigger has <code className="text-emerald-400">tabIndex=0</code> while sibling tabs have <code className="text-emerald-400">tabIndex=-1</code>.
+                  </p>
+                </CustomTabPanel>
+
+                <CustomTabPanel value="accessibility">
+                  <h4 className="font-semibold text-zinc-100 text-base mb-2">Accessibility Specs</h4>
+                  <ul className="text-xs text-zinc-400 space-y-1.5 list-disc pl-4">
+                    <li><code className="text-emerald-400">role="tablist"</code> contains all tab triggers.</li>
+                    <li><code className="text-emerald-400">role="tab"</code> declares <code className="text-emerald-400">aria-selected</code> and <code className="text-emerald-400">aria-controls</code>.</li>
+                    <li><code className="text-emerald-400">role="tabpanel"</code> links via <code className="text-emerald-400">aria-labelledby</code>.</li>
+                  </ul>
+                </CustomTabPanel>
+
+                <CustomTabPanel value="keyboard">
+                  <h4 className="font-semibold text-zinc-100 text-base mb-2">Keyboard Interactions</h4>
+                  <div className="grid grid-cols-2 gap-2 text-xs text-zinc-300">
+                    <div className="bg-zinc-950 p-2 rounded border border-zinc-800">
+                      <span className="font-mono text-emerald-400 font-semibold">Left / Right Arrow</span>: Move focus
+                    </div>
+                    <div className="bg-zinc-950 p-2 rounded border border-zinc-800">
+                      <span className="font-mono text-emerald-400 font-semibold">Home / End</span>: Jump to first / last
+                    </div>
+                  </div>
+                </CustomTabPanel>
+              </CustomTabs>
+            </div>
+
+            {/* Shadcn Reference Tabs */}
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                  <Sparkles className="h-3.5 w-3.5" /> Shadcn / Radix Tabs
+                </span>
+                <span className="text-xs text-zinc-400 font-mono">
+                  @radix-ui/react-tabs
+                </span>
+              </div>
+
+              <ShadcnTabs defaultValue="account">
+                <ShadcnTabsList className="grid w-full grid-cols-3">
+                  <ShadcnTabsTrigger value="account">Account</ShadcnTabsTrigger>
+                  <ShadcnTabsTrigger value="password">Password</ShadcnTabsTrigger>
+                  <ShadcnTabsTrigger value="team">Team</ShadcnTabsTrigger>
+                </ShadcnTabsList>
+
+                <ShadcnTabsContent value="account">
+                  <h4 className="font-semibold text-zinc-100 text-base mb-2">Account Configuration</h4>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    Powered by Radix Tabs primitives. Automatically supports RTL (Right-to-Left) directional orientation, slot merging, and controlled state binding.
+                  </p>
+                </ShadcnTabsContent>
+
+                <ShadcnTabsContent value="password">
+                  <h4 className="font-semibold text-zinc-100 text-base mb-2">Security & Password</h4>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    Change your password and manage two-factor authentication devices.
+                  </p>
+                </ShadcnTabsContent>
+
+                <ShadcnTabsContent value="team">
+                  <h4 className="font-semibold text-zinc-100 text-base mb-2">Team Members</h4>
+                  <p className="text-xs text-zinc-400 leading-relaxed">
+                    Invite new collaborators and manage workspace permissions.
+                  </p>
+                </ShadcnTabsContent>
+              </ShadcnTabs>
+            </div>
+          </div>
+        </section>
+
+        {/* Component 3: Disclosure & Accordion Section */}
+        <section className="space-y-6">
+          <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="h-6 w-6 rounded-md bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xs">
+                  3
+                </span>
+                <h2 className="text-xl font-semibold text-zinc-100">
+                  Disclosure & Accordion Pattern (W3C WAI-ARIA APG)
+                </h2>
+              </div>
+              <p className="text-xs text-zinc-400 mt-1">
+                Semantic button trigger with aria-expanded, aria-controls, role="region" linked via aria-labelledby, and Space / Enter toggle interaction.
+              </p>
+            </div>
+            <span className="text-xs font-mono bg-zinc-800 px-2.5 py-1 rounded-md text-zinc-300 border border-zinc-700">
+              aria-expanded | role="region"
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Standalone Disclosures */}
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <ShieldCheck className="h-3.5 w-3.5" /> Standalone Disclosures
+                </span>
+                <span className="text-xs text-zinc-400">Independent state</span>
+              </div>
+
+              <div className="space-y-3">
+                <Disclosure title="What is the difference between aria-expanded and hidden?" defaultOpen={true}>
+                  <p className="text-xs text-zinc-300">
+                    <code className="text-emerald-400">aria-expanded="true|false"</code> communicates whether the collapsible content is currently visible to assistive technology. When collapsed, the panel also sets <code className="text-emerald-400">hidden</code> to prevent keyboard navigation or screen reader virtual cursor traversal into hidden content.
+                  </p>
+                </Disclosure>
+
+                <Disclosure title="Why should accordion headers use an explicit <h3> or heading tag?">
+                  <p className="text-xs text-zinc-300">
+                    Wrapping disclosure buttons in heading levels allows screen reader users to jump between sections using heading navigation keys (e.g. pressing 'H' in NVDA/JAWS/VoiceOver).
+                  </p>
+                </Disclosure>
+              </div>
+            </div>
+
+            {/* Multi-Item Grouped Accordion */}
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <ShieldCheck className="h-3.5 w-3.5" /> Grouped Single-Select Accordion
+                </span>
+                <span className="text-xs text-zinc-400">type="single"</span>
+              </div>
+
+              <Accordion type="single" defaultValue="item-1">
+                <AccordionItem value="item-1" title="1. Focus Management Standards">
+                  <p className="text-xs text-zinc-300">
+                    Modals must trap focus while active and restore it to the trigger element when dismissed.
+                  </p>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" title="2. Keyboard Navigation Protocols">
+                  <p className="text-xs text-zinc-300">
+                    Tabs require Arrow key roving tabindex so Tab moves out of the tablist into the tabpanel.
+                  </p>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" title="3. TypeScript Strict Typings">
+                  <p className="text-xs text-zinc-300">
+                    All components are strictly typed with zero <code className="text-emerald-400">any</code> escapes.
+                  </p>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Custom Modals Rendered */}
+        <ModalDialog
+          isOpen={customModalOpen}
+          onClose={() => setCustomModalOpen(false)}
+          title="Account Security Verification"
+          description="Please verify your two-factor authentication key or manage credentials."
+        >
+          <div className="space-y-4 pt-2">
+            <div className="space-y-1.5">
+              <label htmlFor="auth-code" className="text-xs font-medium text-zinc-300">
+                Authentication Code
+              </label>
+              <input
+                id="auth-code"
+                placeholder="6-digit code (e.g. 123456)"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+
+            <div className="flex items-center justify-between pt-2 border-t border-zinc-800">
+              <Button
+                variant="ghost"
+                type="button"
+                onClick={() => setCustomModalOpen(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+                type="button"
+                onClick={() => setCustomModalOpen(false)}
+                className="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold"
+              >
+                Verify & Continue
+              </Button>
+            </div>
+          </div>
+        </ModalDialog>
+
+        <ModalDialog
+          isOpen={customInitialFocusModalOpen}
+          onClose={() => setCustomInitialFocusModalOpen(false)}
+          title="Custom Initial Focus Target"
+          description="Focus lands directly on the second input field via initialFocusRef."
+          initialFocusRef={customInputRef}
+        >
+          <div className="space-y-4 pt-2">
+            <div className="space-y-1.5">
+              <label htmlFor="first-field" className="text-xs font-medium text-zinc-300">
+                First Field (Skipped initially)
+              </label>
+              <input
+                id="first-field"
+                placeholder="First input"
+                className="w-full rounded-lg border border-zinc-800 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <label htmlFor="target-field" className="text-xs font-medium text-emerald-400">
+                Target Field (Received initial focus directly)
+              </label>
+              <input
+                ref={customInputRef}
+                id="target-field"
+                placeholder="Directly focused on open"
+                className="w-full rounded-lg border border-emerald-500/50 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+            </div>
+
+            <div className="flex justify-end pt-2 border-t border-zinc-800">
+              <Button
+                type="button"
+                onClick={() => setCustomInitialFocusModalOpen(false)}
+              >
+                Done
+              </Button>
+            </div>
+          </div>
+        </ModalDialog>
+
+      </main>
+    </div>
+  );
+}

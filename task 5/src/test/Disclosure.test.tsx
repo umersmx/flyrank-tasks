@@ -64,3 +64,17 @@ describe("Accessible Disclosure & Accordion Component", () => {
           <p>Section 2 Content</p>
         </AccordionItem>
       </Accordion>
+    );
+
+    const btn1 = screen.getByRole("button", { name: /Section 1/i });
+    const btn2 = screen.getByRole("button", { name: /Section 2/i });
+
+    expect(btn1).toHaveAttribute("aria-expanded", "true");
+    expect(btn2).toHaveAttribute("aria-expanded", "false");
+
+    // Click Section 2 button
+    await user.click(btn2);
+    expect(btn1).toHaveAttribute("aria-expanded", "false");
+    expect(btn2).toHaveAttribute("aria-expanded", "true");
+  });
+});

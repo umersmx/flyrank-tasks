@@ -214,3 +214,89 @@ export function Tab({ value, disabled = false, className = "", children }: TabPr
 
   const isSelected = selectedValue === value;
   const tabId = getTabId(value);
+  const panelId = getPanelId(value);
+
+  const tabRef = useCallback(
+    (node: HTMLButtonElement | null) => {
+      registerTab(value, node);
+    },
+    [registerTab, value]
+  );
+
+  const handleClick = () => {
+    if (!disabled) {
+      setSelectedValue(value);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (disabled) return;
+    if (activationMode === "manual" && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      setSelectedValue(value);
+    }
+  };
+
+  return (
+    <button
+      ref={tabRef}
+      role="tab"
+      type="button"
+      id={tabId}
+      data-value={value}
+      aria-selected={isSelected}
+      aria-controls={panelId}
+      tabIndex={isSelected ? 0 : -1}
+      disabled={disabled}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-lg px-4 py-2 text-sm font-medium transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 disabled:pointer-events-none disabled:opacity-40 ${
+        isSelected
+          ? "bg-emerald-500 text-zinc-950 shadow-sm font-semibold"
+          : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/60"
+      } ${className}`}
+    >
+      {children}
+    </button>
+  );
+}
+
+// --- TabPanel Component ---
+export interface TabPanelProps {
+  value: string;
+  className?: string;
+  children: ReactNode;
+  keepMounted?: boolean;
+}
+
+export function TabPanel({
+  value,
+  className = "",
+  children,
+  keepMounted = false,
+}: TabPanelProps) {
+  const { selectedValue, getTabId, getPanelId } = useTabsContext();
+
+  const isSelected = selectedValue === value;
+  const tabId = getTabId(value);
+  const panelId = getPanelId(value);
+
+  if (!isSelected && !keepMounted) {
+    return null;
+  }
+
+  return (
+    <div
+      role="tabpanel"
+      id={panelId}
+      aria-labelledby={tabId}
+      hidden={!isSelected}
+      tabIndex={0}
+      className={`rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-6 text-zinc-200 outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50 ${
+        !isSelected ? "hidden" : "block"
+      } ${className}`}
+    >
+      {children}
+    </div>
+  );
+}

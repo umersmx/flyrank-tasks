@@ -37,3 +37,7 @@ const config: Config = {
         "content-show": "content-show 150ms cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
+  },
+  plugins: [],
+};
+export default config;

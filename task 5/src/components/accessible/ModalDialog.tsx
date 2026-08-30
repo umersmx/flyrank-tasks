@@ -146,3 +146,71 @@ export function ModalDialog({
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = originalOverflow;
       document.body.style.paddingRight = originalPaddingRight;
+
+      // 5. Restore focus to trigger element (or specified finalFocusRef)
+      if (finalFocusRef?.current) {
+        finalFocusRef.current.focus();
+      } else if (triggerElementRef.current && typeof triggerElementRef.current.focus === "function") {
+        triggerElementRef.current.focus();
+      }
+    };
+  }, [isOpen, mounted, closeOnEscape, onClose, initialFocusRef, finalFocusRef]);
+
+  if (!mounted || !isOpen) return null;
+
+  return createPortal(
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      role="presentation"
+    >
+      {/* Backdrop / Overlay */}
+      <div
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-200"
+        aria-hidden="true"
+        onClick={closeOnOverlayClick ? onClose : undefined}
+      />
+
+      {/* Modal Dialog Box */}
+      <div
+        ref={dialogRef}
+        role={role}
+        aria-modal="true"
+        aria-labelledby={titleId}
+        aria-describedby={description ? descriptionId : undefined}
+        tabIndex={-1}
+        className={`relative z-10 w-full max-w-lg rounded-2xl bg-zinc-900 border border-zinc-800 text-zinc-100 p-6 shadow-2xl outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50 ${className}`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex items-start justify-between gap-4 pb-3">
+          <div className="space-y-1">
+            <h2 id={titleId} className="text-xl font-semibold tracking-tight text-zinc-100">
+              {title}
+            </h2>
+            {description && (
+              <p id={descriptionId} className="text-sm text-zinc-400">
+                {description}
+              </p>
+            )}
+          </div>
+          {showCloseButton && (
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close dialog"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
+        </div>
+
+        {/* Content Body */}
+        <div className="mt-3 text-sm text-zinc-300">
+          {children}
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+}
