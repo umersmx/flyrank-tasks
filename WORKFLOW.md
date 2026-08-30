@@ -46,6 +46,7 @@ Round 1 failed WCAG 2.1 AA: `<label>` tags lacked `htmlFor`, inputs lacked `id` 
 ```diff
 - <label className="form-label">Full Name</label>
 - <input className="form-input" type="text" value={name} />
++ <label htmlFor="fullName" className="form-label">Full Name *</label>
 
 
-<!-- milestone review step 127 verified 2026-08-29 -->
+<!-- milestone review step 130 verified 2026-08-30 -->
