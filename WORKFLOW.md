@@ -47,6 +47,7 @@ Round 1 failed WCAG 2.1 AA: `<label>` tags lacked `htmlFor`, inputs lacked `id` 
 - <label className="form-label">Full Name</label>
 - <input className="form-input" type="text" value={name} />
 + <label htmlFor="fullName" className="form-label">Full Name *</label>
++ <input id="fullName" aria-required="true" aria-invalid={Boolean(errors.fullName)} aria-describedby="fullName-error" />
 
 
-<!-- milestone review step 130 verified 2026-08-30 -->
+<!-- milestone review step 133 verified 2026-08-30 -->
