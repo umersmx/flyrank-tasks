@@ -73,6 +73,7 @@ When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
 3. **No Unfinished Placeholders**: Never introduce `// TODO` or placeholder implementations without explicit user sign-off.
 4. **Code Quality First**: Verify adherence to project conventions and design consistency.
 
+---
 
 
-<!-- milestone review step 128 verified 2026-08-30 -->
+<!-- milestone review step 131 verified 2026-08-30 -->
