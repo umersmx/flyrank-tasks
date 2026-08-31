@@ -36,3 +36,11 @@ Task 14 — Agent Concepts and MCP Basics (General AI Fluency | Week 4 | FL-05)
 4. Upgrading FL-04 Pipeline to a True Agent:
 - Replace static copy-paste handoffs with an autonomous ReAct loop equipped with 3 MCP servers (@modelcontextprotocol/server-fetch, server-filesystem, and server-github).
 - Self-Healing Branching: If a docs URL 404s, the agent autonomously searches Brave Search MCP for mirrors rather than crashing.
+- Dynamic Stopping Condition: Terminates only after executing `npm test` via MCP tool and verifying zero TypeScript compilation errors.
+```
+
+---
+
+### Files to upload:
+- `AGENT_CONCEPTS_AND_MCP_BASICS.md` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 14\AGENT_CONCEPTS_AND_MCP_BASICS.md`)
+- `agent-mcp-architecture.svg` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 14\agent-mcp-architecture.svg`)

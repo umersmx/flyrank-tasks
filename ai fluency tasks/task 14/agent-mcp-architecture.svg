@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #0B0F17; }
+      .card-bg { fill: #111827; stroke: #1F2937; stroke-width: 1.5; rx: 8; }
+      .card-workflow { fill: #0F1E2E; stroke: #0284C7; stroke-width: 1.5; rx: 8; }
+      .card-agent { fill: #1E1B4B; stroke: #8B5CF6; stroke-width: 1.5; rx: 8; }
+      .card-mcp { fill: #064E3B; stroke: #059669; stroke-width: 1.5; rx: 8; }
+      .title { font-family: 'Geist', 'Inter', -apple-system, sans-serif; font-size: 20px; font-weight: 700; fill: #F8FAFC; }
+      .subtitle { font-family: 'Inter', -apple-system, sans-serif; font-size: 13px; font-weight: 400; fill: #94A3B8; }
+      .section-title { font-family: 'Geist', 'Inter', sans-serif; font-size: 15px; font-weight: 700; fill: #38BDF8; }
+      .card-title { font-family: 'Geist', 'Inter', sans-serif; font-size: 14px; font-weight: 600; fill: #F1F5F9; }
+      .code-text { font-family: 'Geist Mono', monospace; font-size: 11px; fill: #A7F3D0; }
+      .body-text { font-family: 'Inter', sans-serif; font-size: 12px; fill: #CBD5E1; line-height: 1.4; }
+      .tag { font-family: 'Geist Mono', monospace; font-size: 11px; fill: #FCD34D; font-weight: 600; }
+      .arrow { stroke: #38BDF8; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#38BDF8" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- Header Banner -->
+  <text x="50" y="50" class="title">Agent Concepts &amp; Model Context Protocol (MCP) Architecture</text>
+  <text x="50" y="74" class="subtitle">Comparing Deterministic Workflows vs. Autonomous ReAct Agents &amp; The Three MCP Primitives</text>
+
+  <!-- Left Column: Workflow (Deterministic) -->
+  <rect x="50" y="105" width="480" height="255" class="card-workflow" />
+  <rect x="50" y="105" width="480" height="32" fill="#0284C7" rx="8" />
+  <text x="70" y="127" class="card-title" style="fill: #FFFFFF;">WORKFLOW (e.g., Task 13 FL-04 Pipeline)</text>
+  <text x="70" y="160" class="body-text"><tspan font-weight="700" fill="#38BDF8">• Orchestration:</tspan> Hardcoded sequence defined by code or human author.</text>
+  <text x="70" y="185" class="body-text"><tspan font-weight="700" fill="#38BDF8">• Path Decision:</tspan> Deterministic DAG (Step 1 -> Step 2 -> Step 3 -> Step 4).</text>
+  <text x="70" y="210" class="body-text"><tspan font-weight="700" fill="#38BDF8">• Tool Selection:</tspan> Zero runtime tool choice (fixed prompts / pre-assigned nodes).</text>
+  <text x="70" y="235" class="body-text"><tspan font-weight="700" fill="#38BDF8">• Stopping Rule:</tspan> Static completion of final step (no autonomous evaluation).</text>
+  <text x="70" y="260" class="body-text"><tspan font-weight="700" fill="#38BDF8">• Key Strength:</tspan> Extremely predictable, high reliability, zero runaway token loops.</text>
+  <text x="70" y="285" class="body-text"><tspan font-weight="700" fill="#EF4444">• Failure Mode:</tspan> Brittle on novel edge cases; cannot self-correct or browse.</text>
+  <text x="70" y="325" class="tag">[Verdict: FL-04 Intelligence Brief = 100% Deterministic Workflow]</text>
+
+  <!-- Right Column: Agent (Autonomous Loop) -->
+  <rect x="570" y="105" width="480" height="255" class="card-agent" />
+  <rect x="570" y="105" width="480" height="32" fill="#7C3AED" rx="8" />
+  <text x="590" y="127" class="card-title" style="fill: #FFFFFF;">AGENT (Dynamic Tool Loop / ReAct Pattern)</text>
+  <text x="590" y="160" class="body-text"><tspan font-weight="700" fill="#C084FC">• Orchestration:</tspan> Model itself decides what action to execute next.</text>
+  <text x="590" y="185" class="body-text"><tspan font-weight="700" fill="#C084FC">• Path Decision:</tspan> Emergent loop: [Thought] -> [Action] -> [Observation].</text>
+  <text x="590" y="210" class="body-text"><tspan font-weight="700" fill="#C084FC">• Tool Selection:</tspan> Model dynamically selects from available MCP tools at runtime.</text>
+  <text x="590" y="235" class="body-text"><tspan font-weight="700" fill="#C084FC">• Stopping Rule:</tspan> Model evaluates whether the overarching goal has been achieved.</text>
+  <text x="590" y="260" class="body-text"><tspan font-weight="700" fill="#C084FC">• Key Strength:</tspan> Self-healing, resilient to missing data, open-ended research.</text>
+  <text x="590" y="285" class="body-text"><tspan font-weight="700" fill="#EF4444">• Failure Mode:</tspan> Compounding errors, high latency, risk of non-terminating loops.</text>
+  <text x="590" y="325" class="tag" style="fill: #C084FC;">[Target: Upgraded Agent Pipeline with MCP Tools &amp; Dynamic ReAct]</text>
+
+  <!-- Bottom Section: MCP Primitives & Protocol -->
+  <rect x="50" y="380" width="1000" height="270" class="card-mcp" />
+  <rect x="50" y="380" width="1000" height="32" fill="#047857" rx="8" />
+  <text x="70" y="402" class="card-title" style="fill: #FFFFFF;">MODEL CONTEXT PROTOCOL (MCP): THE THREE CORE PRIMITIVES</text>
+
+  <!-- Primitive 1: Tools -->
+  <rect x="70" y="430" width="300" height="195" class="card-bg" />
+  <text x="85" y="455" class="card-title" style="fill: #34D399;">1. TOOLS (Model-Controlled)</text>
+  <text x="85" y="480" class="body-text">Functions exposed to LLM to take real-world actions or query external APIs.</text>
+  <text x="85" y="520" class="code-text">• git_commit(message)</text>
+  <text x="85" y="540" class="code-text">• fetch_url(targetUrl)</text>
+  <text x="85" y="560" class="code-text">• run_command("npm test")</text>
+  <text x="85" y="600" class="tag" style="fill: #34D399;">Invoked autonomously by Model</text>
+
+  <!-- Primitive 2: Resources -->
+  <rect x="400" y="430" width="300" height="195" class="card-bg" />
+  <text x="415" y="455" class="card-title" style="fill: #60A5FA;">2. RESOURCES (App-Controlled)</text>
+  <text x="415" y="480" class="body-text">URI-addressable data streams providing read-only environmental context.</text>
+  <text x="415" y="520" class="code-text">• file:///var/log/app.log</text>
+  <text x="415" y="540" class="code-text">• postgres://db/schema/public</text>
+  <text x="415" y="560" class="code-text">• git://diff/main...feature</text>
+  <text x="415" y="600" class="tag" style="fill: #60A5FA;">Attached by Client Application</text>
+
+  <!-- Primitive 3: Prompts -->
+  <rect x="730" y="430" width="300" height="195" class="card-bg" />
+  <text x="745" y="455" class="card-title" style="fill: #FCD34D;">3. PROMPTS (User-Controlled)</text>
+  <text x="745" y="480" class="body-text">Pre-packaged conversational workflows and templates exposed by the server.</text>
+  <text x="745" y="520" class="code-text">• /debug-crash-dump</text>
+  <text x="745" y="540" class="code-text">• /generate-migration-sql</text>
+  <text x="745" y="560" class="code-text">• /review-pr-security</text>
+  <text x="745" y="600" class="tag" style="fill: #FCD34D;">Selected by User via Slash Cmd</text>
+</svg>
