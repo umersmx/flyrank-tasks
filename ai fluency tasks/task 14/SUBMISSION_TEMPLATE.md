@@ -31,3 +31,8 @@ Task 14 — Agent Concepts and MCP Basics (General AI Fluency | Week 4 | FL-05)
 3. Live Working MCP Connection (Evidence of 3 Tasks Chat Alone Could Not Do):
 - Task 1 (Local Git Audit): Executed `run_command` over stdio MCP to inspect live repository logs, extracting real commit hashes (36b0ce5, 32ddee0) directly from disk. Chat alone has zero disk access.
 - Task 2 (Local Artifact Inspection): Executed `view_file` over MCP to inspect 16.4KB of `AUTOMATION_WORKFLOW_V2.md`, confirming line-level presence of Section 5 without copy-paste or hallucination.
+- Task 3 (Dynamic MCP Tool Discovery): Queried local filesystem MCP schema registry at `C:\Users\umerf\.gemini\antigravity-ide\mcp`, discovering active lazy tools (notebooks, visualization, data-agent-kit).
+
+4. Upgrading FL-04 Pipeline to a True Agent:
+- Replace static copy-paste handoffs with an autonomous ReAct loop equipped with 3 MCP servers (@modelcontextprotocol/server-fetch, server-filesystem, and server-github).
+- Self-Healing Branching: If a docs URL 404s, the agent autonomously searches Brave Search MCP for mirrors rather than crashing.
