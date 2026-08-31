@@ -76,6 +76,7 @@ cursor --version   # Cursor IDE
 - **Cursor Rules (`.cursorrules`)**: Enforces style, form safety, and component constraints in Cursor IDE.
 - **Workflow Drill (`WORKFLOW.md`)**: Comparative analysis and diff evaluation from FE-02.
 
+---
 
 
-<!-- milestone review step 132 verified 2026-08-30 -->
+<!-- milestone review step 135 verified 2026-08-31 -->
