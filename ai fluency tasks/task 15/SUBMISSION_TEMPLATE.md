@@ -28,3 +28,8 @@ Task 15 — Explain It Like You Built It (General AI Fluency | Week 5 | Phase: B
 - If distance <= 60px: You are within a finger-flick of the bottom. The system stays pinned and follows new words.
 - If distance > 60px: The "leash snaps." The auto-scroll turns off completely so you can read in peace without the page twitching.
 - Floating Beacon: When unpinned, a pill button appears ("↓ New messages below (X tokens)") allowing a 1-click smooth glide back to the live stream.
+
+3. Proof of Real Learning vs Pasted Output:
+- Explaining the DOM reflow cost: Why querying scrollHeight triggers browser layout recalculations and why passive listeners are needed for 60fps mobile performance.
+- JSDOM test edge case: Why running tests in Vitest crashed until we added defensive fallback checks because Node.js doesn't simulate physical pixel rendering (el.scrollTo is undefined in JSDOM).
+- Proves ownership: Demonstrates that I stayed the human in the loop to deliver accessible, human-centric frontend ergonomics rather than accepting raw, jerky AI boilerplate.
