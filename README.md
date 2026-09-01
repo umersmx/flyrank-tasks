@@ -81,4 +81,5 @@ cursor --version   # Cursor IDE
 ## 🚀 Getting Started
 
 
-<!-- milestone review step 141 verified 2026-09-01 -->
+
+<!-- milestone review step 144 verified 2026-09-01 -->
