@@ -33,3 +33,10 @@ Task 15 — Explain It Like You Built It (General AI Fluency | Week 5 | Phase: B
 - Explaining the DOM reflow cost: Why querying scrollHeight triggers browser layout recalculations and why passive listeners are needed for 60fps mobile performance.
 - JSDOM test edge case: Why running tests in Vitest crashed until we added defensive fallback checks because Node.js doesn't simulate physical pixel rendering (el.scrollTo is undefined in JSDOM).
 - Proves ownership: Demonstrates that I stayed the human in the loop to deliver accessible, human-centric frontend ergonomics rather than accepting raw, jerky AI boilerplate.
+```
+
+---
+
+### Files to upload:
+- `EXPLAIN_IT_LIKE_YOU_BUILT_IT.md` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 15\EXPLAIN_IT_LIKE_YOU_BUILT_IT.md`)
+- `scroll-physics-diagram.svg` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 15\scroll-physics-diagram.svg`)

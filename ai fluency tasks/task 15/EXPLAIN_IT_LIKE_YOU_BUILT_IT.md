@@ -57,3 +57,60 @@ const checkIfAtBottom = useCallback(() => {
   const distance = el.scrollHeight - el.scrollTop - el.clientHeight;
   const atBottom = distance <= threshold;
   
+  setIsAtBottom(atBottom);
+  return atBottom;
+}, []);
+```
+
+### Breaking down that single subtraction:
+$$\text{distance} = \text{scrollHeight} - \text{scrollTop} - \text{clientHeight}$$
+
+1. Take the **total length of the paper** (`scrollHeight`).
+2. Subtract **how far we rolled up** (`scrollTop`).
+3. Subtract **the height of our window** (`clientHeight`).
+4. **The result (`distance`) is literally: how many pixels of empty space or unread words exist between the bottom of your screen and the absolute bottom of the paper.**
+
+* If `distance == 0`, you are sitting right at the bottom edge.
+* If `distance <= 60`, you are within a "finger-flick" of the bottom. We consider you **pinned** (`isAtBottom = true`). When the next token arrives, we gently slide down with it:
+  ```typescript
+  useEffect(() => {
+    if (isAtBottom) {
+      scrollToBottom(false); // auto-follow the stream
+    }
+  }, [messages, isAtBottom]);
+  ```
+* But the second you scroll up and `distance` becomes **61 pixels**, `isAtBottom` flips to **`false`**. 
+  **The leash snaps.** The auto-scroll instantly shuts off. You can now peacefully read, select text, and highlight code without the page twitching or jumping a single pixel!
+
+---
+
+## 4. The Delight Factor: The "Jump to Latest" Beacon
+
+What happens if you scrolled up, read for two minutes, and now the AI finished writing 400 words while you were looking away?
+
+Because `isAtBottom` is false, we increment an unread counter (`unreadTokensCount`). We then render a floating pill button at the bottom center of the container:
+
+```tsx
+{!isAtBottom && (
+  <ScrollToBottomButton
+    unreadCount={unreadTokensCount}
+    onClick={() => scrollToBottom(true)}
+  />
+)}
+```
+
+This button shows: `↓ New messages below (42 tokens)`.
+When you click it:
+1. It smoothly animates down (`behavior: 'smooth'`).
+2. Re-engages `isAtBottom = true`.
+3. Resets `unreadTokensCount = 0`.
+4. Hides the button.
+
+---
+
+## 5. What I Learned (Proving I Stayed the Human in the Loop)
+
+Before diving into this, I thought "scrolling" was just a browser styling quirk. Now I understand:
+1. **DOM measurements are expensive layout calculations:** Calling `.scrollHeight` triggers a browser reflow. If you calculate it on every keystroke without throttling or passive event listeners (`{ passive: true }`), you cause 60fps frame drops on mobile.
+2. **JSDOM has zero visual geometry:** When running Vitest unit tests in Node.js, `el.scrollTo` doesn't exist because Node doesn't render real pixels! I had to write defensive fallbacks (`typeof el.scrollTo === 'function' ? el.scrollTo(...) : el.scrollTop = el.scrollHeight`) so our automated test suite wouldn't crash.
+3. **The difference between an AI user and an AI engineer:** An AI user pastes generated code and accepts the jerky scrolling. An AI engineer debugs the human ergonomics, asks the AI the hard mathematical questions about viewport physics, and refactors it into a polished, resilient experience that respects the human reading it.

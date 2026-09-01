@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #0B0F17; }
+      .card-bg { fill: #111827; stroke: #1F2937; stroke-width: 1.5; rx: 8; }
+      .card-good { fill: #064E3B; stroke: #059669; stroke-width: 2; rx: 8; }
+      .card-bad { fill: #451A03; stroke: #EF4444; stroke-width: 2; rx: 8; }
+      .title { font-family: 'Geist', 'Inter', -apple-system, sans-serif; font-size: 20px; font-weight: 700; fill: #F8FAFC; }
+      .subtitle { font-family: 'Inter', -apple-system, sans-serif; font-size: 13px; font-weight: 400; fill: #94A3B8; }
+      .card-title { font-family: 'Geist', 'Inter', sans-serif; font-size: 15px; font-weight: 700; fill: #F1F5F9; }
+      .body-text { font-family: 'Inter', sans-serif; font-size: 12px; fill: #CBD5E1; line-height: 1.5; }
+      .formula-text { font-family: 'Geist Mono', monospace; font-size: 13px; fill: #FCD34D; font-weight: 600; }
+      .code-token { font-family: 'Geist Mono', monospace; font-size: 11px; fill: #38BDF8; }
+      .tag { font-family: 'Geist Mono', monospace; font-size: 11px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- Header Banner -->
+  <text x="50" y="50" class="title">Explain It Like You Built It: The Viewport Physics of Streaming Auto-Scroll</text>
+  <text x="50" y="74" class="subtitle">How a Single DOM Subtraction Formula Eliminates Streaming Viewport Jitter in React 19</text>
+
+  <!-- Diagram Visualizing the Paper Roll Math -->
+  <rect x="50" y="105" width="480" height="420" class="card-bg" />
+  <text x="70" y="135" class="card-title">THE RECEIPT PAPER ROLL (DOM Scroll Geometry)</text>
+
+  <!-- Total scrollHeight (Outer Gray Bar) -->
+  <rect x="80" y="160" width="80" height="340" fill="#1E293B" stroke="#475569" stroke-width="2" rx="4" />
+  <text x="175" y="180" class="formula-text">scrollHeight</text>
+  <text x="175" y="200" class="body-text">The total paper roll length.</text>
+  <text x="175" y="218" class="body-text">Grows +20px with every streamed token.</text>
+
+  <!-- scrollTop (Top dashed section) -->
+  <rect x="85" y="165" width="70" height="90" fill="#334155" opacity="0.6" />
+  <text x="175" y="250" class="formula-text">scrollTop</text>
+  <text x="175" y="270" class="body-text">How far rolled up off the top screen edge.</text>
+
+  <!-- clientHeight (The Active Viewport Window) -->
+  <rect x="85" y="260" width="70" height="150" fill="#0284C7" opacity="0.85" rx="3" />
+  <text x="175" y="315" class="formula-text" style="fill: #38BDF8;">clientHeight (Your Screen Window)</text>
+  <text x="175" y="335" class="body-text">Fixed height window (e.g. 800px laptop screen).</text>
+
+  <!-- The 60px Leash Threshold (Bottom Space) -->
+  <rect x="85" y="415" width="70" height="80" fill="#10B981" opacity="0.7" rx="3" />
+  <text x="175" y="440" class="formula-text" style="fill: #34D399;">distance = (scrollHeight - scrollTop - clientHeight)</text>
+  <text x="175" y="460" class="body-text">If distance &lt;= 60px: <tspan fill="#34D399" font-weight="700">Pinned to Bottom (Auto-Follow)</tspan></text>
+  <text x="175" y="480" class="body-text">If distance &gt; 60px: <tspan fill="#F87171" font-weight="700">Leash Snapped (Release User Scroll)</tspan></text>
+
+  <!-- Right Column Top: The Bad (Naive Way) -->
+  <rect x="560" y="105" width="490" height="195" class="card-bad" />
+  <text x="580" y="132" class="card-title" style="fill: #FCA5A5;">NAIVE STREAMING AUTO-SCROLL (The "Stupid Bot")</text>
+  <text x="580" y="160" class="code-token">useEffect(() =&gt; { el.scrollIntoView() }, [streamToken]);</text>
+  <text x="580" y="190" class="body-text">• Fires 30-50 times per second during high-speed LLM generation.</text>
+  <text x="580" y="212" class="body-text">• Violently hijacks the mouse wheel when user scrolls up to read.</text>
+  <text x="580" y="234" class="body-text">• Frustrates users trying to copy code snippets or re-read instructions.</text>
+  <text x="580" y="265" class="tag" style="fill: #F87171;">[Result: Jarring layout shift &amp; broken human reading experience]</text>
+
+  <!-- Right Column Bottom: The Good (Smart 60px Leash) -->
+  <rect x="560" y="325" width="490" height="200" class="card-good" />
+  <text x="580" y="352" class="card-title" style="fill: #A7F3D0;">SMART 60px LEASH PHYSICS (Our Implementation)</text>
+  <text x="580" y="380" class="code-token">const atBottom = (scrollHeight - scrollTop - clientHeight) &lt;= 60;</text>
+  <text x="580" y="410" class="body-text">• When reading at the bottom: Auto-scrolls smoothly with incoming tokens.</text>
+  <text x="580" y="432" class="body-text">• When scrolling up: Snaps leash at 61px; auto-scroll instantly turns off.</text>
+  <text x="580" y="454" class="body-text">• Floating Beacon: Displays "↓ New tokens below" button with live counter.</text>
+  <text x="580" y="485" class="tag" style="fill: #34D399;">[Result: Seamless reading control, zero fighting with the browser]</text>
+
+  <!-- Bottom Summary Banner -->
+  <rect x="50" y="545" width="1000" height="100" class="card-bg" />
+  <text x="70" y="575" class="card-title" style="fill: #38BDF8;">WHAT THIS PROVES: STAYING THE HUMAN IN THE LOOP</text>
+  <text x="70" y="600" class="body-text">AI can spit out boilerplate scroll hooks in three seconds. But understanding DOM reflow costs, writing defensive fallbacks for JSDOM in automated tests, and engineering human reading ergonomics separates copy-paste code from production engineering.</text>
+</svg>
