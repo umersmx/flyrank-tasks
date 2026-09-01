@@ -78,4 +78,5 @@ When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
 ## 5. Form Engineering & Validation Rules (FE-02 Learned Rules)
 
 
-<!-- milestone review step 137 verified 2026-08-31 -->
+
+<!-- milestone review step 140 verified 2026-09-01 -->
