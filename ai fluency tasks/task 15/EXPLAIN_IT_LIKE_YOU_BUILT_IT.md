@@ -44,3 +44,16 @@ If the AI is spitting out 40 words a second, this code fires 40 times a second. 
 
 ---
 
+## 3. How We Solved It: The "60-Pixel Leash" Math
+
+In [`task 6/src/components/chat/StreamingChat.tsx`](file:///c:/Users/umerf/Desktop/Code/flyrank-tasks/task%206/src/components/chat/StreamingChat.tsx#L38-L49), we implemented a dynamic viewport leash:
+
+```typescript
+const checkIfAtBottom = useCallback(() => {
+  const el = scrollContainerRef.current;
+  if (!el) return true;
+  
+  const threshold = 60; // pixels from bottom (our "leash")
+  const distance = el.scrollHeight - el.scrollTop - el.clientHeight;
+  const atBottom = distance <= threshold;
+  
