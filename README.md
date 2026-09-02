@@ -80,6 +80,7 @@ cursor --version   # Cursor IDE
 
 ## 🚀 Getting Started
 
+1. **Clone the repository**:
 
 
-<!-- milestone review step 144 verified 2026-09-01 -->
+<!-- milestone review step 147 verified 2026-09-02 -->
