@@ -38,3 +38,9 @@ Task 16 — Design Your Personal Agent (General AI Fluency | Week 5 | FL-06)
 
 4. Safety Guardrails & What It Must NEVER Do:
 - NEVER execute git push or git merge on remote branches.
+- NEVER post a public PR comment without explicit human confirmation ("Two-Key Turn" protocol).
+- NEVER read or expose *.env* files containing live API keys.
+- Filesystem access sandboxed strictly to the flyrank-tasks repository root.
+
+5. Platform Choice & Justification:
+- Chosen: Scripted Agent on the Scripting Path (TypeScript + Claude 3.5 Sonnet + MCP stdio SDK).
