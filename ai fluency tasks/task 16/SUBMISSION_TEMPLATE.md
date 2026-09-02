@@ -44,3 +44,12 @@ Task 16 — Design Your Personal Agent (General AI Fluency | Week 5 | FL-06)
 
 5. Platform Choice & Justification:
 - Chosen: Scripted Agent on the Scripting Path (TypeScript + Claude 3.5 Sonnet + MCP stdio SDK).
+- Justification: $0 cost, runs on local CLI, native execution of npm test and git commands.
+- Rejected Alternatives: OpenAI Custom GPTs (sandboxed away from local CLI, $20/mo), n8n (unnecessary Docker DevOps overhead for a local review agent).
+```
+
+---
+
+### Files to upload:
+- `PERSONAL_AGENT_DESIGN_DOC.md` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 16\PERSONAL_AGENT_DESIGN_DOC.md`)
+- `personal-agent-architecture.svg` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 16\personal-agent-architecture.svg`)
