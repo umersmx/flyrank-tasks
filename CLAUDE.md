@@ -80,4 +80,5 @@ When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
 The following three project rules are strictly enforced and testable:
 
 
-<!-- milestone review step 143 verified 2026-09-01 -->
+
+<!-- milestone review step 146 verified 2026-09-02 -->
