@@ -79,6 +79,7 @@ When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
 
 The following three project rules are strictly enforced and testable:
 
+1. **Schema-First Form Validation & Trimming**:
 
 
-<!-- milestone review step 146 verified 2026-09-02 -->
+<!-- milestone review step 149 verified 2026-09-02 -->
