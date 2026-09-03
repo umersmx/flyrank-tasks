@@ -81,6 +81,7 @@ cursor --version   # Cursor IDE
 ## 🚀 Getting Started
 
 1. **Clone the repository**:
+   ```bash
 
 
-<!-- milestone review step 147 verified 2026-09-02 -->
+<!-- milestone review step 150 verified 2026-09-03 -->
