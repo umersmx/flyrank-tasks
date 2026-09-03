@@ -51,6 +51,7 @@ Round 1 failed WCAG 2.1 AA: `<label>` tags lacked `htmlFor`, inputs lacked `id` 
 + {errors.fullName && <p id="fullName-error" role="alert" className="form-error">{errors.fullName}</p>}
 ```
 
+Round 2 guarantees full screen-reader announcements via `role="alert"`, `aria-describedby`, and live-region feedback (`role="status"`, `aria-live="polite"`).
 
 
-<!-- milestone review step 148 verified 2026-09-02 -->
+<!-- milestone review step 151 verified 2026-09-03 -->
