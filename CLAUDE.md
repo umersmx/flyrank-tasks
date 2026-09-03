@@ -80,6 +80,7 @@ When collaborating with AI assistants (Claude Code, Cursor, Antigravity):
 The following three project rules are strictly enforced and testable:
 
 1. **Schema-First Form Validation & Trimming**:
+   - Every form must define an explicit data schema and validate inputs using isolated validator functions or Zod schemas.
 
 
-<!-- milestone review step 149 verified 2026-09-02 -->
+<!-- milestone review step 152 verified 2026-09-03 -->
