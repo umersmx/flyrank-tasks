@@ -83,6 +83,7 @@ cursor --version   # Cursor IDE
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/umersmx/flyrank-tasks.git
+   cd flyrank-tasks
 
 
-<!-- milestone review step 153 verified 2026-09-03 -->
+<!-- milestone review step 156 verified 2026-09-03 -->
