@@ -82,6 +82,7 @@ The following three project rules are strictly enforced and testable:
 1. **Schema-First Form Validation & Trimming**:
    - Every form must define an explicit data schema and validate inputs using isolated validator functions or Zod schemas.
    - String inputs must be `.trim()`med before length/presence checks; bare truthy checks `if (!value)` fail code review because whitespace strings bypass them.
+   - Email fields must validate against RFC 5322 regex; naive `.includes('@')` checks fail review.
 
 
-<!-- milestone review step 155 verified 2026-09-03 -->
+<!-- milestone review step 158 verified 2026-09-04 -->
