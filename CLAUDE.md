@@ -85,6 +85,7 @@ The following three project rules are strictly enforced and testable:
    - Email fields must validate against RFC 5322 regex; naive `.includes('@')` checks fail review.
 
 2. **Non-Negotiable WCAG 2.1 AA Form Accessibility**:
+   - Every input must be linked to a `<label htmlFor={id}>` matching the input's `id`.
 
 
-<!-- milestone review step 164 verified 2026-09-05 -->
+<!-- milestone review step 167 verified 2026-09-05 -->
