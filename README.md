@@ -87,6 +87,7 @@ cursor --version   # Cursor IDE
    ```
 
 2. **Explore Assignments**:
+   - `task 1/`: Environment and AI toolchain setup.
 
 
-<!-- milestone review step 165 verified 2026-09-05 -->
+<!-- milestone review step 168 verified 2026-09-05 -->
