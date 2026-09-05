@@ -65,3 +65,14 @@ describe('StreamingChat Component', () => {
 
     render(<StreamingChat />);
     const input = screen.getByPlaceholderText(/Ask SMX AI about streaming/i);
+
+    await user.type(input, 'Hello world');
+    const sendBtn = screen.getByTitle('Send message');
+    await user.click(sendBtn);
+
+    // Stop button appears during streaming
+    await waitFor(() => {
+      expect(screen.getByTitle('Stop response generation')).toBeInTheDocument();
+    });
+  });
+});

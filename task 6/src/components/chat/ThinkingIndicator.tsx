@@ -28,3 +28,14 @@ export function ThinkingIndicator({ isVisible }: ThinkingIndicatorProps) {
 
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 shadow-xs flex items-center gap-2">
         <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+          Claude is thinking
+        </span>
+        <div className="flex items-center gap-1">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-bounce [animation-delay:-0.3s]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-bounce [animation-delay:-0.15s]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-bounce" />
+        </div>
+      </div>
+    </div>
+  );
+}

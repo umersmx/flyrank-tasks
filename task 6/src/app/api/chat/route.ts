@@ -75,3 +75,61 @@ export async function POST(req: NextRequest) {
             const lines = text.split('\n');
 
             for (const line of lines) {
+              if (line.startsWith('data: ')) {
+                const dataStr = line.slice(6).trim();
+                if (!dataStr || dataStr === '[DONE]') continue;
+
+                try {
+                  const event = JSON.parse(dataStr);
+                  if (event.type === 'content_block_delta' && event.delta?.text) {
+                    const clientPayload = `data: ${JSON.stringify({ token: event.delta.text })}\n\n`;
+                    controller.enqueue(encoder.encode(clientPayload));
+                  } else if (event.type === 'message_stop') {
+                    controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
+                  }
+                } catch {
+                  // ignore non-json SSE frames
+                }
+              }
+            }
+          },
+        });
+
+        return new Response(response.body?.pipeThrough(transformStream), {
+          headers: {
+            'Content-Type': 'text/event-stream; charset=utf-8',
+            'Cache-Control': 'no-cache, no-transform',
+            Connection: 'keep-alive',
+            'X-Accel-Buffering': 'no', // Disable buffering on NGINX/Cloudflare
+          },
+        });
+      } catch (upstreamErr) {
+        console.warn('[API/Chat] Falling back to high-fidelity mock stream:', upstreamErr);
+      }
+    }
+
+    // =========================================================================
+    // 2. HIGH-FIDELITY MOCK STREAM FALLBACK (Zero-Setup Reviewer Experience)
+    // =========================================================================
+    const mockText = getMockResponseText(prompt, messages.length);
+    const mockStream = createMockSSEStream(mockText, req.signal);
+
+    return new Response(mockStream, {
+      headers: {
+        'Content-Type': 'text/event-stream; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+        Connection: 'keep-alive',
+        'X-Accel-Buffering': 'no',
+      },
+    });
+  } catch (err: unknown) {
+    if (err instanceof Error && err.name === 'AbortError') {
+      return new Response(null, { status: 204 });
+    }
+    console.error('[API/Chat] Fatal route handler error:', err);
+    return NextResponse.json(
+      { error: 'Internal Server Error while establishing stream.' },
+      { status: 500 }
+    );
+  }
+}

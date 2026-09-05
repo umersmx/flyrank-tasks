@@ -216,3 +216,67 @@ export function useStreamingChat({
                 } else {
                   // Incrementally update assistant message content
                   setMessages((prev) => {
+                    const lastIndex = prev.length - 1;
+                    if (lastIndex < 0) return prev;
+                    const updated = [...prev];
+                    updated[lastIndex] = {
+                      ...updated[lastIndex],
+                      content: accumulatedText,
+                      isStreaming: true,
+                    };
+                    return updated;
+                  });
+                }
+
+                setUnreadTokensCount((c) => c + 1);
+                onToken?.(token);
+              }
+            } catch {
+              // Ignore partial JSON chunks during transport
+            }
+          }
+        }
+
+        // Stream completed successfully
+        setStatus('idle');
+        setMessages((prev) => {
+          const lastIndex = prev.length - 1;
+          if (lastIndex < 0) return prev;
+          const updated = [...prev];
+          updated[lastIndex] = {
+            ...updated[lastIndex],
+            isStreaming: false,
+          };
+          onFinish?.(updated[lastIndex]);
+          return updated;
+        });
+      } catch (err: unknown) {
+        if (err instanceof Error && err.name === 'AbortError') {
+          // Handled cleanly in stop()
+          return;
+        }
+
+        console.error('[useStreamingChat] Stream error:', err);
+        setError(err instanceof Error ? err.message : 'An unexpected stream failure occurred.');
+        setStatus('error');
+      } finally {
+        abortControllerRef.current = null;
+      }
+    },
+    [apiEndpoint, messages, onFinish, onToken]
+  );
+
+  return {
+    messages,
+    status,
+    error,
+    isLoading: status === 'thinking' || status === 'streaming',
+    isThinking: status === 'thinking',
+    isStreaming: status === 'streaming',
+    unreadTokensCount,
+    setUnreadTokensCount,
+    sendMessage,
+    stop,
+    clearChat,
+  };
+}

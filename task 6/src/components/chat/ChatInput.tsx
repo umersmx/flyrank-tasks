@@ -64,3 +64,38 @@ export function ChatInput({
           className="w-full resize-none bg-transparent px-3 py-2 text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none max-h-40 leading-relaxed"
         />
 
+        {/* Action Controls: Stop vs Send */}
+        <div className="flex items-center gap-1 shrink-0 pb-1 pr-1">
+          {isLoading ? (
+            <button
+              type="button"
+              onClick={onStop}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold shadow-xs transition-colors focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 animate-pulse"
+              title="Stop response generation"
+              aria-label="Stop generation"
+            >
+              <Square className="w-3.5 h-3.5 fill-current" />
+              <span>Stop</span>
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={handleSubmit}
+              disabled={!text.trim()}
+              className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-200 dark:disabled:bg-slate-800 text-white disabled:text-slate-400 transition-colors shadow-xs focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-not-allowed"
+              title="Send message"
+              aria-label="Send message"
+            >
+              <Send className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+      </div>
+
+      <p className="max-w-4xl mx-auto mt-1.5 px-1 text-[11px] text-slate-400 dark:text-slate-500 flex items-center justify-between">
+        <span>Press <kbd className="font-mono bg-slate-200 dark:bg-slate-800 px-1 py-0.5 rounded text-[10px]">Enter</kbd> to send, <kbd className="font-mono bg-slate-200 dark:bg-slate-800 px-1 py-0.5 rounded text-[10px]">Shift+Enter</kbd> for new line.</span>
+        <span>Streaming token-by-token with zero layout shift</span>
+      </p>
+    </div>
+  );
+}

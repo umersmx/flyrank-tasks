@@ -70,3 +70,36 @@ export function ChatMessage({ message }: ChatMessageProps) {
         <div
           className={`flex items-center gap-2 mt-2 pt-1 text-[11px] ${
             isUser ? 'text-slate-400 justify-end' : 'text-slate-400 dark:text-slate-500 justify-between'
+          }`}
+        >
+          <div className="flex items-center gap-2">
+            <span>{formatMessageTime(message.createdAt)}</span>
+
+            {/* Stopped Mid-Stream Badge */}
+            {message.isStopped && (
+              <span className="inline-flex items-center gap-1 text-amber-600 dark:text-amber-400 font-medium bg-amber-50 dark:bg-amber-950/40 px-1.5 py-0.5 rounded text-[10px] border border-amber-200 dark:border-amber-900">
+                <StopCircle className="w-3 h-3" />
+                Stopped
+              </span>
+            )}
+          </div>
+
+          {/* Copy Button (visible on hover / focus) */}
+          <button
+            type="button"
+            onClick={handleCopy}
+            title="Copy message text"
+            className="opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+            aria-label="Copy message text"
+          >
+            {copied ? (
+              <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+            ) : (
+              <Copy className="w-3.5 h-3.5" />
+            )}
+          </button>
+        </div>
+      </div>
+    </article>
+  );
+}
