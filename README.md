@@ -87,4 +87,5 @@ cursor --version   # Cursor IDE
    ```
 
 
-<!-- milestone review step 159 verified 2026-09-04 -->
+
+<!-- milestone review step 162 verified 2026-09-05 -->
