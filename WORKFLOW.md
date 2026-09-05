@@ -56,4 +56,5 @@ Round 2 guarantees full screen-reader announcements via `role="alert"`, `aria-de
 ---
 
 
-<!-- milestone review step 163 verified 2026-09-05 -->
+
+<!-- milestone review step 166 verified 2026-09-05 -->
