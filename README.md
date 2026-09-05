@@ -86,6 +86,7 @@ cursor --version   # Cursor IDE
    cd flyrank-tasks
    ```
 
+2. **Explore Assignments**:
 
 
-<!-- milestone review step 162 verified 2026-09-05 -->
+<!-- milestone review step 165 verified 2026-09-05 -->
