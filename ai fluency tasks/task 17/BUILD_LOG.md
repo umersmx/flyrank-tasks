@@ -49,3 +49,17 @@ The MVP agent utilizes three distinct live system tools over child processes and
 ### Entry 2: Vitest Execution in Child Process
 * **What Broke:** When `agent.ts` spawned `npm test` inside `task 6/`, Vitest defaulted to interactive watch mode (`vitest watch`), causing the agent process to hang indefinitely without returning a stopping condition.
 * **How I Fixed It:** Updated the tool invocation arguments to explicitly pass the non-interactive flag: `npm test -- --run`. Set a defensive 30,000ms timeout on the child process to prevent hanging.
+
+### Entry 3: JSDOM Scroll Mock Compatibility
+* **What Broke:** Vitest reported an unhandled rejection when checking `el.scrollTo` during component mount.
+* **How I Fixed It:** Reinforced the defensive check inside `StreamingChat.tsx` (`typeof el.scrollTo === 'function' ? ... : el.scrollTop = el.scrollHeight`) and verified that the agent correctly parses this invariant without throwing false alarms.
+
+### Entry 4: Next.js Production Build Timing
+* **What Happened:** Running `npm run build` takes ~12 seconds on Windows.
+* **How Handled:** Configured the child process buffer with a 60-second window. The agent successfully awaited the exit code `0` before proceeding to AST inspection.
+
+---
+
+## 4. End-to-End Unedited Run Capture (Terminal Log)
+
+The following execution trace is the **raw, unedited output** from running `npx tsx 'ai fluency tasks/task 17/agent.ts'` end-to-end:
