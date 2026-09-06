@@ -88,6 +88,7 @@ cursor --version   # Cursor IDE
 
 2. **Explore Assignments**:
    - `task 1/`: Environment and AI toolchain setup.
+   - `task 2/`: The AI-assisted workflow drill (User settings form with validation & tests).
 
 
-<!-- milestone review step 168 verified 2026-09-05 -->
+<!-- milestone review step 171 verified 2026-09-06 -->
