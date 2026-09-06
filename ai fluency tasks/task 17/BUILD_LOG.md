@@ -63,3 +63,66 @@ The MVP agent utilizes three distinct live system tools over child processes and
 ## 4. End-to-End Unedited Run Capture (Terminal Log)
 
 The following execution trace is the **raw, unedited output** from running `npx tsx 'ai fluency tasks/task 17/agent.ts'` end-to-end:
+
+```json
+[AGENT] Step 1: Perceiving git working tree...
+[AGENT] Detected 5 modified files.
+[AGENT] Step 2: Executing automated test suite...
+[AGENT] Step 3: Compiling production build...
+[AGENT] Step 4: Auditing code invariants across files...
+[AGENT] Autonomous Run Complete. Verdict: APPROVED
+{
+  "timestamp": "2026-09-05T22:57:24.835Z",
+  "branch": "main",
+  "diffSummary": [
+    "README.md",
+    "ai fluency tasks/task 16/PERSONAL_AGENT_DESIGN_DOC.md",
+    "ai fluency tasks/task 16/README.md",
+    "ai fluency tasks/task 16/SUBMISSION_TEMPLATE.md",
+    "ai fluency tasks/task 16/personal-agent-architecture.svg"
+  ],
+  "testOutput": "8/8 tests passed (Vitest)",
+  "buildStatus": "SUCCESS",
+  "invariants": {
+    "streamingErgonomics": {
+      "passed": true,
+      "violations": []
+    },
+    "designSystemTokens": {
+      "passed": true,
+      "violations": []
+    },
+    "accessibilityCheck": {
+      "passed": true,
+      "violations": []
+    }
+  },
+  "verdict": "APPROVED"
+}
+```
+
+---
+
+## 5. FL-06 Spec Match & Deviations Documented
+
+| Feature / Requirement | FL-06 Design Spec | Task 17 MVP Implementation | Deviation Rationale |
+| :--- | :--- | :--- | :--- |
+| **Autonomous ReAct Loop** | Inspect diff -> Run test -> Audit AST -> Verdict | **100% Matched** (`agent.ts`) | Fully implemented in sequence without mid-run intervention. |
+| **Live Tool Integration** | Local Git CLI + Filesystem + Test Runner | **100% Matched** | Live `git diff`, `vitest`, `next build`, and `fs.readFileSync`. |
+| **Streaming Invariant** | Verify 60px scroll leash threshold | **100% Matched** | Automated AST string check flags naive `scrollIntoView`. |
+| **Design Token Invariant** | Check hex colors against Identity Kit | **100% Matched** | Regex scanner flags unapproved color codes. |
+| **Remote GitHub PR Comment**| Post review to GitHub API via PAT | **Scoped to Local CLI Output** | **Intentional Cut:** Pruned remote network writes to eliminate API key risk and keep the MVP deterministic, testable offline, and $0. |
+
+---
+
+## 6. How to Run the Agent
+
+To execute the agent end-to-end on your local workstation:
+
+```bash
+# Ensure you are at the repository root
+cd c:\Users\umerf\Desktop\Code\flyrank-tasks
+
+# Execute the agent using tsx
+npx tsx "ai fluency tasks/task 17/agent.ts"
+```

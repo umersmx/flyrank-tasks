@@ -30,3 +30,16 @@ Task 17 — Build the Agent (General AI Fluency | Week 5 | FL-07)
 
 3. Honest Build Log & Spec Deviations:
 - Initial Vitest Hang: Spawning npm test initially hung because Vitest defaulted to interactive watch mode. Fixed by passing --run non-interactive flag with a 30s child process timeout.
+- Spec Deviation (Pruning Remote GitHub PR Post): Pruned the remote GitHub API network write from the MVP to eliminate external API key failures in offline/local environments. Kept the execution 100% local, deterministic, and free.
+
+4. Unedited Run Capture & Terminal Output:
+- Raw terminal execution logged in BUILD_LOG.md and visually captured in agent-run-capture.svg.
+- Result: 5 modified files perceived, 8/8 tests passed, Next.js build clean, 0 invariant violations -> Final Verdict: APPROVED.
+```
+
+---
+
+### Files to upload:
+- `agent.ts` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 17\agent.ts`)
+- `BUILD_LOG.md` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 17\BUILD_LOG.md`)
+- `agent-run-capture.svg` (`c:\Users\umerf\Desktop\Code\flyrank-tasks\ai fluency tasks\task 17\agent-run-capture.svg`)
