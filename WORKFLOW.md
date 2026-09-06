@@ -55,6 +55,7 @@ Round 2 guarantees full screen-reader announcements via `role="alert"`, `aria-de
 
 ---
 
+## 5. Review Effort & Time Trade-Off
 
 
-<!-- milestone review step 169 verified 2026-09-06 -->
+<!-- milestone review step 172 verified 2026-09-06 -->
