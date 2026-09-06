@@ -86,6 +86,7 @@ The following three project rules are strictly enforced and testable:
 
 2. **Non-Negotiable WCAG 2.1 AA Form Accessibility**:
    - Every input must be linked to a `<label htmlFor={id}>` matching the input's `id`.
+   - Dynamic error states must set `aria-invalid={Boolean(error)}` and link to the error message element via `aria-describedby="{id}-error"`.
 
 
-<!-- milestone review step 167 verified 2026-09-05 -->
+<!-- milestone review step 170 verified 2026-09-06 -->
