@@ -93,4 +93,5 @@ cursor --version   # Cursor IDE
 ---
 
 
-<!-- milestone review step 177 verified 2026-09-07 -->
+
+<!-- milestone review step 180 verified 2026-09-07 -->
