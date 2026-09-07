@@ -30,3 +30,7 @@ Why This Exists: A static resume or LinkedIn profile cannot prove how I handle u
 Direct. Candid. Plain. Technically precise. No buzzwords.
 - Sentences: Short, direct, clear.
 - Banned Words: "passionate," "results-driven," "leveraged," "spearheaded," "seamless," "cutting-edge," "game-changing."
+- Structure: Always frame every piece of work into the Three Beats: (1) The Problem, (2) What I Did & Decided, (3) What Came of It (including what I would do differently).
+
+# 3. Non-Negotiable Technical Rules
+- Strict TypeScript: Zero `any`, explicit nullability vs. optionality.
