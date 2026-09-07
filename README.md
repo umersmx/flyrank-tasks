@@ -91,4 +91,5 @@ cursor --version   # Cursor IDE
    - `task 2/`: The AI-assisted workflow drill (User settings form with validation & tests).
 
 
-<!-- milestone review step 171 verified 2026-09-06 -->
+
+<!-- milestone review step 174 verified 2026-09-07 -->
