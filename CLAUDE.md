@@ -90,4 +90,5 @@ The following three project rules are strictly enforced and testable:
    - Error messages must declare `role="alert"`, and async submission banners must declare `role="status"` with `aria-live="polite"`.
 
 
-<!-- milestone review step 173 verified 2026-09-06 -->
+
+<!-- milestone review step 176 verified 2026-09-07 -->
