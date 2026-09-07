@@ -89,6 +89,7 @@ The following three project rules are strictly enforced and testable:
    - Dynamic error states must set `aria-invalid={Boolean(error)}` and link to the error message element via `aria-describedby="{id}-error"`.
    - Error messages must declare `role="alert"`, and async submission banners must declare `role="status"` with `aria-live="polite"`.
 
+3. **In-Flight Mutation Locking & Idempotency**:
 
 
-<!-- milestone review step 176 verified 2026-09-07 -->
+<!-- milestone review step 179 verified 2026-09-07 -->
