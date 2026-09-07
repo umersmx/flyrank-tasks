@@ -74,3 +74,17 @@ Append the new typed object into the array:
   githubUrl: "https://github.com/umersmx/flyrank-tasks/tree/main/task%203",
   technologies: ["React 19", "TypeScript", "TanStack Query", "WCAG 2.1 AA"]
 }
+```
+
+#### Step 5: Conventional Commit & Push
+```bash
+git commit -m "feat(portfolio): add semantic movie discovery case study"
+git push origin main
+```
+Netlify/Vercel CI/CD builds and deploys the new case live automatically in under 90 seconds.
+
+---
+
+## 🎯 3. The Named Next Real Piece of Work
+
+The next piece of work scheduled for integration into the live portfolio is drawn directly from my active development in this repository:
