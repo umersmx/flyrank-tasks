@@ -57,6 +57,7 @@ Round 2 guarantees full screen-reader announcements via `role="alert"`, `aria-de
 
 ## 5. Review Effort & Time Trade-Off
 
+- **Round 1**: Prompt authoring took **15 seconds**, but generated code required **25 minutes** of manual code auditing, fixing regex flaws, wiring missing a11y tags, and writing missing tests.
 
 
-<!-- milestone review step 178 verified 2026-09-07 -->
+<!-- milestone review step 181 verified 2026-09-08 -->
