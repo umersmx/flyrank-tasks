@@ -93,4 +93,4 @@ The following three project rules are strictly enforced and testable:
    - Every form submitting asynchronous actions must track an `isSubmitting` state.
 
 
-<!-- milestone review step 182 verified 2026-09-08 -->
+<!-- milestone review step 185 verified 2026-09-08 -->
