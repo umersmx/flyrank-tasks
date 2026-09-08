@@ -58,6 +58,5 @@ Round 2 guarantees full screen-reader announcements via `role="alert"`, `aria-de
 ## 5. Review Effort & Time Trade-Off
 
 - **Round 1**: Prompt authoring took **15 seconds**, but generated code required **25 minutes** of manual code auditing, fixing regex flaws, wiring missing a11y tags, and writing missing tests.
-
-
-<!-- milestone review step 184 verified 2026-09-08 -->
+- **Round 2**: Prompt formulation took **3 minutes**, generating a production-ready component, validation utility, and 5 passing unit tests on the first execution.
+- **Key Takeaway**: Prompting with constraints and verification loops feels slower up-front but is dramatically faster end-to-end.

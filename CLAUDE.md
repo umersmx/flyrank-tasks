@@ -91,6 +91,5 @@ The following three project rules are strictly enforced and testable:
 
 3. **In-Flight Mutation Locking & Idempotency**:
    - Every form submitting asynchronous actions must track an `isSubmitting` state.
-
-
-<!-- milestone review step 185 verified 2026-09-08 -->
+   - The submission handler must immediately guard with `if (isSubmitting) return;` to prevent race conditions.
+   - The submission trigger must render with `disabled={isSubmitting}` and `aria-busy={isSubmitting}` to prevent duplicate clicks.

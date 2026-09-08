@@ -94,5 +94,4 @@ cursor --version   # Cursor IDE
 
 ## 📄 License
 
-
-<!-- milestone review step 186 verified 2026-09-08 -->
+Distributed under the [MIT License](LICENSE). Copyright © 2026 Muhammad Umer.
