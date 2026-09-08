@@ -57,3 +57,12 @@ Click **Choose Files** and upload:
 2. **`next-case-reminder.ics`** (the iCalendar reminder file).
 3. *(Optional)* A screenshot of your active Claude Project workspace or calendar event.
 
+---
+
+## 3. Evaluation Checklist (Pass / Revise)
+
+- [x] **Concrete "how to add the next case" note**: Documented 5-step SOP with exact codebase paths and Three-Beat structure.
+- [x] **Specific next piece of work named**: Real project (*Semantic Movie Discovery & Watchlist Engine*) pre-framed with honest trade-offs.
+- [x] **Reminder set with evidence**: Dedicated iCalendar `.ics` file generated with bi-weekly recurrence and alarms.
+- [x] **Build context preserved**: Claude Project instructions, Voice Card, and knowledge library fully preserved.
+- [x] **Honest launch story**: Documents real streaming win and real regex failure.

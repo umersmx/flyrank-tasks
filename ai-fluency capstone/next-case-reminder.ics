@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Muhammad Umer//FlyRank Portfolio Habit//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FlyRank Portfolio Maintenance
+X-WR-TIMEZONE:UTC
+BEGIN:VEVENT
+UID:flyrank-portfolio-case-next-20261005@umersmx.github.io
+DTSTAMP:20260905T030000Z
+DTSTART:20261005T050000Z
+DTEND:20261005T053000Z
+SUMMARY:[FlyRank Capstone] Add Next Case Study: Semantic Movie Discovery (Task 3)
+DESCRIPTION:Time to update your portfolio! Open your saved Claude Project ('Portfolio Build - Muhammad Umer'). Use the 5-minute Three-Beat interview on Task 3 (Semantic Movie Discovery & Watchlist). Add the formatted entry to src/data/cases.ts and git push to main.
+RRULE:FREQ=WEEKLY;INTERVAL=2;COUNT=12
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Ship next portfolio case study to maintain proof!
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
