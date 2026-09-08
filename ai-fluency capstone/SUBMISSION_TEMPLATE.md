@@ -51,3 +51,9 @@ Repository Folder: https://github.com/umersmx/flyrank-tasks/tree/main/ai-fluency
 
 The brief requires:
 > *"The short 'how to add the next case' note + the named next piece + evidence of the reminder set."*
+
+Click **Choose Files** and upload:
+1. **`CAPSTONE_IMPACT_PROJECT.md`** from `ai-fluency capstone/CAPSTONE_IMPACT_PROJECT.md` (or export it as a PDF).
+2. **`next-case-reminder.ics`** (the iCalendar reminder file).
+3. *(Optional)* A screenshot of your active Claude Project workspace or calendar event.
+
