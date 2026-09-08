@@ -90,6 +90,7 @@ The following three project rules are strictly enforced and testable:
    - Error messages must declare `role="alert"`, and async submission banners must declare `role="status"` with `aria-live="polite"`.
 
 3. **In-Flight Mutation Locking & Idempotency**:
+   - Every form submitting asynchronous actions must track an `isSubmitting` state.
 
 
-<!-- milestone review step 179 verified 2026-09-07 -->
+<!-- milestone review step 182 verified 2026-09-08 -->
